@@ -12,13 +12,25 @@ By accessing or using SIST™, you ("Operator") agree to these Terms of Service.
 
 ---
 
-## 2. Eligibility
+## 2. Who SIST Is Built For
 
-SIST is designed for use by **licensed attorneys and authorized legal professionals** only. By using the platform, you represent that:
+SIST was built for **everyone who needs to fight** — especially those the system was designed to ignore.
 
-- You hold a valid law license in your jurisdiction or are authorized by a licensed attorney to operate the platform
+SIST is built for:
+
+- **Pro se litigants** — people representing themselves in court without an attorney
+- **The underdog** — anyone facing institutions, systems, or opponents with far more resources
+- **Survivors** — people in the middle of custody battles, evictions, criminal cases, civil rights violations, and family court who cannot afford to disappear
+- **Paralegals and legal advocates** — professionals supporting clients who need deeper analytical firepower
+- **Attorneys** — who choose to use SIST as a force-multiplying research and adversarial analysis tool
+
+SIST does **not** require a law license. It does not require money, connections, or a team. It requires only that you show up and fight.
+
+By using the platform, you represent that:
+
 - You have the lawful right to submit the data contained in any case prompt or intake documents
-- You will use the platform solely for legitimate legal analysis purposes
+- You will use the platform solely for legitimate legal analysis and self-advocacy purposes
+- You will not use SIST output as a substitute for independent judgment — you remain responsible for your own decisions
 
 ---
 
@@ -32,7 +44,7 @@ SIST delivers legal analysis through the Adversarial Integration Protocol™:
 4. A final verdict is issued: **HOLD**, **REVISE**, or **RETRACT**
 5. Output is delivered via PDF to the operator or time-limited client portal
 
-**SIST output is AI-generated analysis — not legal advice.** The operator is solely responsible for independent review, professional judgment, and any decisions made based on SIST output.
+**SIST output is AI-generated analysis — not legal advice.** The operator is solely responsible for independent review, judgment, and any decisions made based on SIST output.
 
 ---
 
@@ -78,10 +90,10 @@ You may manually destroy any session at any time via `POST /api/sessions/{sessio
 You may not use SIST to:
 
 - Submit data you are not authorized to process
-- Circumvent the privilege protection architecture (e.g., sharing operator-level API access with clients)
+- Circumvent the privilege protection architecture
 - Attempt to extract internal deliberation content from the client portal
-- Use the platform for any purpose other than legitimate legal analysis
-- Violate any applicable law or professional conduct rule
+- Use the platform for any purpose other than legitimate legal analysis or self-advocacy
+- Violate any applicable law
 
 ---
 
@@ -90,7 +102,8 @@ You may not use SIST to:
 - SIST output is AI-generated and does not constitute legal advice
 - SIST does not guarantee any particular outcome, verdict, or analysis quality
 - AI models may produce errors, hallucinations, or incomplete analysis
-- The Operator is solely responsible for independent professional review of all SIST output
+- The Operator is solely responsible for independent review of all SIST output
+- If you are representing yourself in court, SIST is a tool — not your attorney. Use it to build your record, sharpen your arguments, and understand the system. The final call is always yours.
 
 ---
 
@@ -113,4 +126,5 @@ We may update these Terms. Material changes will be communicated via the platfor
 ---
 
 *SIST™ | The Perez Method™ | Adversarial Integration Protocol™*
+*Built in Battle. Deployed for You.*
 *All rights reserved.*
