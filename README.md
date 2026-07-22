@@ -12,6 +12,21 @@
 
 ---
 
+## DOCUMENTS
+
+| Document | Link |
+|---|---|
+| 📜 Public White Paper | [SIST_Public_White_Paper_v1.md](./SIST_Public_White_Paper_v1.md) |
+| 🌐 Live Site (GitHub Pages) | [aperez8910-maker.github.io/SIST.PUBLIC](https://aperez8910-maker.github.io/SIST.PUBLIC) |
+| ⚖️ Terms of Service | [docs/trust/TERMS_OF_SERVICE.md](./docs/trust/TERMS_OF_SERVICE.md) |
+| 🔒 Privacy Policy | [docs/trust/PRIVACY_POLICY.md](./docs/trust/PRIVACY_POLICY.md) |
+| 🛡️ Privilege Protection Statement | [docs/trust/PRIVILEGE_PROTECTION_STATEMENT.md](./docs/trust/PRIVILEGE_PROTECTION_STATEMENT.md) |
+| 📄 Data Processing Agreement | [docs/trust/DATA_PROCESSING_AGREEMENT.md](./docs/trust/DATA_PROCESSING_AGREEMENT.md) |
+| 🏥 HIPAA BAA Template | [docs/trust/HIPAA_BAA_TEMPLATE.md](./docs/trust/HIPAA_BAA_TEMPLATE.md) |
+| 📬 Contact | aperez8910@gmail.com |
+
+---
+
 ## THE DOCTRINE
 
 > *"The system is not broken. It is working exactly as designed. Make it work for you, or make it acknowledge you. Either way, do not disappear."*
