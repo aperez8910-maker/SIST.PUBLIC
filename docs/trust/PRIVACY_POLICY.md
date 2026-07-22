@@ -8,13 +8,13 @@
 
 ## 1. Who We Are
 
-SIST™ (Strategic Intelligence Synthesis Technology) is a privileged legal analysis platform developed under The Perez Method™. SIST is operated by its founder and is designed exclusively for use by licensed attorneys and authorized legal professionals.
+SIST™ (System Intelligence and Strategic Tactics) is a legal analysis and self-advocacy platform developed under The Perez Method™. SIST is operated by its founder, Alexander Emilio Perez, and is built for **everyone who needs to fight** — including pro se litigants, survivors, advocates, paralegals, and attorneys. No law license is required to use SIST™.
 
 ---
 
 ## 2. What We Collect
 
-When a session is initiated, the following data is submitted by the operator (attorney):
+When a session is initiated, the following data is submitted by the operator:
 
 - **Case reference identifier** (operator-assigned, non-identifying label)
 - **Case prompt** — the factual or legal question submitted for analysis
@@ -40,14 +40,14 @@ No submitted data is used for model training, sold to third parties, shared with
 
 ---
 
-## 4. Privilege & Confidentiality
+## 4. Confidentiality Architecture
 
-SIST operates under a strict attorney-client privilege protection architecture:
+SIST operates under a strict confidentiality protection architecture:
 
 - All sessions are identified by a randomly generated **Session ID** — never by client name or matter number
 - Client portal access requires a **time-limited encrypted link** + optional **operator-set PIN**
 - Operator and client data are **logically isolated** — the client portal exposes only output, never internal deliberation, seat outputs, or gate reports
-- All AI council deliberations are privileged work product and are never surfaced to the client
+- All AI council deliberations are treated as privileged work product and are never surfaced to the client
 
 ---
 
@@ -128,4 +128,5 @@ Material changes will be communicated to operators via the platform. Continued u
 ---
 
 *SIST™ | The Perez Method™ | Adversarial Integration Protocol™*
+*Built in Battle. Deployed for You.*
 *All rights reserved.*
