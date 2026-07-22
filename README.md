@@ -1,7 +1,7 @@
 # SIST™ — Systems Intelligence & Strategic Tactics
 
 <p align="center">
-  <img src="sist_logo.jpeg" alt="SIST Logo" width="200"/>
+  <img src="assets/generated-image.png" alt="SIST Logo" width="200"/>
 </p>
 
 > **"They count on you showing up confused, alone, and late. SIST is the answer to all three."**
