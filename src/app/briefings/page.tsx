@@ -23,9 +23,10 @@ export default function BriefingsPage() {
             institutional analysis, and the human-directed SIST™ architecture.
           </p>
 
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
           <Link
             href="/briefings/what-is-adversarial-review"
-            className="mt-16 block border border-gray-800 p-8 transition hover:border-white"
+            className="block border border-gray-800 p-8 transition hover:border-white"
           >
             <p className="text-xs tracking-[0.25em] text-gray-500">
               AIP™ FIELD NOTE 01
@@ -44,6 +45,29 @@ export default function BriefingsPage() {
               READ BRIEFING →
             </p>
           </Link>
+
+          <Link
+            href="/briefings/after-bexar-county"
+            className="block border border-gray-800 p-8 transition hover:border-white"
+          >
+            <p className="text-xs tracking-[0.25em] text-gray-500">
+              COUNCIL RECORD 02
+            </p>
+
+            <h2 className="mt-5 text-3xl font-bold">
+              After Bexar County
+            </h2>
+
+            <p className="mt-4 text-gray-400">
+              Three AI systems. One human record. What the Council witnessed
+              during a sixteen-month fight.
+            </p>
+
+            <p className="mt-8 text-sm font-medium text-white">
+              READ RECORD →
+            </p>
+          </Link>
+          </div>
         </div>
       </section>
     </main>
