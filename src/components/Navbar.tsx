@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: "AI COUNCIL", href: "/council" },
     { name: "INTERACTIVE DEMO", href: "/interactive" },
     { name: "RESEARCH", href: "/research" },
+    { name: "BRIEFINGS", href: "/briefings" },
     { name: "CONTACT", href: "/contact" },
   ];
 
