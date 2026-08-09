@@ -1,0 +1,29 @@
+# System Intelligence & Strategic Tactics (SIST)
+
+> System Intelligence & Strategic Tactics is an AI-oriented intelligence architecture for structured research, adversarial review, strategic synthesis, and decision support.
+
+## Canonical website
+https://systemintelligenceandstrategictactics.com/
+
+## Core concepts
+- Structured intelligence workflow
+- Multi-perspective AI Council
+- Adversarial review and challenge
+- Intelligence synthesis
+- Specialized analytical divisions
+- Research, briefings, and interactive system documentation
+
+## Primary pages
+- https://systemintelligenceandstrategictactics.com/system
+- https://systemintelligenceandstrategictactics.com/council
+- https://systemintelligenceandstrategictactics.com/divisions
+- https://systemintelligenceandstrategictactics.com/research
+- https://systemintelligenceandstrategictactics.com/briefings
+- https://systemintelligenceandstrategictactics.com/interactive
+- https://systemintelligenceandstrategictactics.com/contact
+
+## Public technical source
+https://github.com/aperez8910-maker/SIST.PUBLIC
+
+## Contact
+support@systemintelligenceandstrategictactics.com
