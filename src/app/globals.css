@@ -20,15 +20,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes sist-flow { to { stroke-dashoffset: -52; } }
-@keyframes sist-track { to { stroke-dashoffset: -32; } }
+@keyframes sist-flow { to { stroke-dashoffset: -84; } }
+@keyframes sist-track { to { stroke-dashoffset: -48; } }
 @keyframes sist-pulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
 @keyframes sist-gate { 0%,100% { opacity: .72; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-2px); } }
 @keyframes sist-scan { from { transform: translateY(-110%); } to { transform: translateY(420%); } }
-@keyframes sist-core { 0%,100% { box-shadow: 0 0 55px rgba(215,173,75,.12), inset 0 0 24px rgba(215,173,75,.04); } 50% { box-shadow: 0 0 90px rgba(215,173,75,.23), inset 0 0 32px rgba(215,173,75,.09); } }
+@keyframes sist-core { 0%,100% { box-shadow: 0 0 55px rgba(215,173,75,.12), inset 0 0 24px rgba(215,173,75,.04); } 50% { box-shadow: 0 0 90px rgba(215,173,75,.28), inset 0 0 32px rgba(215,173,75,.1); } }
+@keyframes sist-route-pulse { 0%,100% { opacity: .28; } 50% { opacity: .8; } }
 
-.sist-flow-line { stroke-dasharray: 2 16; animation: sist-flow 3.5s linear infinite; }
-.sist-data-track { animation: sist-track 5s linear infinite; }
+.sist-flow-line { stroke-dasharray: 5 16; animation: sist-flow 1.8s linear infinite; }
+.sist-data-track { animation: sist-track 3s linear infinite; }
 .sist-gate { animation: sist-gate 4s ease-in-out infinite; }
 .sist-gate:nth-child(2) { animation-delay: .18s; }
 .sist-gate:nth-child(3) { animation-delay: .36s; }
@@ -38,7 +39,8 @@ body {
 .sist-gate:nth-child(7) { animation-delay: 1.08s; }
 .sist-gate:nth-child(8) { animation-delay: 1.26s; }
 .sist-gate-frame { border: 1px solid rgba(215,173,75,.08); border-left-color: rgba(215,173,75,.35); border-right-color: rgba(215,173,75,.35); clip-path: polygon(0 12px,12px 0,calc(100% - 12px) 0,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px)); }
-.sist-core-mark { animation: sist-core 4.5s ease-in-out infinite; }
+.sist-core-mark { animation: sist-core 3s ease-in-out infinite; }
+.sist-logo { display: block; mix-blend-mode: screen; filter: drop-shadow(0 0 8px rgba(215,173,75,.12)); }
 .sist-status { animation: sist-pulse 3s ease-in-out infinite; }
 .sist-scan { height: 18%; background: linear-gradient(to bottom, transparent, rgba(215,173,75,.035), transparent); animation: sist-scan 10s linear infinite; }
 .sist-noise { opacity: .045; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E"); mix-blend-mode: screen; }
