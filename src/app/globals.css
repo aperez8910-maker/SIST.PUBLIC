@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030303;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,15 +12,22 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { background: #030303; }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes sist-orbit { to { transform: rotate(360deg); } }
+@keyframes sist-track { to { stroke-dashoffset: -24; } }
+@keyframes sist-pulse { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.025); } }
+
+.sist-orbit { animation: sist-orbit 32s linear infinite; transform-origin: center; }
+.sist-track { animation: sist-track 4s linear infinite; }
+.sist-pulse { animation: sist-pulse 5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sist-orbit, .sist-track, .sist-pulse, .animate-pulse { animation: none !important; }
 }
