@@ -1,75 +1,10 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-export default function BriefingsPage() {
-  return (
-    <main className="min-h-screen bg-black text-white">
-      <Navbar />
+const records=[
+  ["AIP™ FIELD NOTE 01","What Is Adversarial Review?","An introduction to the AIP™ method: structured challenge, verification, and human-directed strategic synthesis.","amber","/briefings/what-is-adversarial-review"],
+  ["COUNCIL RECORD 02","After Bexar County","Three AI systems. One human record. What the Council witnessed during a sixteen-month fight.","red","/briefings/after-bexar-county"],
+] as const;
+const tone={amber:["border-amber-300/25","text-amber-300","bg-amber-300"],red:["border-red-400/30","text-red-300","bg-red-400"]};
 
-      <section className="px-6 pb-20 pt-32">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm tracking-[0.5em] text-gray-400">
-            SIST INTELLIGENCE BRIEFINGS
-          </p>
-
-          <h1 className="mt-6 text-5xl font-bold md:text-7xl">
-            FIELD NOTES
-            <br />
-            FROM THE SYSTEM
-          </h1>
-
-          <p className="mt-8 max-w-3xl text-lg text-gray-300">
-            Original notes on adversarial review, structured intelligence,
-            institutional analysis, and the human-directed SIST™ architecture.
-          </p>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <Link
-            href="/briefings/what-is-adversarial-review"
-            className="block border border-gray-800 p-8 transition hover:border-white"
-          >
-            <p className="text-xs tracking-[0.25em] text-gray-500">
-              AIP™ FIELD NOTE 01
-            </p>
-
-            <h2 className="mt-5 text-3xl font-bold">
-              What Is Adversarial Review?
-            </h2>
-
-            <p className="mt-4 max-w-2xl text-gray-400">
-              An introduction to the AIP™ method: structured challenge,
-              verification, and human-directed strategic synthesis.
-            </p>
-
-            <p className="mt-8 text-sm font-medium text-white">
-              READ BRIEFING →
-            </p>
-          </Link>
-
-          <Link
-            href="/briefings/after-bexar-county"
-            className="block border border-gray-800 p-8 transition hover:border-white"
-          >
-            <p className="text-xs tracking-[0.25em] text-gray-500">
-              COUNCIL RECORD 02
-            </p>
-
-            <h2 className="mt-5 text-3xl font-bold">
-              After Bexar County
-            </h2>
-
-            <p className="mt-4 text-gray-400">
-              Three AI systems. One human record. What the Council witnessed
-              during a sixteen-month fight.
-            </p>
-
-            <p className="mt-8 text-sm font-medium text-white">
-              READ RECORD →
-            </p>
-          </Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
+export default function BriefingsPage(){return <main className="sist-page-shell"><div className="sist-grid pointer-events-none fixed inset-0"/><Navbar/><section className="relative px-6 pb-24 pt-32 sm:px-10"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / INTELLIGENCE BRIEFINGS</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">FIELD NOTES<br />FROM THE SYSTEM</h1><p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">Original notes on adversarial review, structured intelligence, institutional analysis, and the human-directed SIST™ architecture.</p></div><div className="border border-red-400/20 bg-red-400/[0.025] p-6"><div className="flex justify-between text-[9px] tracking-[0.3em]"><span className="text-gray-600">RECORDS</span><span className="text-red-300">2 PUBLISHED</span></div><div className="mt-6 h-1 bg-white/10"><div className="h-full w-2/3 bg-gradient-to-r from-amber-300 via-red-400 to-emerald-400"/></div><p className="mt-5 text-xs leading-6 text-gray-500">Field material from the system's analytical record.</p></div></div><div className="mt-16 grid gap-5 md:grid-cols-2">{records.map(([label,title,description,kind,href])=>{const t=tone[kind as keyof typeof tone];return <Link key={href} href={href} className={`group relative overflow-hidden border ${t[0]} bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05]`}><div className="flex justify-between"><p className={`text-[9px] tracking-[0.25em] ${t[1]}`}>{label}</p><span className={`h-2 w-2 rounded-full ${t[2]}`}/></div><h2 className="mt-6 text-3xl font-semibold">{title}</h2><p className="mt-4 text-sm leading-7 text-gray-500">{description}</p><p className={`mt-8 text-[9px] tracking-[0.25em] ${t[1]}`}>READ RECORD →</p></Link>})}</div></div></section></main>}
