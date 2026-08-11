@@ -12,6 +12,25 @@ const gates = [
 export default function Home() {
   return (
     <main className="sist-page-shell min-h-screen overflow-hidden text-white">
+      <style>{`
+        @keyframes gatePacket { 0%{left:-4%;opacity:0;transform:scale(.65)} 10%{opacity:1} 50%{opacity:1;transform:scale(1)} 90%{opacity:1} 100%{left:104%;opacity:0;transform:scale(.65)} }
+        @keyframes gateVerdict { 0%,46%{opacity:.25} 50%,68%{opacity:1} 72%,100%{opacity:.25} }
+        @keyframes gateVerdictAlt { 0%,28%{opacity:.25} 32%,52%{opacity:1} 56%,100%{opacity:.25} }
+        @keyframes gateVerdictAbort { 0%,60%{opacity:.25} 64%,82%{opacity:1} 86%,100%{opacity:.25} }
+        .sist-live-gate{overflow:hidden}
+        .sist-live-gate::before{content:"";position:absolute;left:-5%;top:50%;width:8px;height:8px;border-radius:999px;background:#d7ad4b;box-shadow:0 0 14px rgba(215,173,75,.95);transform:translateY(-50%);animation:gatePacket 7.8s linear infinite;z-index:2}
+        .sist-live-gate:nth-child(3)::before{animation-delay:-2.1s;animation-duration:8.6s;background:#38e39a;box-shadow:0 0 14px rgba(56,227,154,.95)}
+        .sist-live-gate:nth-child(4)::before{animation-delay:-4.4s;animation-duration:9.4s;background:#ff4d5e;box-shadow:0 0 14px rgba(255,77,94,.95)}
+        .sist-live-gate:nth-child(5)::before{animation-delay:-1.3s;animation-duration:8.9s;background:#d7ad4b;box-shadow:0 0 14px rgba(215,173,75,.95)}
+        .sist-live-gate:nth-child(6)::before{animation-delay:-5.2s;animation-duration:9.8s;background:#38e39a;box-shadow:0 0 14px rgba(56,227,154,.95)}
+        .sist-gate-status{position:absolute;right:12px;bottom:12px;font-size:7px;font-weight:700;letter-spacing:.18em;font-style:normal;white-space:nowrap;animation:gateVerdict 8s steps(1,end) infinite;color:#38e39a}
+        .sist-gate-status::after{content:"PASS"}
+        .status-2{animation:gateVerdictAlt 9s steps(1,end) infinite;color:#d7ad4b}.status-2::after{content:"REVISE"}
+        .status-3{animation:gateVerdictAbort 10s steps(1,end) infinite;color:#ff4d5e}.status-3::after{content:"ABORT"}
+        .status-4{animation:gateVerdictAlt 11s steps(1,end) infinite;color:#d7ad4b}.status-4::after{content:"REVISE"}
+        .status-5{animation:gateVerdict 12s steps(1,end) infinite;color:#38e39a}.status-5::after{content:"PASS"}
+        .sist-gate-stream i{animation-duration:7.5s!important}
+      `}</style>
       <div className="sist-grid pointer-events-none fixed inset-0" />
       <div className="sist-noise pointer-events-none fixed inset-0" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(215,173,75,.15),transparent_34%)]" />
@@ -80,7 +99,7 @@ export default function Home() {
             <div className="mx-auto mt-8 h-px max-w-5xl bg-gradient-to-r from-transparent via-amber-300/50 to-transparent" />
             <div className="relative mt-7 grid gap-3 md:grid-cols-5">
               <div className="sist-gate-stream" aria-hidden="true"><i /><i /><i /><i /><i /></div>
-              {gates.map(([id, name], index) => <div key={id} className="sist-gate-frame sist-live-gate relative border border-amber-300/15 bg-[#050607]/90 p-4 text-left"><span className="text-[9px] text-amber-300">{id}</span><p className="mt-4 min-h-8 text-[8px] font-bold leading-4 tracking-[.16em] text-gray-300">{name}</p><p className="mt-3 text-[7px] tracking-[.25em] text-gray-700">GATED STAGE</p><b className={`sist-gate-status status-${index + 1}`}>●</b></div>)}
+              {gates.map(([id, name], index) => <div key={id} className="sist-gate-frame sist-live-gate relative border border-amber-300/15 bg-[#050607]/90 p-4 text-left"><span className="text-[9px] text-amber-300">{id}</span><p className="mt-4 min-h-8 text-[8px] font-bold leading-4 tracking-[.16em] text-gray-300">{name}</p><p className="mt-3 text-[7px] tracking-[.25em] text-gray-700">GATED STAGE</p><b className={`sist-gate-status status-${index + 1}`} aria-label="Sentinel verdict" /></div>)}
             </div>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-5 text-[8px] tracking-[.25em] text-gray-600"><span>HIGH REASONING RISK</span><span>→</span><span>INDEPENDENT ANALYSIS</span><span>→</span><span>ADVERSARIAL ATTACK</span><span>→</span><span>CORRECTION</span><span>→</span><span className="text-emerald-300">NO MATERIAL ERROR ESCAPES</span></div>
           </div>
