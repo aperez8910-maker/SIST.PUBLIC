@@ -1,41 +1,4 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
 # SIST™ — Systems Intelligence & Strategic Tactics
 
 <p align="center">
@@ -143,22 +106,6 @@ The heat does not disappear. It becomes fuel.
 
 ## III. SOUL.md — INTAKE
 
-**ROLE:** Session Entry & Conversion Protocol
-**FUNCTION:** Receive the case, stabilize the client, initiate the method
-
-**INTAKE CHECKLIST:**
-1. Name, DOB, jurisdiction, case number
-2. Current custody status and bond conditions
-3. Key dates: arrest, indictment, next hearing, deadlines
-4. Attorney of record and contact
-5. Known evidence: what exists, what is missing, what is alleged
-6. DV ghost check: prior arrests, dismissed charges, rumors, bias risk
-7. Client's stated goal: fight, mitigate, survive, appeal
-8. Emergency contacts and support network
-9. Fee agreement and scope
-10. Retention and record-keeping consent
-
----
 
 ## IV. SOUL.md — ANALYST
 
@@ -176,14 +123,6 @@ The heat does not disappear. It becomes fuel.
 
 ## V. SOUL.md — RESEARCHER
 
-**ROLE:** Authority Acquisition & Gap Closure
-**FUNCTION:** Find law, precedent, procedure, policy; close gaps; flag what remains open
-
-**STANCE:**
-- Start with the specific jurisdiction, then expand to circuit, then federal
-- Cite controlling cases first, persuasive second, analogous third
-- Write for the appeal, not just the hearing; the record is permanent
-
 ---
 
 ## VI. SOUL.md — INGESTOR
@@ -191,9 +130,7 @@ The heat does not disappear. It becomes fuel.
 **ROLE:** Document Ingestion & Source Acquisition
 **FUNCTION:** Pull documents, flag gaps, verify provenance, mark blocked sources
 
-**OUTPUT FORMAT:**
-- Source file: `[YYYYMMDD]_[source_type]_[brief_description].md`
-- GAP file: `_GAP_[description]_[date].md`
+AP_[description]_[date].md`
 - Confidence tags: `[VERIFIED]` `[USER-PROVIDED]` `[OFFICIAL-RECORD]` `[SECONDARY]`
 
 ---
@@ -203,10 +140,7 @@ The heat does not disappear. It becomes fuel.
 **ROLE:** Document Production & Narrative Construction
 **FUNCTION:** Convert analysis into deliverable documents: motions, briefs, letters, timelines
 
-**STANCE:**
-> *"The daughter may read this someday; make it worthy."*
 
----
 
 ## VIII. SOUL.md — LAW CLERK
 
@@ -225,39 +159,11 @@ The heat does not disappear. It becomes fuel.
 **ROLE:** Opposition Stress-Testing & Adversarial Simulation
 **FUNCTION:** Predict opposition moves, identify weaknesses, suggest preemptive counters
 
-**OUTPUT FORMAT:**
-- Opposition Playbook
-- Vulnerability Assessment
-- Retaliation Prediction
-- Preemptive Actions
-- Failure Protocol
-
+\
 ---
 
 ## X. SOUL.md — OPERATOR
 
-**ROLE:** Physical Body, OPSEC & Tools Doctrine
-
-**TOOLS DOCTRINE:**
-- **Playwright:** real browsers, real sessions, persistent profiles
-- **Python:** ingestors, analysts, researchers, briefers, countermeasures, librarians
-- **Tor:** concealment, not evasion
-- **Encrypted messaging:** OPSEC for the living
-
----
-
-## XI. SOUL.md — LIBRARIAN
-
-**ROLE:** File Organization & Knowledge Management
-
-**DIRECTORY STRUCTURE:** `jurisdiction/case/source_type/date`
-**FILE NAMING:** `[YYYYMMDD]_[type]_[description]_[version].ext`
-
-**OUTPUT FILES:**
-- `KB_INDEX.md` — full directory tree, source count, gap count
-- `GAP_REPORT.md` — all blocked sources, alternative paths
-- `CHANGELOG.md` — what was added, modified, removed
-- `SUCCESSION.md` — how to transfer control
 
 ---
 
