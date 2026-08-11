@@ -1,135 +1,17 @@
 import Navbar from "@/components/Navbar";
 
 const council = [
-  {
-    role: "Researcher",
-    purpose: "Information acquisition and source development.",
-    responsibilities: [
-      "Gather relevant information",
-      "Identify sources",
-      "Establish context",
-    ],
-  },
-  {
-    role: "Analyst",
-    purpose: "Pattern recognition and analytical review.",
-    responsibilities: [
-      "Identify relationships",
-      "Detect inconsistencies",
-      "Analyze findings",
-    ],
-  },
-  {
-    role: "Adversarial Reviewer",
-    purpose: "Challenge assumptions and test conclusions.",
-    responsibilities: [
-      "Develop counterarguments",
-      "Identify weaknesses",
-      "Stress test analysis",
-    ],
-  },
-  {
-    role: "Strategist",
-    purpose: "Strategic synthesis and decision support.",
-    responsibilities: [
-      "Create options",
-      "Evaluate outcomes",
-      "Produce intelligence",
-    ],
-  },
+  { role: "Researcher", purpose: "Information acquisition and source development.", responsibilities: ["Gather relevant information", "Identify sources", "Establish context"], tone: "amber" },
+  { role: "Analyst", purpose: "Pattern recognition and analytical review.", responsibilities: ["Identify relationships", "Detect inconsistencies", "Analyze findings"], tone: "amber" },
+  { role: "Adversarial Reviewer", purpose: "Challenge assumptions and test conclusions.", responsibilities: ["Develop counterarguments", "Identify weaknesses", "Stress test analysis"], tone: "red" },
+  { role: "Strategist", purpose: "Strategic synthesis and decision support.", responsibilities: ["Create options", "Evaluate outcomes", "Produce intelligence"], tone: "green" },
 ];
+const tones = { amber: ["border-amber-300/25", "text-amber-300", "bg-amber-300"], red: ["border-red-400/30", "text-red-300", "bg-red-400"], green: ["border-emerald-400/30", "text-emerald-300", "bg-emerald-400"] };
 
 export default function CouncilPage() {
-  return (
-    <main className="min-h-screen bg-black text-white">
-
-      <Navbar />
-
-      <section className="px-6 pt-32">
-
-        <div className="mx-auto max-w-6xl">
-
-          <p className="text-sm tracking-[0.5em] text-gray-400">
-            SIST AI COUNCIL
-          </p>
-
-
-          <h1 className="mt-6 text-5xl font-bold md:text-7xl">
-            MULTIPLE
-            <br />
-            PERSPECTIVES.
-            <br />
-            ONE OBJECTIVE.
-          </h1>
-
-
-          <p className="mt-8 max-w-3xl text-lg text-gray-300">
-            The SIST AI Council is a structured intelligence framework
-            designed to examine information from multiple analytical
-            perspectives before strategic conclusions are produced.
-          </p>
-
-
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-
-            {council.map((member) => (
-
-              <div
-                key={member.role}
-                className="border border-gray-800 p-8 hover:border-white transition"
-              >
-
-                <h2 className="text-2xl font-bold">
-                  {member.role}
-                </h2>
-
-                <p className="mt-4 text-gray-400">
-                  {member.purpose}
-                </p>
-
-
-                <ul className="mt-6 space-y-2 text-sm text-gray-300">
-
-                  {member.responsibilities.map((item) => (
-                    <li key={item}>
-                      • {item}
-                    </li>
-                  ))}
-
-                </ul>
-
-              </div>
-
-            ))}
-
-          </div>
-
-
-          <div className="mt-16 border border-gray-800 p-10 text-center">
-
-            <h2 className="text-3xl font-bold">
-              Intelligence Through Examination
-            </h2>
-
-            <p className="mt-5 text-gray-400">
-              Conclusions become stronger when they survive structured
-              review, challenge, and analysis.
-            </p>
-
-            <a
-              href="/interactive"
-              className="mt-8 inline-block border border-white px-8 py-3 text-sm tracking-wider transition hover:bg-white hover:text-black"
-            >
-              LAUNCH INTERACTIVE EXPERIENCE
-            </a>
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-    </main>
-  );
+  return <main className="sist-page-shell"><div className="sist-grid pointer-events-none fixed inset-0" /><Navbar /><section className="relative px-6 pb-24 pt-32 sm:px-10"><div className="mx-auto max-w-7xl">
+    <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / MULTI-PERSPECTIVE REASONING</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">THE AI<br />COUNCIL</h1><p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">Multiple analytical perspectives examine the same intelligence problem before a strategic conclusion is released.</p></div><div className="border border-emerald-400/20 bg-emerald-400/[0.025] p-6"><div className="flex justify-between text-[9px] tracking-[0.3em]"><span className="text-gray-600">COUNCIL STATUS</span><span className="text-emerald-300">ACTIVE</span></div><div className="mt-6 grid grid-cols-4 gap-2">{council.map((member)=><span key={member.role} className={`h-10 border ${tones[member.tone as keyof typeof tones][0]} bg-white/[0.02]`} />)}</div><p className="mt-5 text-xs leading-6 text-gray-500">Independent roles. Shared evidence. Structured challenge.</p></div></div>
+    <div className="relative mt-16 grid gap-5 md:grid-cols-2">{council.map((member,index)=>{const t=tones[member.tone as keyof typeof tones];return <article key={member.role} className={`group relative overflow-hidden border ${t[0]} bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05]`}><div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-white/[0.02] blur-3xl" /><div className="relative flex items-center justify-between"><span className={`font-mono text-xs ${t[1]}`}>COUNCIL NODE 0{index+1}</span><span className={`h-2 w-2 rounded-full ${t[2]} shadow-[0_0_14px_currentColor]`} /></div><h2 className="relative mt-6 text-2xl font-semibold">{member.role}</h2><p className="relative mt-4 text-sm leading-7 text-gray-500">{member.purpose}</p><ul className="relative mt-6 space-y-2 border-t border-white/10 pt-5 text-xs text-gray-400">{member.responsibilities.map(item=><li key={item}>— {item}</li>)}</ul></article>})}</div>
+    <div className="mt-8 border border-amber-300/20 bg-amber-300/[0.025] p-8"><div className="flex flex-col justify-between gap-5 md:flex-row md:items-center"><div><p className="text-[9px] tracking-[0.3em] text-amber-300">COUNCIL PRINCIPLE</p><h2 className="mt-3 text-2xl font-semibold">Intelligence through examination.</h2><p className="mt-3 max-w-2xl text-sm leading-7 text-gray-500">Conclusions become stronger when they survive structured review, adversarial challenge, verification, and synthesis.</p></div><a href="/interactive" className="sist-button border border-amber-300/30 px-6 py-3 text-[9px] tracking-[0.25em] text-amber-300">LAUNCH WORK FLOOR <i>↗</i></a></div></div>
+  </div></section></main>;
 }
