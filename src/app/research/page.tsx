@@ -1,90 +1,11 @@
 import Navbar from "@/components/Navbar";
 
 const research = [
-  {
-    title: "SIST Intelligence Architecture",
-    description:
-      "A structured framework describing the organization, analysis, and application of intelligence methodology.",
-  },
+  ["01", "SIST Intelligence Architecture", "A structured framework describing the organization, analysis, and application of intelligence methodology.", "amber"],
+  ["02", "Adversarial Integration Protocol", "A methodology designed to challenge assumptions, test conclusions, and improve analytical outcomes.", "red"],
+  ["03", "Strategic Intelligence Framework", "A system for transforming complex information into structured strategic understanding.", "green"],
+  ["04", "AI Council Model", "A multi-perspective reasoning framework designed to improve analysis through specialized viewpoints.", "amber"],
+] as const;
+const tone={amber:["border-amber-300/25","text-amber-300","bg-amber-300"],red:["border-red-400/30","text-red-300","bg-red-400"],green:["border-emerald-400/30","text-emerald-300","bg-emerald-400"]};
 
-  {
-    title: "Adversarial Integration Protocol",
-    description:
-      "A methodology designed to challenge assumptions, test conclusions, and improve analytical outcomes.",
-  },
-
-  {
-    title: "Strategic Intelligence Framework",
-    description:
-      "A system for transforming complex information into structured strategic understanding.",
-  },
-
-  {
-    title: "AI Council Model",
-    description:
-      "A multi-perspective reasoning framework designed to improve analysis through specialized viewpoints.",
-  },
-];
-
-
-export default function ResearchPage() {
-  return (
-    <main className="min-h-screen bg-black text-white">
-
-      <Navbar />
-
-      <section className="px-6 pt-32 pb-20">
-
-        <div className="mx-auto max-w-6xl">
-
-          <p className="text-sm tracking-[0.5em] text-gray-400">
-            SIST RESEARCH
-          </p>
-
-
-          <h1 className="mt-6 text-5xl font-bold md:text-7xl">
-            KNOWLEDGE
-            <br />
-            CENTER
-          </h1>
-
-
-          <p className="mt-8 max-w-3xl text-lg text-gray-300">
-            Research, frameworks, and documentation supporting
-            the development of System Intelligence & Strategic Tactics.
-          </p>
-
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
-
-            {research.map((item) => (
-
-              <div
-                key={item.title}
-                className="border border-gray-800 p-8 transition hover:border-white"
-              >
-
-                <h2 className="text-2xl font-bold">
-                  {item.title}
-                </h2>
-
-
-                <p className="mt-4 text-gray-400">
-                  {item.description}
-                </p>
-
-
-              </div>
-
-            ))}
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-    </main>
-  );
-}
+export default function ResearchPage(){return <main className="sist-page-shell"><div className="sist-grid pointer-events-none fixed inset-0"/><Navbar/><section className="relative px-6 pb-24 pt-32 sm:px-10"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / KNOWLEDGE CENTER</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">RESEARCH<br />& FRAMEWORKS</h1><p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">Research, protocols, and documentation supporting the development of System Intelligence & Strategic Tactics.</p></div><div className="border border-amber-300/20 bg-white/[0.025] p-6"><p className="text-[9px] tracking-[0.3em] text-gray-600">KNOWLEDGE PIPELINE</p><div className="mt-6 flex items-center gap-2">{["amber","amber","red","green"].map((x,i)=><div key={i} className="flex flex-1 items-center gap-2"><span className={`h-2 w-2 rounded-full ${tone[x as keyof typeof tone][2]}`}/>{i<3&&<span className="h-px flex-1 bg-white/10"/>}</div>)}</div><p className="mt-5 text-xs leading-6 text-gray-500">Frameworks move from collection through challenge and verification.</p></div></div><div className="mt-16 grid gap-5 md:grid-cols-2">{research.map(([num,title,description,kind])=>{const t=tone[kind as keyof typeof tone];return <article key={num} className={`group relative overflow-hidden border ${t[0]} bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05]`}><div className="flex justify-between"><span className={`font-mono text-xs ${t[1]}`}>{num}</span><span className={`h-2 w-2 rounded-full ${t[2]}`}/></div><h2 className="mt-6 text-2xl font-semibold">{title}</h2><p className="mt-4 text-sm leading-7 text-gray-500">{description}</p><div className="mt-8 border-t border-white/10 pt-5 text-[8px] tracking-[0.25em] text-gray-600">RESEARCH NODE / DOCUMENTATION</div></article>})}</div></div></section></main>}
