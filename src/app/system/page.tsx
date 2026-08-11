@@ -1,16 +1,81 @@
 import Navbar from "@/components/Navbar";
 
-const methodology = [
-  ["01", "INTELLIGENCE COLLECTION", "Gather relevant information and establish the mission, scope, constraints, actors, and evidence base."],
-  ["02", "INFORMATION ORGANIZATION", "Structure fragmented material into an operating picture while separating fact, inference, assumption, and unknown."],
-  ["03", "ANALYTICAL PROCESSING", "Evaluate relationships, patterns, inconsistencies, dependencies, and competing explanations."],
-  ["04", "ADVERSARIAL INTEGRATION", "Introduce independent perspectives, challenge the working theory, and actively search for failure points."],
-  ["05", "STRATEGIC OUTPUT", "Synthesize what survives scrutiny into a traceable intelligence product designed for the next decision."],
+const seats = [
+  { name: "COUNCILMAN 1", role: "TRUTH", tone: "gold", index: "01" },
+  { name: "COUNCILWOMAN 2", role: "ATTACK", tone: "red", index: "02" },
+  { name: "COUNCILMAN 3", role: "ENFORCER", tone: "green", index: "03" },
 ];
-const states=["COLLECT","STRUCTURE","ANALYZE","CHALLENGE","VERIFY","SYNTHESIZE"];
 
-export default function SystemPage(){return <main className="sist-page-shell"><div className="sist-grid pointer-events-none fixed inset-0"/><Navbar/><section className="relative px-6 pb-24 pt-32 sm:px-10"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[1fr_430px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST FRAMEWORK / CONTROLLED INTELLIGENCE PIPELINE</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">THE SYSTEM<br/>IN MOTION</h1><p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">SIST is structured as a controlled pipeline: information enters, competing interpretations are developed, conclusions are challenged, evidence is verified, and surviving intelligence is synthesized for action.</p></div><div className="border border-amber-300/20 bg-white/[0.025] p-6"><p className="text-[9px] tracking-[0.3em] text-gray-600">LIVE ARCHITECTURE / GATED ROUTE</p><div className="mt-7 space-y-3">{["INPUT","REASONING","CHALLENGE","VERIFICATION","OUTPUT"].map((item,i)=><div key={item} className="flex items-center gap-3"><span className={`h-2 w-2 rounded-full ${i===2?"bg-red-400":i===3?"bg-emerald-400":"bg-amber-300"}`}/><span className="h-px w-6 bg-white/10"/><span className="text-[9px] tracking-[0.2em] text-gray-400">{item}</span></div>)}</div></div></div>
+const deliberation = ["INDEPENDENT ANALYSIS", "CHALLENGE", "CROSS-EXAMINATION", "SYNTHESIS"];
 
-<div className="mt-16 overflow-hidden border border-white/10 bg-white/[0.02]"><div className="grid grid-cols-3 border-b border-white/10 bg-white/[0.025] text-[9px] tracking-[0.3em] text-gray-500 md:grid-cols-6">{states.map((state,i)=><div key={state} className="border-r border-white/10 px-4 py-4 last:border-0"><span className={i===3?"text-red-300":i===4?"text-emerald-300":"text-amber-300"}>0{i+1}</span><br/>{state}</div>)}</div><div className="relative p-6 sm:p-8"><div className="absolute left-10 right-10 top-[128px] hidden h-px bg-gradient-to-r from-amber-300/30 via-red-400/60 to-emerald-400/50 lg:block"/><div className="relative grid gap-4 md:grid-cols-5">{methodology.map(([number,title,description],index)=><article key={number} className={`sist-gate-frame relative border bg-black/80 p-6 backdrop-blur ${index===3?"border-red-400/25":index===4?"border-emerald-400/25":"border-amber-300/15"}`}><span className={`font-mono text-xs ${index===3?"text-red-300":index===4?"text-emerald-300":"text-amber-300"}`}>{number}</span><div className="mt-6 flex items-center gap-2"><span className={`h-3 w-3 rounded-full ${index===3?"bg-red-400":index===4?"bg-emerald-400":"bg-amber-300"} shadow-[0_0_14px_currentColor]`}/><span className="h-px flex-1 bg-white/10"/></div><h2 className="mt-5 text-sm font-semibold leading-6 text-gray-200">{title}</h2><p className="mt-3 text-xs leading-6 text-gray-600">{description}</p></article>)}</div></div></div>
+export default function SystemPage() {
+  return (
+    <main className="sist-page-shell min-h-screen overflow-hidden">
+      <div className="sist-grid pointer-events-none fixed inset-0" />
+      <Navbar />
+      <section className="relative px-6 pb-28 pt-32 sm:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-4xl">
+            <p className="text-[9px] tracking-[0.45em] text-amber-300">SIST FRAMEWORK / COUNCIL DELIBERATION</p>
+            <h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">THE SYSTEM<br />IN MOTION</h1>
+            <p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">Three independent seats interrogate the working theory, route competing interpretations through deliberation, and converge only after adversarial scrutiny. The AIP governs what survives.</p>
+          </div>
 
-<div className="mt-8 grid gap-5 md:grid-cols-3"><div className="border border-amber-300/20 bg-amber-300/[0.025] p-7"><p className="text-[9px] tracking-[0.3em] text-amber-300">PRIMARY ROUTE</p><p className="mt-4 text-sm leading-7 text-gray-500">Sequential reasoning moves through controlled gates before intelligence reaches output.</p></div><div className="border border-red-400/20 bg-red-400/[0.025] p-7"><p className="text-[9px] tracking-[0.3em] text-red-300">ADVERSARIAL LAYER</p><p className="mt-4 text-sm leading-7 text-gray-500">Challenge is an active control layer, not a decorative branch of the workflow.</p></div><div className="border border-emerald-400/20 bg-emerald-400/[0.025] p-7"><p className="text-[9px] tracking-[0.3em] text-emerald-300">VERIFICATION GATE</p><p className="mt-4 text-sm leading-7 text-gray-500">Critical claims are checked before the final intelligence product is released.</p></div></div></div></section></main>}
+          <section className="relative mt-16 border border-white/10 bg-white/[0.018] px-5 py-10 sm:px-10 sm:py-14">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent" />
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-[9px] tracking-[0.35em] text-gray-600">LIVE COUNCIL / DELIBERATION CHANNELS</p>
+                <p className="mt-2 text-xs tracking-[0.18em] text-gray-500">INDEPENDENT SEATS · ADVERSARIAL ROUTING · SYNTHESIS</p>
+              </div>
+              <span className="flex items-center gap-2 text-[8px] tracking-[0.25em] text-emerald-300"><i className="sist-live-dot" /> LIVE</span>
+            </div>
+
+            <div className="relative mt-12 min-h-[430px]">
+              <svg className="sist-deliberation-map absolute inset-0 h-full w-full" viewBox="0 0 1000 430" preserveAspectRatio="none" aria-hidden="true">
+                <path className="sist-deliberation-route sist-deliberation-gold" d="M170 95 C300 95 330 190 500 215" />
+                <path className="sist-deliberation-route sist-deliberation-red" d="M500 95 C500 145 500 175 500 215" />
+                <path className="sist-deliberation-route sist-deliberation-green" d="M830 95 C700 95 670 190 500 215" />
+                <path className="sist-deliberation-return sist-deliberation-gold" d="M500 215 C390 260 280 280 170 330" />
+                <path className="sist-deliberation-return sist-deliberation-red" d="M500 215 C500 270 500 300 500 330" />
+                <path className="sist-deliberation-return sist-deliberation-green" d="M500 215 C610 260 720 280 830 330" />
+              </svg>
+
+              <div className="relative grid gap-5 md:grid-cols-3">
+                {seats.map((seat) => (
+                  <article key={seat.name} className={`sist-council-seat sist-seat-${seat.tone} border bg-black/80 p-6 backdrop-blur`}>
+                    <div className="flex items-center justify-between"><span className="font-mono text-[10px] text-gray-600">SEAT {seat.index}</span><span className="sist-seat-orb h-2.5 w-2.5 rounded-full" /></div>
+                    <h2 className="mt-8 text-sm font-semibold tracking-[0.12em] text-gray-200">{seat.name}</h2>
+                    <p className="mt-2 text-[9px] tracking-[0.32em] text-gray-500">{seat.role}</p>
+                    <div className="mt-7 flex items-center gap-2 text-[8px] tracking-[0.22em] text-gray-600"><span className="sist-route-pulse-line flex-1" /> ROUTING <span className="sist-route-pulse-line flex-1" /></div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="relative mx-auto mt-24 max-w-xl">
+                <div className="sist-deliberation-core border border-amber-300/25 bg-black/90 px-7 py-8 text-center shadow-[0_0_70px_rgba(215,173,75,.08)]">
+                  <p className="text-[8px] tracking-[0.4em] text-amber-300">DELIBERATION / ACTIVE</p>
+                  <h2 className="mt-3 text-lg font-semibold tracking-[0.22em] text-gray-200">SYNTHESIS</h2>
+                  <div className="mt-5 flex flex-wrap justify-center gap-2">{deliberation.map((item) => <span key={item} className="border border-white/10 px-3 py-1.5 text-[7px] tracking-[0.2em] text-gray-500">{item}</span>)}</div>
+                  <span className="sist-synthesis-orbit sist-synthesis-orbit-a" /><span className="sist-synthesis-orbit sist-synthesis-orbit-b" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative mx-auto mt-8 max-w-4xl">
+            <div className="sist-aip-bridge" />
+            <div className="sist-aip-engine border border-amber-300/25 bg-black/90 p-7 text-center">
+              <p className="text-[8px] tracking-[0.4em] text-amber-300">ADVERSARIAL INTEGRATION PROTOCOL</p>
+              <h2 className="mt-3 text-xl font-semibold tracking-[0.2em] text-gray-200">AIP ENGINE</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-xs leading-6 text-gray-600">Deliberation is not the endpoint. The AIP challenges the integrated theory, exposes vulnerabilities, forces correction, and controls what is allowed to advance.</p>
+              <div className="mt-7 flex flex-wrap items-center justify-center gap-2 text-[8px] tracking-[0.18em]">
+                {[["HIGH RISK", "amber"], ["INDEPENDENT ANALYSIS", "gold"], ["VULNERABILITIES EXPOSED", "red"], ["ADVERSARIAL ATTACK", "red"], ["CORRECTION", "gold"], ["SURVIVES", "green"]].map(([label, tone], i) => <span key={label} className={`sist-aip-step sist-aip-${tone}`}><b>{String(i + 1).padStart(2, "0")}</b>{label}</span>)}
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  );
+}
