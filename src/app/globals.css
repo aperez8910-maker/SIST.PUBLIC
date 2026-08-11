@@ -28,6 +28,27 @@ body {
 @keyframes sist-core { 0%,100% { box-shadow: 0 0 55px rgba(215,173,75,.12), inset 0 0 24px rgba(215,173,75,.04); } 50% { box-shadow: 0 0 90px rgba(215,173,75,.28), inset 0 0 32px rgba(215,173,75,.1); } }
 @keyframes sist-route-pulse { 0%,100% { opacity: .28; } 50% { opacity: .8; } }
 
+/* Sentinel orbit system */
+@keyframes sist-sentinel-orbit-a {
+  from { transform: rotate(0deg) translateX(118px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(118px) rotate(-360deg); }
+}
+
+@keyframes sist-sentinel-orbit-b {
+  from { transform: rotate(180deg) translateX(154px) rotate(-180deg); }
+  to { transform: rotate(540deg) translateX(154px) rotate(-540deg); }
+}
+
+@keyframes sist-sentinel-pulse {
+  0%,100% { transform: scale(.82); opacity: .45; box-shadow: 0 0 0 0 rgba(56,227,154,0); }
+  50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 18px 5px rgba(56,227,154,.18); }
+}
+
+@keyframes sist-orbit-spin { to { transform: rotate(360deg); } }
+@keyframes sist-node-active { 0%,100% { opacity: .35; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.2); } }
+@keyframes sist-node-ring { 0%,100% { opacity: .12; transform: scale(.82); } 50% { opacity: .55; transform: scale(1.16); } }
+@keyframes sist-floor-sweep { from { transform: translateX(-120%); } to { transform: translateX(220%); } }
+
 .sist-flow-line { stroke-dasharray: 5 16; animation: sist-flow 1.8s linear infinite; }
 .sist-data-track { animation: sist-track 3s linear infinite; }
 .sist-gate { animation: sist-gate 4s ease-in-out infinite; }
@@ -39,7 +60,7 @@ body {
 .sist-gate:nth-child(7) { animation-delay: 1.08s; }
 .sist-gate:nth-child(8) { animation-delay: 1.26s; }
 .sist-gate-frame { border: 1px solid rgba(215,173,75,.08); border-left-color: rgba(215,173,75,.35); border-right-color: rgba(215,173,75,.35); clip-path: polygon(0 12px,12px 0,calc(100% - 12px) 0,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px)); }
-.sist-core-mark { animation: sist-core 3s ease-in-out infinite; }
+.sist-core-mark { animation: sist-core 3s ease-in-out infinite; position: relative; z-index: 40; }
 .sist-logo { display: block; mix-blend-mode: screen; filter: drop-shadow(0 0 8px rgba(215,173,75,.12)); }
 .sist-status { animation: sist-pulse 3s ease-in-out infinite; }
 .sist-scan { height: 18%; background: linear-gradient(to bottom, transparent, rgba(215,173,75,.035), transparent); animation: sist-scan 10s linear infinite; }
@@ -51,6 +72,77 @@ body {
 .sist-button:hover { background: #d7ad4b; color: #020304; box-shadow: 0 0 35px rgba(215,173,75,.18); }
 .sist-button:hover i { transform: translate(3px,-3px); opacity: 1; }
 
+/* Two independent SENTINELS orbit the SIST core. They remain visually tied to the pipeline rather than floating like decoration. */
+.sist-core-mark::before,
+.sist-core-mark::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.sist-core-mark::before {
+  background: #38e39a;
+  border: 1px solid rgba(255,255,255,.8);
+  animation: sist-sentinel-orbit-a 7s linear infinite, sist-sentinel-pulse 1.8s ease-in-out infinite;
+}
+
+.sist-core-mark::after {
+  background: #ff4d5e;
+  border: 1px solid rgba(255,255,255,.7);
+  animation: sist-sentinel-orbit-b 10s linear infinite, sist-sentinel-pulse 2.4s ease-in-out infinite .4s;
+}
+
+/* Concentric operational rings make the core read as a live command node. */
+.sist-core-mark {
+  box-shadow:
+    0 0 0 22px rgba(215,173,75,.025),
+    0 0 0 23px rgba(215,173,75,.16),
+    0 0 0 58px rgba(255,255,255,.018),
+    0 0 0 59px rgba(56,227,154,.10),
+    0 0 55px rgba(215,173,75,.12),
+    inset 0 0 24px rgba(215,173,75,.04);
+}
+
+/* Active gate nodes: every stage gets a live halo instead of looking like a static card. */
+.sist-gate::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px;
+  border: 1px solid rgba(215,173,75,.28);
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+  animation: sist-node-ring 2.6s ease-in-out infinite;
+}
+
+.sist-gate:nth-child(2)::before { animation-delay: .25s; }
+.sist-gate:nth-child(3)::before { animation-delay: .5s; }
+.sist-gate:nth-child(4)::before { animation-delay: .75s; }
+.sist-gate:nth-child(5)::before { animation-delay: 1s; }
+.sist-gate:nth-child(6)::before { animation-delay: 1.25s; }
+.sist-gate:nth-child(7)::before { animation-delay: 1.5s; }
+.sist-gate:nth-child(8)::before { animation-delay: 1.75s; }
+
+/* Moving energy sweep across the work floor. */
+.sist-flow-line + .sist-floor-sweep { position: absolute; }
+
+@media (max-width: 900px) {
+  .sist-core-mark::before { animation-name: sist-sentinel-orbit-a, sist-sentinel-pulse; }
+  .sist-core-mark::after { animation-name: sist-sentinel-orbit-b, sist-sentinel-pulse; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .sist-flow-line, .sist-data-track, .sist-gate, .sist-status, .sist-core-mark, .sist-scan { animation: none !important; }
+  .sist-flow-line, .sist-data-track, .sist-gate, .sist-status, .sist-core-mark, .sist-scan,
+  .sist-core-mark::before, .sist-core-mark::after, .sist-gate::before { animation: none !important; }
 }
