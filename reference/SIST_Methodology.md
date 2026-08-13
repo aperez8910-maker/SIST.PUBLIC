@@ -1,129 +1,33 @@
-# SIST METHODOLOGY
+# SIST™ — Public Methodology Overview
 
-## Adversarial Integration Protocol (AIP)
+This document provides a deliberately high-level description of SIST™ for public reference.
 
-The Adversarial Integration Protocol is the core analytical methodology of SIST.
+SIST™ uses structured intelligence, multiple analytical perspectives, adversarial examination, synthesis, and human-controlled decision support.
 
-AIP is designed to prevent incomplete analysis by forcing information through structured review, challenge, and synthesis.
+## Public principle
 
-The objective is not simply to generate answers.
+Information is examined from multiple perspectives before a conclusion is treated as intelligence.
 
-The objective is to produce intelligence that has been examined from multiple perspectives.
+## Public workflow
 
----
+At a high level, SIST may involve:
 
-# SIST Intelligence Pipeline
+1. Intake and definition of the matter
+2. Organization of available information
+3. Research and source development
+4. Analytical examination
+5. Adversarial challenge
+6. Strategic synthesis
+7. Delivery of decision-support output
 
-## Stage 01 — Intake
+## What is intentionally omitted
 
-Purpose:
+This public document does **not** disclose proprietary prompt logic, agent instructions, routing rules, sentinel rules, scoring systems, evaluation criteria, internal schemas, orchestration mechanics, deployment controls, private integrations, or other confidential implementation details.
 
-Define the objective, collect information, and establish the scope of analysis.
+The public workflow is conceptual and should not be treated as a specification from which the private SIST implementation can be reconstructed.
 
-Inputs:
+## Core principle
 
-- Documents
-- Records
-- Data
-- Questions
-- Objectives
+**Every conclusion must survive examination.**
 
----
-
-## Stage 02 — Organization
-
-Purpose:
-
-Structure fragmented information into an organized intelligence environment.
-
-Processes:
-
-- Classification
-- Categorization
-- Timeline creation
-- Entity identification
-
----
-
-## Stage 03 — Research
-
-Purpose:
-
-Acquire additional information necessary for understanding.
-
-Processes:
-
-- Source review
-- Regulatory research
-- Background analysis
-- Context development
-
----
-
-## Stage 04 — Analysis
-
-Purpose:
-
-Identify patterns, relationships, contradictions, and significant findings.
-
-Processes:
-
-- Comparative analysis
-- Pattern recognition
-- Risk identification
-- Issue identification
-
----
-
-## Stage 05 — Adversarial Review
-
-Purpose:
-
-Challenge assumptions and test conclusions.
-
-Processes:
-
-- Counterarguments
-- Weakness identification
-- Alternative explanations
-- Stress testing
-
----
-
-## Stage 06 — Strategic Synthesis
-
-Purpose:
-
-Combine findings into a structured intelligence product.
-
-Outputs:
-
-- Reports
-- Summaries
-- Findings
-- Strategic options
-
----
-
-## Stage 07 — Deployment
-
-Purpose:
-
-Deliver actionable intelligence.
-
-Outputs:
-
-- Recommendations
-- Decisions
-- Strategic actions
-- Operational plans
-
----
-
-# Core SIST Principle
-
-Every conclusion must survive examination.
-
-Information becomes intelligence through:
-
-Organization → Analysis → Challenge → Synthesis → Action
+© 2026 Alexander Emilio Perez. All rights reserved.
