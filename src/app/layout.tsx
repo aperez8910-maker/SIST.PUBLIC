@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./sist-reference-theme.css";
+import "./sist-cinematic-3d.css";
 import Footer from "@/components/Footer";
 
 const siteUrl = "https://systemintelligenceandstrategictactics.com";
