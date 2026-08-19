@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 type IconName = "search" | "evidence" | "strategy" | "operations" | "institution" | "scales" | "health" | "consumer" | "court" | "target" | "binoculars" | "cross" | "puzzle" | "network" | "chess" | "shield" | "review" | "chart";
 
@@ -26,7 +27,7 @@ const social = [
 function Icon({ name, size = 44 }: { name: IconName | "eagle"; size?: number }) {
   const common = { width: size, height: size, viewBox: "0 0 64 64", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   if (name === "eagle") return <svg {...common}><path d="M8 23c8-8 17-11 24-8 7-3 16 0 24 8-8-2-14 0-19 5l-5 8-5-8c-5-5-11-7-19-5Z"/><path d="M24 25c4 3 7 5 8 10 1-5 4-7 8-10"/><circle cx="42" cy="24" r="1.5" fill="currentColor" stroke="none"/><path d="M31 35l-5 13M35 35l5 13"/></svg>;
-  const paths: Record<string, React.ReactNode> = {
+  const paths: Record<string, ReactNode> = {
     search: <><circle cx="28" cy="28" r="14"/><path d="m39 39 14 14"/><path d="M28 20v16M20 28h16"/></>,
     evidence: <><circle cx="32" cy="32" r="22"/><circle cx="24" cy="28" r="5"/><circle cx="41" cy="21" r="3"/><circle cx="42" cy="42" r="5"/><path d="M28 30l10-7M28 34l9 6"/></>,
     strategy: <><path d="m17 48 30-32M19 18l27 28"/><path d="M11 14h12M41 50h12"/><path d="M17 10v8M47 46v8"/></>,
