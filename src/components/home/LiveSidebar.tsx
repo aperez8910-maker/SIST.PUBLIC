@@ -17,8 +17,8 @@ const STATUS_TONE: Record<string, { border: string; text: string; bg: string; ba
 const STATUS_ITEMS = [
   { label: "LEGAL INTELLIGENCE", count: 14, tone: "amber" },
   { label: "HEALTHCARE ACCOUNTABILITY", count: 9, tone: "green" },
-  { label: "CONSUMER ADVOCACY", count: 11, tone: "teal" },
-  { label: "INSTITUTIONAL ACCOUNTABILITY", count: 6, tone: "red" },
+  { label: "CONSUMER ADVOCACY", count: 7, tone: "teal" },
+  { label: "INSTITUTIONAL ACCOUNTABILITY", count: 11, tone: "red" },
 ];
 
 const BASE_FEED: FeedItem[] = [
