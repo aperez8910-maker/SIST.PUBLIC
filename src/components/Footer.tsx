@@ -46,7 +46,6 @@ export default function Footer() {
               <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">
                 <a href="mailto:support@systemintelligenceandstrategictactics.com" className="hover:text-amber-200">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</a>
               </div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">+1 (512) 866-0147</div>
             </div>
           </div>
         </div>
