@@ -5,11 +5,11 @@ import LiveSidebar from "@/components/home/LiveSidebar";
 const stages = [
   { n: "1", title: "DEFINE", tag: "VERIFIED" },
   { n: "2", title: "GATHER", tag: "SIGNAL" },
-  { n: "3", title: "CHALLENGE", tag: "" },
-  { n: "4", title: "DECONSTRUCT", tag: "REVIEW" },
+  { n: "3", title: "CHALLENGE", tag: "REVIEW" },
+  { n: "4", title: "DECONSTRUCT", tag: "VERIFIED" },
   { n: "5", title: "SYNTHESIZE", tag: "SIGNAL" },
-  { n: "6", title: "STRATEGIZE", tag: "" },
-  { n: "7", title: "EXECUTE", tag: "VERIFIED" },
+  { n: "6", title: "STRATEGIZE", tag: "REVIEW" },
+  { n: "7", title: "EXECUTE", tag: "" },
   { n: "8", title: "REVIEW", tag: "" },
   { n: "9", title: "IMPROVE", tag: "REVIEW" },
 ] as const;

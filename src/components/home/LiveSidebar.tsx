@@ -22,12 +22,10 @@ const STATUS_ITEMS = [
 ];
 
 const BASE_FEED: FeedItem[] = [
-  { time: "09:42", text: "Activity detected: regulatory filing anomaly identified" },
-  { time: "09:41", text: "Review node active: evidentiary timeline reconciliation" },
-  { time: "09:40", text: "Council node cleared: adversarial challenge accepted" },
-  { time: "09:39", text: "Source confirmed: supplemental record intake complete" },
-  { time: "09:38", text: "Red team attack module: contradiction surface expanded" },
-  { time: "09:37", text: "Verification sentinel: cross-check initiated" },
+  { time: "09:42", text: "Activity detected: Regulatory filing anomaly identified" },
+  { time: "09:31", text: "New signal captured: Healthcare billing pattern" },
+  { time: "09:17", text: "Legal motion flagged for inconsistency review" },
+  { time: "09:03", text: "Source validation: Financial disclosure mismatch" },
 ];
 
 const EXTRA_FEED: FeedItem[] = [
