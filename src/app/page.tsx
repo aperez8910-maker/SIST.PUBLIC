@@ -72,8 +72,8 @@ export default function Home() {
           <h1>INTELLIGENCE<br />UNDER<br /><em>PRESSURE.</em></h1>
           <p>Challenge everything. Trust what survives.</p>
           <div className="hero-actions">
-            <Link href="/system" className="sist-button"><span>EXPLORE SIST</span><i>↗</i></Link>
-            <Link href="/interactive" className="sist-button secondary">VIEW WORKFLOW</Link>
+            <Link href="/system" className="sist-button"><span>EXPLORE SIST</span><i aria-hidden="true">→</i></Link>
+            <Link href="/interactive" className="sist-button secondary">VIEW WORKFLOW<i aria-hidden="true">→</i></Link>
           </div>
         </div>
 
