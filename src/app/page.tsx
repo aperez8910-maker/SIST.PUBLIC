@@ -15,6 +15,17 @@ const networkNodes = [
   { id: "9", label: "REVIEW", top: "12%", left: "73%" },
 ];
 
+const nodeLinks = [
+  ["52", "10", "42", "16"],
+  ["42", "16", "41", "26"],
+  ["41", "26", "45", "38"],
+  ["45", "38", "54", "46"],
+  ["54", "46", "67", "42"],
+  ["67", "42", "77", "26"],
+  ["77", "26", "73", "12"],
+  ["73", "12", "52", "10"],
+];
+
 const steps = [
   { n: "1", label: "DEFINE" },
   { n: "2", label: "GATHER" },
@@ -126,17 +137,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-8 lg:px-10 border-b border-white/[0.12] bg-[#050810]/85 backdrop-blur-xl">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10">
-            <svg viewBox="0 0 40 40" className="w-full h-full">
-              <circle cx="20" cy="20" r="18" stroke="rgba(201,168,76,0.4)" strokeWidth="1" fill="none" />
-              <circle cx="20" cy="20" r="14" stroke="rgba(201,168,76,0.2)" strokeWidth="0.5" fill="none" />
-              <circle cx="20" cy="20" r="2.5" fill="#c9a84c" />
-              <circle cx="12" cy="10" r="1.5" fill="rgba(201,168,76,0.6)" />
-              <circle cx="30" cy="14" r="1" fill="rgba(201,168,76,0.4)" />
-              <circle cx="28" cy="30" r="1.2" fill="rgba(201,168,76,0.5)" />
-              <line x1="20" y1="20" x2="12" y2="10" stroke="rgba(201,168,76,0.2)" strokeWidth="0.5" />
-              <line x1="20" y1="20" x2="30" y2="14" stroke="rgba(201,168,76,0.2)" strokeWidth="0.5" />
-              <line x1="20" y1="20" x2="28" y2="30" stroke="rgba(201,168,76,0.2)" strokeWidth="0.5" />
-            </svg>
+            <Image src="/logo.png" alt="SIST™" width={40} height={40} priority className="object-contain" />
           </div>
           <span className="text-xl font-extrabold tracking-[0.15em] text-white">SIST™</span>
         </Link>
@@ -166,24 +167,22 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#050810] via-transparent to-transparent" />
           </div>
 
-          <svg className="absolute inset-0 w-full h-full z-[4] pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <line x1="52" y1="10" x2="42" y2="16" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="42" y1="16" x2="41" y2="26" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="41" y1="26" x2="45" y2="38" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="45" y1="38" x2="54" y2="46" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="54" y1="46" x2="67" y2="42" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="67" y1="42" x2="77" y2="26" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="77" y1="26" x2="73" y2="12" stroke="#c9a84c" strokeWidth="0.15" />
-            <line x1="73" y1="12" x2="52" y2="10" stroke="#c9a84c" strokeWidth="0.15" />
+          <svg className="absolute inset-0 w-full h-full z-[4] pointer-events-none opacity-25" viewBox="0 0 100 100" preserveAspectRatio="none">
+            {nodeLinks.map((link, idx) => (
+              <line key={idx} x1={link[0]} y1={link[1]} x2={link[2]} y2={link[3]} stroke="#c9a84c" strokeWidth="0.18" className="animate-pulse" style={{ animationDelay: `${idx * 0.3}s` }} />
+            ))}
           </svg>
 
           {mounted &&
-            networkNodes.map((node) => (
+            networkNodes.map((node, idx) => (
               <div key={node.id} className="absolute flex flex-col items-center gap-1 z-[5] pointer-events-none hidden lg:flex" style={{ top: node.top, left: node.left }}>
-                <div className="w-9 h-9 rounded-full border border-[#c9a84c]/50 bg-[#050810]/80 flex items-center justify-center text-xs font-bold text-[#c9a84c] shadow-[0_0_15px_rgba(201,168,76,0.15)]">
-                  {node.id}
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-full border border-[#c9a84c]/30 animate-ping" style={{ animationDelay: `${idx * 0.4}s` }} />
+                  <div className="w-9 h-9 rounded-full border border-[#c9a84c]/60 bg-[#050810]/80 flex items-center justify-center text-xs font-bold text-[#c9a84c] shadow-[0_0_18px_rgba(201,168,76,0.25)]">
+                    {node.id}
+                  </div>
                 </div>
-                <span className="text-[7px] tracking-[0.15em] text-[#c9a84c]/70 font-medium">{node.label}</span>
+                <span className="text-[7px] tracking-[0.15em] text-[#c9a84c]/80 font-medium">{node.label}</span>
               </div>
             ))}
 
@@ -327,7 +326,7 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <div className="text-[10px] tracking-[0.15em] text-[#8892a0]">CONTACT@SIST.INTEL</div>
+                <div className="text-[10px] tracking-[0.15em] text-[#8892a0]">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</div>
               </div>
             </div>
           </div>
@@ -359,22 +358,16 @@ export default function Home() {
         <div className="flex-1 overflow-y-auto p-5 space-y-6">
           <div>
             <h4 className="text-[9px] tracking-[0.2em] text-[#8892a0] mb-3 font-semibold">THREAT LANDSCAPE</h4>
-            <div className="h-32 rounded border border-white/[0.12] bg-white/[0.05] relative overflow-hidden">
-              {[
-                { s: 3, c: "#c9a84c", t: 30, l: 20, d: 0 },
-                { s: 2, c: "#c9a84c", t: 25, l: 35, d: 0.5 },
-                { s: 3, c: "#10b981", t: 40, l: 50, d: 1 },
-                { s: 2, c: "#c9a84c", t: 35, l: 65, d: 1.5 },
-                { s: 3, c: "#3b82f6", t: 50, l: 75, d: 0.3 },
-                { s: 2, c: "#c9a84c", t: 45, l: 85, d: 0.8 },
-                { s: 2, c: "#c9a84c", t: 55, l: 25, d: 1.2 },
-                { s: 3, c: "#a855f7", t: 60, l: 55, d: 0.7 },
-              ].map((dot, i) => (
-                <div key={i} className="absolute rounded-full animate-pulse" style={{ width: dot.s, height: dot.s, background: dot.c, top: `${dot.t}%`, left: `${dot.l}%`, animationDelay: `${dot.d}s`, opacity: 0.7 }} />
-              ))}
-              <svg className="absolute inset-0 w-full h-full opacity-5" viewBox="0 0 100 60" preserveAspectRatio="none">
-                <path d="M10,30 Q30,20 50,30 T90,30" fill="none" stroke="#c9a84c" strokeWidth="0.3" />
-                <path d="M15,35 Q35,25 55,35 T85,35" fill="none" stroke="#c9a84c" strokeWidth="0.2" />
+            <div className="h-32 rounded border border-white/[0.12] bg-[#020304] relative overflow-hidden">
+              <svg viewBox="0 0 220 80" className="h-full w-full" aria-hidden="true">
+                <circle cx="38" cy="28" r="2" className="fill-[#c9a84c]/90 animate-pulse" />
+                <circle cx="72" cy="52" r="1.5" className="fill-[#c9a84c]/75 animate-pulse" style={{ animationDelay: "0.4s" }} />
+                <circle cx="106" cy="22" r="2" className="fill-[#10b981]/90 animate-pulse" style={{ animationDelay: "0.8s" }} />
+                <circle cx="138" cy="46" r="1.5" className="fill-[#c9a84c]/75 animate-pulse" style={{ animationDelay: "1.2s" }} />
+                <circle cx="170" cy="30" r="2" className="fill-[#3b82f6]/90 animate-pulse" style={{ animationDelay: "1.6s" }} />
+                <circle cx="192" cy="58" r="1.5" className="fill-[#a855f7]/80 animate-pulse" style={{ animationDelay: "2s" }} />
+                <path d="M38 28 C60 14 88 42 106 22 S152 18 170 30 S188 48 192 58" fill="none" stroke="#c9a84c" strokeOpacity="0.28" strokeWidth="1" />
+                <path d="M38 28 C80 60 120 30 138 46 S172 54 192 58" fill="none" stroke="#10b981" strokeOpacity="0.22" strokeWidth="1" />
               </svg>
             </div>
           </div>

@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_#f59e0b]" />
-                CHANNEL
+                SUPPORT
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">
                 <a href="mailto:support@systemintelligenceandstrategictactics.com" className="hover:text-amber-200">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</a>
