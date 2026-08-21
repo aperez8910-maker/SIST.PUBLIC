@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="border-t border-amber-300/18 bg-[#020304] px-6 py-8 text-white">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <h2 className="text-lg font-bold tracking-[0.18em] text-amber-200">SYSTEM INTELLIGENCE AND STRATEGIC TACTICS™</h2>
+            <div className="flex items-center gap-3">
+              <Image src="/logo.png" alt="SIST™" width={46} height={46} priority className="object-contain" />
+              <h2 className="text-lg font-bold tracking-[0.18em] text-amber-200">SYSTEM INTELLIGENCE AND STRATEGIC TACTICS™</h2>
+            </div>
             <p className="mt-2 text-xs leading-6 text-gray-400">
               Adversarial intelligence architecture for structured research, challenge, verification, and decision support.
             </p>
@@ -13,7 +18,7 @@ export default function Footer() {
           <div className="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4">
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
+                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
                 SECURE CHANNEL
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">ALL COMMUNICATIONS ENCRYPTED</div>
@@ -22,7 +27,7 @@ export default function Footer() {
 
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
+                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
                 SYSTEM STATUS
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-emerald-300">OPERATIONAL</div>
@@ -31,7 +36,7 @@ export default function Footer() {
 
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_#f59e0b]" />
+                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
                 AIP SENTINEL™
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">CHALLENGE ACTIVE</div>
@@ -40,7 +45,7 @@ export default function Footer() {
 
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_#f59e0b]" />
+                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
                 SUPPORT
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">
