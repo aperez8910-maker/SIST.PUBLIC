@@ -2,15 +2,15 @@ import Navbar from "@/components/Navbar";
 
 export default function StrategicDivision() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#050810] text-white">
 
       <Navbar />
 
-      <section className="px-6 pt-32 pb-20">
+      <section className="px-4 sm:px-8 py-5 sm:py-6">
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
 
-          <p className="text-sm tracking-[0.5em] text-gray-400">
+          <p className="text-sm tracking-[0.5em] text-[#8892a0]">
             DIVISION 05
           </p>
 
@@ -33,14 +33,14 @@ export default function StrategicDivision() {
           </p>
 
 
-          <div className="mt-16 border border-gray-800 p-10">
+          <div className="mt-16 border border-white/10 p-6">
 
             <h2 className="text-3xl font-bold">
               Focus Areas
             </h2>
 
 
-            <ul className="mt-6 space-y-3 text-gray-400">
+            <ul className="mt-6 space-y-3 text-[#8892a0]">
 
               <li>
                 • Strategic planning analysis
@@ -67,14 +67,14 @@ export default function StrategicDivision() {
           </div>
 
 
-          <div className="mt-10 border border-gray-800 p-10">
+          <div className="mt-10 border border-white/10 p-6">
 
             <h2 className="text-3xl font-bold">
               Mission
             </h2>
 
 
-            <p className="mt-5 text-gray-400">
+            <p className="mt-5 text-[#8892a0]">
               To convert intelligence findings into strategic
               understanding that supports better decisions,
               planning, and organizational direction.
@@ -83,14 +83,14 @@ export default function StrategicDivision() {
           </div>
 
 
-          <div className="mt-10 border border-gray-800 p-10">
+          <div className="mt-10 border border-white/10 p-6">
 
             <h2 className="text-3xl font-bold">
               Intelligence Approach
             </h2>
 
 
-            <p className="mt-5 text-gray-400">
+            <p className="mt-5 text-[#8892a0]">
               Strategic intelligence requires more than collecting
               information. SIST combines analysis, challenge,
               verification, and synthesis to develop meaningful

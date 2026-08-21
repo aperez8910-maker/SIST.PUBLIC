@@ -2,15 +2,15 @@ import Navbar from "@/components/Navbar";
 
 export default function HealthcareDivision() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#050810] text-white">
 
       <Navbar />
 
-      <section className="px-6 pt-32 pb-20">
+      <section className="px-4 sm:px-8 py-5 sm:py-6">
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
 
-          <p className="text-sm tracking-[0.5em] text-gray-400">
+          <p className="text-sm tracking-[0.5em] text-[#8892a0]">
             DIVISION 02
           </p>
 
@@ -32,14 +32,14 @@ export default function HealthcareDivision() {
           </p>
 
 
-          <div className="mt-16 border border-gray-800 p-10">
+          <div className="mt-16 border border-white/10 p-6">
 
             <h2 className="text-3xl font-bold">
               Focus Areas
             </h2>
 
 
-            <ul className="mt-6 space-y-3 text-gray-400">
+            <ul className="mt-6 space-y-3 text-[#8892a0]">
 
               <li>
                 • Medical record organization and analysis
@@ -66,14 +66,14 @@ export default function HealthcareDivision() {
           </div>
 
 
-          <div className="mt-10 border border-gray-800 p-10">
+          <div className="mt-10 border border-white/10 p-6">
 
             <h2 className="text-3xl font-bold">
               Mission
             </h2>
 
 
-            <p className="mt-5 text-gray-400">
+            <p className="mt-5 text-[#8892a0]">
               To help individuals and organizations better understand
               complex healthcare environments through structured
               intelligence, documentation, and analysis.

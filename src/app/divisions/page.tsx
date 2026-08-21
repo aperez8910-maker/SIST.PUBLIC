@@ -12,12 +12,12 @@ const accents = [
 
 export default function DivisionsPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#020304] text-white">
+    <main className="relative min-h-screen overflow-hidden bg-[#050810] text-white">
       <div className="sist-grid pointer-events-none fixed inset-0" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(215,173,75,.10),transparent_34%)]" />
       <Navbar />
 
-      <section className="relative px-6 pb-24 pt-32 sm:px-10">
+      <section className="relative px-4 sm:px-8 py-5 sm:py-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end">
             <div>
@@ -26,17 +26,17 @@ export default function DivisionsPage() {
                 SIST / SPECIALIZED INTELLIGENCE NETWORK
               </div>
               <h1 className="sist-metal mt-6 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">DIVISIONAL<br />INTELLIGENCE</h1>
-              <p className="mt-7 max-w-3xl text-base leading-8 text-gray-400 md:text-lg">
+              <p className="mt-7 max-w-3xl text-base leading-8 text-[#8892a0] md:text-lg">
                 Specialized environments operating on one common intelligence architecture. Each division applies the same disciplined pipeline while adapting its evidence, risks, and decision requirements to the mission.
               </p>
             </div>
 
             <div className="border border-white/10 bg-white/[0.025] p-6 backdrop-blur">
-              <div className="flex justify-between text-[9px] tracking-[0.3em] text-gray-500"><span>NETWORK STATUS</span><span className="text-emerald-300">ONLINE</span></div>
+              <div className="flex justify-between text-[9px] tracking-[0.3em] text-[#8892a0]"><span>NETWORK STATUS</span><span className="text-emerald-300">ONLINE</span></div>
               <div className="mt-5 flex items-center gap-2">
                 {divisions.map((division, i) => <span key={division.number} className={`h-1.5 flex-1 ${accents[i % accents.length].dot} opacity-70`} />)}
               </div>
-              <p className="mt-5 text-xs leading-6 text-gray-500">Five specialized domains. One controlled intelligence architecture.</p>
+              <p className="mt-5 text-xs leading-6 text-[#8892a0]">Five specialized domains. One controlled intelligence architecture.</p>
             </div>
           </div>
 
@@ -51,9 +51,9 @@ export default function DivisionsPage() {
                     <span className={`h-2 w-2 rounded-full ${accent.dot} shadow-[0_0_12px_currentColor]`} />
                   </div>
                   <h2 className="relative mt-6 text-2xl font-semibold tracking-tight">{division.title}</h2>
-                  <p className="relative mt-4 max-w-xl text-sm leading-7 text-gray-500">{division.description}</p>
+                  <p className="relative mt-4 max-w-xl text-sm leading-7 text-[#8892a0]">{division.description}</p>
                   <div className="relative mt-7 flex items-center justify-between border-t border-white/10 pt-5">
-                    <span className="text-[9px] tracking-[0.3em] text-gray-600">SPECIALIZED NODE</span>
+                    <span className="text-[9px] tracking-[0.3em] text-[#8892a0]">SPECIALIZED NODE</span>
                     <span className={`text-[10px] tracking-[0.2em] ${accent.label}`}>ACCESS →</span>
                   </div>
                 </Link>

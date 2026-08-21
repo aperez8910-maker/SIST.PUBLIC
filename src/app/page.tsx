@@ -198,9 +198,9 @@ export default function Home() {
       )}
 
       {/* ===== MAIN CONTENT ===== */}
-      <div className="xl:pr-80">
+      <div className="xl:pr-72">
         {/* ===== HERO ===== */}
-        <section className="relative min-h-[100svh] pt-16 flex items-center overflow-hidden">
+        <section className="relative min-h-[100svh] pt-14 sm:pt-16 flex items-center overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,rgba(10,20,40,0.6)_0%,transparent_60%)]" />
 
           <div className="absolute right-[-10%] sm:right-[-5%] top-0 w-[85%] sm:w-[70%] h-full z-[1] opacity-90">
@@ -228,7 +228,7 @@ export default function Home() {
               </div>
             ))}
 
-          <div className="relative z-10 px-5 sm:px-10 lg:px-14 max-w-xl pt-8 sm:pt-0">
+          <div className="relative z-10 px-5 sm:px-10 lg:px-14 max-w-xl pt-6 sm:pt-0">
             <div className="text-[8px] sm:text-[9px] font-bold tracking-[0.36em] text-[#c9a84c] mb-3 sm:mb-4">SYSTEM INTELLIGENCE & STRATEGIC TACTICS™</div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white mb-4 sm:mb-5">
               INTELLIGENCE
@@ -264,10 +264,10 @@ export default function Home() {
         </section>
 
         {/* ===== WORKFLOW ===== */}
-        <section className="py-6 sm:py-7 px-4 sm:px-8 lg:px-10 bg-white/[0.03] border-y border-white/[0.12] flex flex-col md:flex-row md:items-center gap-6 sm:gap-8">
+        <section className="py-5 sm:py-6 px-4 sm:px-8 lg:px-10 bg-white/[0.03] border-y border-white/[0.12] flex flex-col md:flex-row md:items-center gap-6 sm:gap-8">
           <div className="md:w-40 flex-shrink-0">
-            <h3 className="text-sm font-bold tracking-wide text-white mb-1">AIP™ ADVERSARIAL INTEGRATION PROTOCOL</h3>
-            <p className="text-xs text-[#8892a0] leading-relaxed">
+            <h3 className="text-xs sm:text-sm font-bold tracking-wide text-white mb-1">AIP™ ADVERSARIAL INTEGRATION PROTOCOL</h3>
+            <p className="text-[10px] sm:text-xs text-[#8892a0] leading-relaxed">
               A rigorous process.
               <br />
               Built for clarity in complexity.
@@ -277,11 +277,11 @@ export default function Home() {
             <div className="flex items-center min-w-max gap-0">
               {steps.map((s, i, arr) => (
                 <div key={s.n} className="flex items-center">
-                  <div className="flex flex-col items-center gap-2 group cursor-default">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#c9a84c]/40 group-hover:border-[#c9a84c] group-hover:bg-[#c9a84c]/10 transition-all flex items-center justify-center text-sm font-bold text-[#c9a84c] bg-[#050810]/50">
+                  <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-default">
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-[#c9a84c]/40 group-hover:border-[#c9a84c] group-hover:bg-[#c9a84c]/10 transition-all flex items-center justify-center text-sm font-bold text-[#c9a84c] bg-[#050810]/50">
                       {s.n}
                     </div>
-                    <span className="text-[8px] sm:text-[9px] tracking-[0.12em] text-[#8892a0] group-hover:text-white transition-colors font-medium">{s.label}</span>
+                    <span className="text-[7px] sm:text-[9px] tracking-[0.12em] text-[#8892a0] group-hover:text-white transition-colors font-medium">{s.label}</span>
                   </div>
                   {i < arr.length - 1 && <div className="w-5 sm:w-6 lg:w-10 h-px mx-1 bg-gradient-to-r from-[#c9a84c]/30 to-[#c9a84c]/10 mb-4 sm:mb-5" />}
                 </div>
@@ -293,7 +293,7 @@ export default function Home() {
         {/* ===== DIVISIONS ===== */}
         <section id="divisions" className="p-3 sm:p-4 lg:p-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
           {divisions.map((d) => (
-            <div key={d.title} className="group relative rounded-lg border border-white/[0.12] bg-white/[0.06] overflow-hidden hover:border-[#c9a84c]/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.08),inset_0_1px_0_rgba(255,255,255,0.03)] transition-all duration-400 cursor-pointer min-h-[240px] sm:min-h-[280px] flex flex-col">
+            <div key={d.title} className="group relative rounded-lg border border-white/[0.12] bg-white/[0.06] overflow-hidden hover:border-[#c9a84c]/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.08),inset_0_1px_0_rgba(255,255,255,0.03)] transition-all duration-400 cursor-pointer min-h-[220px] sm:min-h-[260px] flex flex-col">
               <div className="absolute inset-0 bg-gradient-to-t from-[#050810] via-[#050810]/85 to-[#050810]/50" />
               <div className="relative z-10 p-4 sm:p-6 flex flex-col h-full">
                 <div className="flex items-start gap-3 sm:gap-3.5 mb-3 sm:mb-4">
@@ -303,7 +303,7 @@ export default function Home() {
                 <p className="text-xs text-[#8892a0] leading-relaxed mb-3 sm:mb-4">{d.desc}</p>
                 <ul className="list-none flex-1 space-y-1.5">
                   {d.items.map((item) => (
-                    <li key={item} className="text-[11px] text-[#8892a0] flex items-center gap-2">
+                    <li key={item} className="text-[10px] sm:text-[11px] text-[#8892a0] flex items-center gap-2">
                       <span className="w-1 h-1 rounded-sm bg-[#c9a84c] flex-shrink-0" />
                       {item}
                     </li>
@@ -321,8 +321,8 @@ export default function Home() {
         </section>
 
         {/* ===== FOOTER ===== */}
-        <footer className="bg-white/[0.03] border-t border-white/[0.12] px-4 sm:px-8 lg:px-10 py-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-4 sm:mb-6">
+        <footer className="bg-white/[0.03] border-t border-white/[0.12] px-4 sm:px-8 lg:px-10 py-5 sm:py-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-4 sm:mb-6">
             <div className="flex items-center gap-3">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-[#c9a84c]/25 flex items-center justify-center text-[#c9a84c]">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
@@ -386,9 +386,9 @@ export default function Home() {
       </div>
 
       {/* ===== LIVE INTELLIGENCE SIDEBAR ===== */}
-      <aside className="fixed top-0 right-0 bottom-0 w-80 bg-[#050810]/95 backdrop-blur-3xl border-l border-white/[0.12] z-40 hidden xl:flex flex-col">
-        <div className="px-5 py-4 border-b border-white/[0.12] flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+      <aside className="fixed top-0 right-0 bottom-0 w-72 sm:w-80 bg-[#050810]/95 backdrop-blur-3xl border-l border-white/[0.12] z-40 hidden xl:flex flex-col">
+        <div className="px-4 sm:px-5 py-3 sm:py-4 border-b border-white/[0.12] flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-2.5">
             <svg className="w-3.5 h-3.5 text-[#c9a84c]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -397,10 +397,10 @@ export default function Home() {
           <div className={`w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] ${pulse ? "animate-pulse" : "opacity-50"}`} />
         </div>
 
-        <div className="flex-1 overflow-y-auto p-5 space-y-6">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 sm:space-y-6">
           <div>
-            <h4 className="text-[9px] tracking-[0.2em] text-[#8892a0] mb-3 font-semibold">THREAT LANDSCAPE</h4>
-            <div className="h-32 rounded border border-white/[0.12] bg-[#020304] relative overflow-hidden">
+            <h4 className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#8892a0] mb-2 sm:mb-3 font-semibold">THREAT LANDSCAPE</h4>
+            <div className="h-28 sm:h-32 rounded border border-white/[0.12] bg-[#020304] relative overflow-hidden">
               <svg viewBox="0 0 220 80" className="h-full w-full" aria-hidden="true">
                 <circle cx="38" cy="28" r="2" className="fill-[#c9a84c]/90 animate-pulse" />
                 <circle cx="72" cy="52" r="1.5" className="fill-[#c9a84c]/75 animate-pulse" style={{ animationDelay: "0.4s" }} />
@@ -415,7 +415,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className="text-[9px] tracking-[0.2em] text-[#8892a0] mb-3 font-semibold">ACTIVE INQUIRIES</h4>
+            <h4 className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#8892a0] mb-2 sm:mb-3 font-semibold">ACTIVE INQUIRIES</h4>
             <div className="space-y-1.5">
               {inquiries.map((q) => (
                 <div key={q.label} className="flex items-center justify-between py-1">
@@ -430,7 +430,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className="text-[9px] tracking-[0.2em] text-[#8892a0] mb-3 font-semibold">INTELLIGENCE FEED</h4>
+            <h4 className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#8892a0] mb-2 sm:mb-3 font-semibold">INTELLIGENCE FEED</h4>
             <div className="space-y-0">
               {feed.map((f, i) => (
                 <div key={i} className="py-2 border-b border-white/[0.02] last:border-0">
@@ -444,8 +444,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="px-5 py-3.5 border-t border-white/[0.12]">
-          <Link href="/briefings" className="w-full flex items-center justify-between text-[9px] tracking-[0.15em] text-[#8892a0] hover:text-[#c9a84c] transition-colors">
+        <div className="px-4 sm:px-5 py-3 sm:py-3.5 border-t border-white/[0.12]">
+          <Link href="/briefings" className="w-full flex items-center justify-between text-[8px] sm:text-[9px] tracking-[0.15em] text-[#8892a0] hover:text-[#c9a84c] transition-colors">
             VIEW FULL FEED
             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
