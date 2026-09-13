@@ -55,6 +55,24 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="mt-6 flex justify-center md:justify-start">
+          <a
+            href="https://codetrendy.com/listing/systemintelligenceandstrategictactics?utm_source=systemintelligenceandstrategictactics.com&utm_medium=badge"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="inline-flex rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
+          >
+            {/* Use the provider's badge directly to preserve its original rendering. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://codetrendy.com/api/badge?style=classic"
+              alt="Listed on CodeTrendy"
+              height="54"
+              className="h-[54px] w-auto max-w-full"
+            />
+          </a>
+        </div>
+
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 md:flex-row">
           <div className="text-center text-[8px] tracking-[0.34em] text-gray-500 md:text-left">
             © {new Date().getFullYear()} SIST™ — SYSTEM INTELLIGENCE AND STRATEGIC TACTICS™. ALL RIGHTS RESERVED.
