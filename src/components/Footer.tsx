@@ -19,10 +19,10 @@ export default function Footer() {
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
               <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
                 <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
-                SECURE CHANNEL
+                FIRST CONTACT
               </div>
-              <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">ALL COMMUNICATIONS ENCRYPTED</div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">AES-256 · TLS 1.3</div>
+              <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">CONTACT BY EMAIL</div>
+              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">REVIEW AND SEND IN YOUR EMAIL APP</div>
             </div>
 
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">
@@ -31,7 +31,7 @@ export default function Footer() {
                 SYSTEM STATUS
               </div>
               <div className="mt-2 text-[9px] tracking-[0.22em] text-emerald-300">OPERATIONAL</div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">INTAKE ACTIVE</div>
+              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">ONLINE INTAKE CLOSED</div>
             </div>
 
             <div className="rounded border border-white/10 bg-white/[0.02] p-4">

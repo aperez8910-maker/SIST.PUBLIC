@@ -126,7 +126,7 @@ const navLinks = [
   { label: "DIVISIONS", href: "/divisions" },
   { label: "BRIEFINGS", href: "/briefings" },
   { label: "RESEARCH", href: "/research" },
-  { label: "INTAKE", href: "/intake" },
+  { label: "CONTACT REQUEST", href: "/intake" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -162,7 +162,7 @@ export default function Home() {
 
         <div className="hidden md:block">
           <Link href="/intake" className="px-4 sm:px-5 py-2 text-[11px] tracking-[0.08em] font-semibold border border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c]/10 hover:border-[#c9a84c] transition-all duration-300 rounded">
-            OPEN INTAKE
+            REQUEST CONTACT
           </Link>
         </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
               </Link>
             ))}
             <Link href="/intake" onClick={() => setMenuOpen(false)} className="mt-2 px-6 py-3 text-sm tracking-[0.1em] font-semibold border border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c]/10 hover:border-[#c9a84c] transition-all rounded">
-              OPEN INTAKE
+              REQUEST CONTACT
             </Link>
           </div>
         </div>

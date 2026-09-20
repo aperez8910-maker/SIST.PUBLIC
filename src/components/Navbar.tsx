@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: "DIVISIONS", href: "/divisions" },
     { name: "BRIEFINGS", href: "/briefings" },
     { name: "RESEARCH", href: "/research" },
-    { name: "INTAKE", href: "/intake" },
+    { name: "CONTACT REQUEST", href: "/intake" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -31,13 +31,13 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/intake" className="ml-2 border border-amber-300/50 px-5 py-2 text-[9px] font-bold tracking-[0.32em] text-amber-300 transition hover:bg-amber-300/10">
-            OPEN INTAKE
+            REQUEST CONTACT
           </Link>
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
           <Link href="/intake" className="border border-amber-300/50 px-4 py-2 text-[9px] font-bold tracking-[0.28em] text-amber-300">
-            INTAKE
+            CONTACT
           </Link>
           <button onClick={() => setOpen(!open)} className="text-xl text-amber-300" aria-label="Toggle Menu">
             {open ? "✕" : "☰"}
@@ -54,7 +54,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link href="/intake" onClick={() => setOpen(false)} className="mt-2 border border-amber-300/50 px-5 py-3 text-center text-[10px] font-bold tracking-[0.3em] text-amber-300">
-              OPEN INTAKE
+              REQUEST CONTACT
             </Link>
           </div>
         </div>
