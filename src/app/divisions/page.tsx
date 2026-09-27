@@ -12,8 +12,8 @@ const accents = [
 
 export default function DivisionsPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050810] text-white">
-      <div className="sist-grid pointer-events-none fixed inset-0" />
+    <main className="sist-page-shell sist-modern-page relative min-h-screen overflow-hidden text-white">
+      <div className="sist-grid pointer-events-none fixed inset-0" /><div className="sist-modern-radial pointer-events-none fixed inset-0"/>
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(215,173,75,.10),transparent_34%)]" />
       <Navbar />
 
