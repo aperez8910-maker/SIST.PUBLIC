@@ -116,6 +116,10 @@ export default function Home() {
       <div className="evo-shell">
         <section className="evo-hero" aria-labelledby="hero-title">
           <div className="hero-command">
+            <div className="hero-insignia" aria-hidden="true">
+              <Image src="/logo.png" alt="" width={320} height={320} priority />
+              <span>SIST CORE / SYSTEM MARK</span>
+            </div>
             <div>
               <span className="eyebrow">ADVERSARIAL INTELLIGENCE ARCHITECTURE / AUSTIN, TEXAS</span>
               <h1 id="hero-title">
