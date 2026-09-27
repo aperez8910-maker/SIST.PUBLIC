@@ -9,7 +9,7 @@ type DivisionDetailProps = {
   title: string;
   intro: string;
   focus: string[];
-  sealIndex: number;
+  sealSrc: string;
   mission?: string;
   approach?: string;
   tone?: Tone;
@@ -29,7 +29,7 @@ export default function DivisionDetail({
   title,
   intro,
   focus,
-  sealIndex,
+  sealSrc,
   mission,
   approach,
   tone = "gold",
@@ -69,10 +69,9 @@ export default function DivisionDetail({
             <div className="division-orbit division-orbit-inner" />
             <div className="division-seal-frame division-hero-seal" role="img" aria-label={`${title} official seal`}>
               <img
-                src="/division-seals.webp"
+                src={sealSrc}
                 alt=""
-                className="division-seal-strip"
-                style={{ transform: `translateX(-${sealIndex * 20}%)` }}
+                className="division-seal-image"
               />
             </div>
             <span className="division-insignia-label">SYSTEM INTELLIGENCE & STRATEGIC TACTICS</span>
