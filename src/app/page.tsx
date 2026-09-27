@@ -236,7 +236,14 @@ export default function Home() {
           <div className="division-home-grid">
             {divisions.map((division) => (
               <Link key={division.number} href={division.href} className="division-home-card">
-                <div className="division-home-seal division-seal" data-seal={division.sealIndex} aria-hidden="true" />
+                <div className="division-seal-frame division-home-seal" aria-hidden="true">
+                  <img
+                    src="/division-seals.webp"
+                    alt=""
+                    className="division-seal-strip"
+                    style={{ transform: `translateX(-${division.sealIndex * 20}%)` }}
+                  />
+                </div>
                 <div className="division-home-copy">
                   <span className="panel-number">DIVISION {division.number}</span>
                   <h3>{division.title}</h3>
