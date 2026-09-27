@@ -1,17 +1,70 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-const council = [
-  { role: "Researcher", purpose: "Information acquisition and source development.", responsibilities: ["Gather relevant information", "Identify sources", "Establish context"], tone: "amber" },
-  { role: "Analyst", purpose: "Pattern recognition and analytical review.", responsibilities: ["Identify relationships", "Detect inconsistencies", "Analyze findings"], tone: "amber" },
-  { role: "Adversarial Reviewer", purpose: "Challenge assumptions and test conclusions.", responsibilities: ["Develop counterarguments", "Identify weaknesses", "Stress test analysis"], tone: "red" },
-  { role: "Strategist", purpose: "Strategic synthesis and decision support.", responsibilities: ["Create options", "Evaluate outcomes", "Produce intelligence"], tone: "green" },
-];
-const tones = { amber: ["border-amber-300/25", "text-amber-300", "bg-amber-300"], red: ["border-red-400/30", "text-red-300", "bg-red-400"], green: ["border-emerald-400/30", "text-emerald-300", "bg-emerald-400"] };
+const seats = [
+  {id:"01",name:"COUNCILMAN 1",role:"INDEPENDENT ANALYSIS",tone:"gold",body:"Develops an independent position from the record before synthesis pressure is introduced."},
+  {id:"02",name:"COUNCILWOMAN 2",role:"ADVERSARIAL ATTACK",tone:"red",body:"Targets assumptions, weak links, contradictions, alternate explanations, and unsupported confidence."},
+  {id:"03",name:"COUNCILMAN 3",role:"VERIFICATION / ENFORCEMENT",tone:"green",body:"Tests whether the surviving position is sufficiently grounded to move forward."},
+] as const;
 
-export default function CouncilPage() {
-  return <main className="sist-page-shell sist-modern-page"><div className="sist-grid pointer-events-none fixed inset-0" /><div className="sist-modern-radial pointer-events-none fixed inset-0"/><Navbar /><section className="relative px-4 sm:px-8 py-5 sm:py-6"><div className="mx-auto max-w-7xl">
-    <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / MULTI-PERSPECTIVE REASONING</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">THE AI<br />COUNCIL</h1><p className="mt-7 max-w-3xl text-base leading-8 text-[#8892a0] md:text-lg">Multiple analytical perspectives examine the same intelligence problem before a strategic conclusion is released.</p></div><div className="border border-emerald-400/20 bg-emerald-400/[0.025] p-6"><div className="flex justify-between text-[9px] tracking-[0.3em]"><span className="text-[#8892a0]">COUNCIL STATUS</span><span className="text-emerald-300">ACTIVE</span></div><div className="mt-6 grid grid-cols-4 gap-2">{council.map((member)=><span key={member.role} className={`h-10 border ${tones[member.tone as keyof typeof tones][0]} bg-white/[0.02]`} />)}</div><p className="mt-5 text-xs leading-6 text-[#8892a0]">Independent roles. Shared evidence. Structured challenge.</p></div></div>
-    <div className="relative mt-16 grid gap-5 md:grid-cols-2">{council.map((member,index)=>{const t=tones[member.tone as keyof typeof tones];return <article key={member.role} className={`group relative overflow-hidden border ${t[0]} bg-white/[0.025] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05]`}><div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-white/[0.02] blur-3xl" /><div className="relative flex items-center justify-between"><span className={`font-mono text-xs ${t[1]}`}>COUNCIL NODE 0{index+1}</span><span className={`h-2 w-2 rounded-full ${t[2]} shadow-[0_0_14px_currentColor]`} /></div><h2 className="relative mt-6 text-2xl font-semibold">{member.role}</h2><p className="relative mt-4 text-sm leading-7 text-[#8892a0]">{member.purpose}</p><ul className="relative mt-6 space-y-2 border-t border-white/10 pt-5 text-xs text-[#8892a0]">{member.responsibilities.map(item=><li key={item}>— {item}</li>)}</ul></article>})}</div>
-    <div className="mt-8 border border-amber-300/20 bg-amber-300/[0.025] p-5 sm:p-6"><div className="flex flex-col justify-between gap-5 md:flex-row md:items-center"><div><p className="text-[9px] tracking-[0.3em] text-amber-300">COUNCIL PRINCIPLE</p><h2 className="mt-3 text-2xl font-semibold">Intelligence through examination.</h2><p className="mt-3 max-w-2xl text-sm leading-7 text-[#8892a0]">Conclusions become stronger when they survive structured review, adversarial challenge, verification, and synthesis.</p></div><a href="/interactive" className="sist-button border border-amber-300/30 px-6 py-3 text-[9px] tracking-[0.25em] text-amber-300">LAUNCH WORK FLOOR <i>↗</i></a></div></div>
-  </div></section></main>;
+export default function CouncilPage(){
+  return <main className="sist-evo command-page command-council">
+    <Navbar/>
+    <div className="command-shell">
+      <section className="command-hero command-hero-council">
+        <div className="command-hero-copy">
+          <span className="eyebrow">SIST / COUNCIL CHAMBER</span>
+          <h1>INDEPENDENT<br/><em>MINDS. ONE RECORD.</em></h1>
+          <p>The Council is not a vote. Independent analytical seats develop, attack, verify, and synthesize positions while preserving the underlying evidence and disagreement.</p>
+          <div className="command-actions">
+            <Link href="/interactive" className="action-primary">ENTER WORK FLOOR ↗</Link>
+            <Link href="/system" className="action-secondary">SYSTEM ARCHITECTURE →</Link>
+          </div>
+          <div className="command-metrics">
+            <div><span>SEATS</span><strong>03</strong></div>
+            <div><span>MODE</span><strong>INDEPENDENT</strong></div>
+            <div><span>CHALLENGE</span><strong className="gold">ACTIVE</strong></div>
+            <div><span>SYNTHESIS</span><strong>CONTROLLED</strong></div>
+          </div>
+        </div>
+        <div className="council-chamber">
+          <div className="council-ring council-ring-a"/><div className="council-ring council-ring-b"/>
+          {seats.map((s,i)=><div key={s.id} className={`council-orbit-seat council-seat-${i+1} council-tone-${s.tone}`}>
+            <span>{s.id}</span><strong>{s.name}</strong><small>{s.role}</small>
+          </div>)}
+          <div className="council-core"><span>SYNTHESIS</span><small>CONTROLLED POSITION</small></div>
+        </div>
+      </section>
+
+      <section className="command-signal-rail">
+        <span>INDEPENDENCE / PRESERVED</span><span>SHARED RECORD / ACTIVE</span><span>DISSENT / VISIBLE</span><span>CHALLENGE / ACTIVE</span><span>SYNTHESIS / CONTROLLED</span>
+      </section>
+
+      <section className="command-section">
+        <div className="command-section-head"><span className="eyebrow">COUNCIL SEATS</span><div><h2>Each seat has a different job.</h2><p>Separation matters. The value comes from independent development and structured disagreement before a single synthesis is allowed to emerge.</p></div></div>
+        <div className="council-seat-grid">
+          {seats.map(s=><article key={s.id} className={`council-seat-card council-tone-${s.tone}`}>
+            <div className="seat-top"><span>SEAT {s.id}</span><i/></div>
+            <h2>{s.name}</h2><strong>{s.role}</strong><p>{s.body}</p>
+            <div className="seat-trace"><span/><span/><span/></div>
+          </article>)}
+        </div>
+      </section>
+
+      <section className="command-section council-process">
+        <article><span>01</span><h3>SEPARATE</h3><p>Each seat develops before seeing a synthesized answer.</p></article>
+        <article><span>02</span><h3>CONFRONT</h3><p>Conflicts and weak points are made explicit instead of blended away.</p></article>
+        <article><span>03</span><h3>RECONCILE</h3><p>Support, dissent, and unresolved issues are compared against the record.</p></article>
+        <article><span>04</span><h3>SYNTHESIZE</h3><p>The surviving position is assembled with limitations still visible.</p></article>
+      </section>
+
+      <section className="command-feature command-feature-gold">
+        <span className="eyebrow">COUNCIL PRINCIPLE</span>
+        <h2>Agreement is not the objective. Defensibility is.</h2>
+        <p>A strong synthesis can include disagreement. SIST is designed to preserve material dissent and uncertainty instead of manufacturing consensus.</p>
+      </section>
+
+      <section className="command-footer"><Link href="/system">← SYSTEM</Link><span>SIST / COUNCIL CHAMBER</span><Link href="/briefings">BRIEFINGS →</Link></section>
+    </div>
+  </main>;
 }
