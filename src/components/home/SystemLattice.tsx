@@ -62,7 +62,7 @@ export default function SystemLattice() {
       </div>
 
       <div className="lattice-canvas">
-        <svg viewBox="0 0 900 430" role="img" aria-label="SIST staged intelligence lattice">
+        <svg viewBox="0 0 900 430" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="goldFlow" x1="0" x2="1">
               <stop offset="0" stopColor="#7f6527" />
@@ -116,12 +116,6 @@ export default function SystemLattice() {
               className={`lattice-node ${toneClass[stage.tone]} ${active === i ? "is-active" : ""}`}
               transform={`translate(${stage.x} ${stage.y})`}
               onClick={() => setActive(i)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") setActive(i);
-              }}
-              aria-label={`${stage.id} ${stage.label}: ${stage.short}`}
             >
               <circle r="25" className="node-halo" />
               <circle r="14" className="node-shell" />
@@ -132,7 +126,7 @@ export default function SystemLattice() {
           ))}
         </svg>
 
-        <aside className="lattice-readout">
+        <aside className="lattice-readout" aria-live="polite">
           <span className="readout-index">{selected.id}</span>
           <div>
             <p>ACTIVE NODE</p>
@@ -140,6 +134,22 @@ export default function SystemLattice() {
             <span>{selected.short}</span>
           </div>
         </aside>
+      </div>
+
+      <div className="lattice-controls" aria-label="Select SIST architecture stage">
+        {stages.map((stage, i) => (
+          <button
+            key={stage.id}
+            type="button"
+            onClick={() => setActive(i)}
+            className={`lattice-control ${toneClass[stage.tone]} ${active === i ? "is-active" : ""}`}
+            aria-pressed={active === i}
+            aria-label={`${stage.id} ${stage.label}: ${stage.short}`}
+          >
+            <span>{stage.id}</span>
+            <strong>{stage.label}</strong>
+          </button>
+        ))}
       </div>
     </div>
   );
