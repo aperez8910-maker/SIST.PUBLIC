@@ -4,7 +4,7 @@ export default function ConsumerDivision() {
   return (
     <DivisionDetail
       number="03"
-      sealIndex={2}
+      sealSrc="/division-seals/consumer-advocacy.webp"
       eyebrow="CONSUMER ADVOCACY"
       title="CONSUMER ADVOCACY DIVISION"
       intro="The Consumer Advocacy Division applies structured intelligence methods to consumer records, representations, disputes, account histories, organizational practices, and available redress pathways."
