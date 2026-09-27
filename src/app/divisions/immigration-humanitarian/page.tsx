@@ -4,7 +4,7 @@ export default function ImmigrationHumanitarianDivision() {
   return (
     <DivisionDetail
       number="04"
-      sealIndex={3}
+      sealSrc="/division-seals/immigration-humanitarian.webp"
       eyebrow="IMMIGRATION & HUMANITARIAN ADVOCACY"
       title="IMMIGRATION & HUMANITARIAN ADVOCACY DIVISION"
       intro="The Immigration & Humanitarian Advocacy Division organizes immigration records, detention and custody information, procedural history, humanitarian equities, family impact, and advocacy pathways into a controlled intelligence picture."
