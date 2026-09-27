@@ -46,7 +46,14 @@ export default function DivisionsPage() {
               return (
                 <Link key={division.number} href={division.href} className={`group relative overflow-hidden border ${accent.edge} ${accent.glow} bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05] ${index === divisions.length - 1 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-10px)]" : ""}`}>
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/[0.02] blur-2xl transition group-hover:bg-white/[0.06]" />
-                  <div className="division-card-seal division-seal" data-seal={division.sealIndex} aria-hidden="true" />
+                  <div className="division-seal-frame division-card-seal" aria-hidden="true">
+                    <img
+                      src="/division-seals.webp"
+                      alt=""
+                      className="division-seal-strip"
+                      style={{ transform: `translateX(-${division.sealIndex * 20}%)` }}
+                    />
+                  </div>
                   <div className="relative mt-6 flex items-start justify-between">
                     <span className={`font-mono text-xs ${accent.label}`}>DIVISION {division.number}</span>
                     <span className={`h-2 w-2 rounded-full ${accent.dot} shadow-[0_0_12px_currentColor]`} />
