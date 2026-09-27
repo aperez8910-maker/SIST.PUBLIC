@@ -1355,3 +1355,43 @@ main.min-h-screen.bg-\[\#050810\] section[class*="border"],
   .division-seal,
   .division-home-card { transition:none !important; }
 }
+
+
+/* ===== RELIABLE VISIBLE SEAL RENDERING ===== */
+.division-seal-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e8dfca;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.30),
+    0 0 34px rgba(201,168,76,.10),
+    inset 0 0 0 1px rgba(241,209,122,.16);
+}
+.division-seal-strip {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 500%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+  display: block;
+  transition: transform .01s linear, filter .3s ease;
+}
+.division-card-seal {
+  width: min(190px, 46vw);
+  margin: 0 auto 4px;
+}
+.division-detail-seal {
+  width: min(290px, 100%);
+  margin: 0 auto;
+}
+.division-home-seal {
+  width: 100%;
+  max-width: 180px;
+}
+.group:hover .division-seal-strip,
+.division-home-card:hover .division-seal-strip {
+  filter: saturate(1.06) contrast(1.04);
+}
