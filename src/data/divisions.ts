@@ -2,7 +2,7 @@ export const divisions = [
   {
     number: "01",
     slug: "criminal-defense",
-    sealIndex: 0,
+    sealSrc: "/division-seals/criminal-defense.webp",
     title: "Criminal Defense Division",
     description:
       "Structured criminal-defense intelligence focused on records, discovery, evidence, procedure, contradictions, and adversarial strategy.",
@@ -11,7 +11,7 @@ export const divisions = [
   {
     number: "02",
     slug: "healthcare",
-    sealIndex: 1,
+    sealSrc: "/division-seals/healthcare-intelligence.webp",
     title: "Healthcare Intelligence Division",
     description:
       "Structured analysis of healthcare records, processes, billing, policy, institutional decisions, and patient-advocacy environments.",
@@ -20,7 +20,7 @@ export const divisions = [
   {
     number: "03",
     slug: "consumer",
-    sealIndex: 2,
+    sealSrc: "/division-seals/consumer-advocacy.webp",
     title: "Consumer Advocacy Division",
     description:
       "Consumer-focused intelligence organizing records, representations, disputes, account history, and available accountability pathways.",
@@ -29,7 +29,7 @@ export const divisions = [
   {
     number: "04",
     slug: "immigration-humanitarian",
-    sealIndex: 3,
+    sealSrc: "/division-seals/immigration-humanitarian.webp",
     title: "Immigration & Humanitarian Advocacy Division",
     description:
       "Structured immigration and humanitarian intelligence spanning records, detention, procedure, family impact, advocacy, and escalation.",
@@ -38,7 +38,7 @@ export const divisions = [
   {
     number: "05",
     slug: "institutional-accountability",
-    sealIndex: 4,
+    sealSrc: "/division-seals/institutional-accountability.webp",
     title: "Institutional Accountability Division",
     description:
       "Evidence reconstruction, process analysis, contradiction mapping, accountability review, and strategic escalation across complex institutions.",
