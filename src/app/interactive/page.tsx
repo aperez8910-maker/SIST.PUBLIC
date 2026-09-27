@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 const stages = [
   ["01", "INTAKE", "Mission, scope, actors and evidence enter the system.", "amber"],
@@ -28,11 +29,11 @@ export default function InteractivePage() {
   const t = tone[kind];
 
   return (
-    <main className="sist-page-shell min-h-screen text-white">
-      <div className="sist-grid pointer-events-none fixed inset-0" />
+    <main className="sist-page-shell sist-modern-page min-h-screen text-white">
+      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />\n      <Navbar />
       <div className="sist-noise pointer-events-none fixed inset-0" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(215,173,75,.13),transparent_34%)]" />
-      <div className="relative mx-auto max-w-[1700px] px-4 sm:px-8 py-5 sm:py-6">
+      <div className="relative mx-auto max-w-[1700px] px-4 pb-8 pt-28 sm:px-8 sm:pt-32">
         <header className="flex items-center justify-between border-b border-amber-300/15 pb-6">
           <div className="flex items-center gap-4"><span className="sist-brand-lockup"><Image src="/logo.png" alt="SIST" width={62} height={62} className="sist-logo sist-logo-gold" priority /></span><div><p className="text-xs tracking-[0.5em] text-amber-300">SIST</p><p className="mt-1 text-[9px] tracking-[0.28em] text-[#8892a0]">ADVERSARIAL INTELLIGENCE WORK FLOOR</p></div></div>
           <div className="flex items-center gap-2 border border-emerald-400/25 bg-emerald-400/[.04] px-4 py-2 text-[9px] tracking-[.25em] text-emerald-300"><span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" /> LIVE SYSTEM</div>
