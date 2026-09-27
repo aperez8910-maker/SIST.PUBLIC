@@ -4,7 +4,7 @@ export default function CriminalDefenseDivision() {
   return (
     <DivisionDetail
       number="01"
-      sealIndex={0}
+      sealSrc="/division-seals/criminal-defense.webp"
       eyebrow="CRIMINAL DEFENSE"
       title="CRIMINAL DEFENSE DIVISION"
       intro="The Criminal Defense Division applies structured intelligence methods to criminal case records, discovery, evidence, procedure, contradictions, and defense strategy support."
