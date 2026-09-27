@@ -45,10 +45,9 @@ export default function DivisionsPage() {
               <div className="division-card-main">
                 <div className="division-seal-frame division-card-seal-large" aria-hidden="true">
                   <img
-                    src="/division-seals.webp"
+                    src={division.sealSrc}
                     alt=""
-                    className="division-seal-strip"
-                    style={{ transform: `translateX(-${division.sealIndex * 20}%)` }}
+                    className="division-seal-image"
                   />
                 </div>
 
