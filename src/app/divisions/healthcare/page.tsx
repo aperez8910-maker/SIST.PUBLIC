@@ -4,18 +4,19 @@ export default function HealthcareDivision() {
   return (
     <DivisionDetail
       number="02"
+      sealIndex={1}
       eyebrow="HEALTHCARE INTELLIGENCE"
-      title="HEALTHCARE INTELLIGENCE & ADVOCACY"
-      intro="The Healthcare Intelligence & Advocacy Division applies structured analysis to healthcare information, records, processes, and institutional systems to improve understanding, transparency, and accountability."
+      title="HEALTHCARE INTELLIGENCE DIVISION"
+      intro="The Healthcare Intelligence Division applies structured analysis to healthcare records, billing, processes, policy, institutional decisions, and patient-advocacy environments."
       focus={[
         "Medical record organization and analysis",
-        "Healthcare process review",
+        "Healthcare process and billing review",
         "Patient advocacy intelligence",
-        "Institutional accountability analysis",
+        "Institutional decision analysis",
         "Complex healthcare information synthesis",
       ]}
-      mission="Help individuals and organizations understand complex healthcare environments through disciplined documentation, structured intelligence, and evidence-based analysis."
-      approach="Connect records, billing, process, policy, and institutional decisions while preserving uncertainty and source provenance."
+      mission="Create a disciplined, evidence-based picture of complex healthcare environments so records, process failures, institutional decisions, and accountability questions can be evaluated together."
+      approach="Connect records, billing, process, policy, and institutional decisions while preserving source provenance, uncertainty, contradictions, and unresolved questions."
       tone="green"
     />
   );
