@@ -4,18 +4,19 @@ export default function ConsumerDivision() {
   return (
     <DivisionDetail
       number="03"
+      sealIndex={2}
       eyebrow="CONSUMER ADVOCACY"
-      title="CONSUMER ADVOCACY & INSTITUTIONAL ACCOUNTABILITY"
-      intro="The Consumer Advocacy & Institutional Accountability Division applies intelligence methodology to examine consumer experiences, organizational practices, records, disputes, and system-level issues."
+      title="CONSUMER ADVOCACY DIVISION"
+      intro="The Consumer Advocacy Division applies structured intelligence methods to consumer records, representations, disputes, account histories, organizational practices, and available redress pathways."
       focus={[
         "Consumer record organization and review",
-        "Institutional process analysis",
+        "Representation and contradiction mapping",
+        "Account and dispute history reconstruction",
         "Documentation and evidence management",
-        "Dispute intelligence preparation",
-        "Accountability and transparency analysis",
+        "Advocacy and escalation pathway analysis",
       ]}
-      mission="Provide structured intelligence that helps people understand complex consumer environments and evaluate institutional decisions through organized evidence and analytical review."
-      approach="Map representations, account history, documents, contradictions, and redress paths into a single escalation-ready operating picture."
+      mission="Turn fragmented consumer records and institutional responses into an organized, auditable picture that supports informed advocacy and escalation."
+      approach="Map representations, documents, account history, contradictions, unresolved issues, and redress options before building the final advocacy position."
       tone="blue"
     />
   );
