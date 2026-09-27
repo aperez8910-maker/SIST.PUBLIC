@@ -15,12 +15,12 @@ type DivisionDetailProps = {
   tone?: Tone;
 };
 
-const toneMap: Record<Tone, { text: string; border: string; glow: string; dot: string }> = {
-  gold: { text: "text-amber-300", border: "border-amber-300/25", glow: "shadow-[0_0_55px_rgba(215,173,75,.08)]", dot: "bg-amber-300" },
-  green: { text: "text-emerald-300", border: "border-emerald-300/25", glow: "shadow-[0_0_55px_rgba(56,227,154,.07)]", dot: "bg-emerald-300" },
-  blue: { text: "text-sky-300", border: "border-sky-300/25", glow: "shadow-[0_0_55px_rgba(56,189,248,.07)]", dot: "bg-sky-300" },
-  red: { text: "text-red-300", border: "border-red-300/25", glow: "shadow-[0_0_55px_rgba(255,77,94,.07)]", dot: "bg-red-300" },
-  violet: { text: "text-violet-300", border: "border-violet-300/25", glow: "shadow-[0_0_55px_rgba(167,139,250,.07)]", dot: "bg-violet-300" },
+const toneClass: Record<Tone, string> = {
+  gold: "tone-gold",
+  green: "tone-green",
+  blue: "tone-blue",
+  red: "tone-red",
+  violet: "tone-violet",
 };
 
 export default function DivisionDetail({
@@ -34,31 +34,40 @@ export default function DivisionDetail({
   approach,
   tone = "gold",
 }: DivisionDetailProps) {
-  const t = toneMap[tone];
-
   return (
-    <main className="sist-page-shell sist-modern-page min-h-screen text-white">
-      <div className="sist-grid pointer-events-none fixed inset-0" />
-      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
+    <main className={`sist-evo division-command-page ${toneClass[tone]}`}>
       <Navbar />
 
-      <section className="relative mx-auto max-w-[1500px] px-4 pb-20 pt-28 sm:px-8 sm:pt-32">
-        <div className="grid gap-8 border-b border-white/10 pb-12 lg:grid-cols-[1fr_360px] lg:items-end">
-          <div>
-            <div className={`flex items-center gap-3 text-[9px] tracking-[.34em] ${t.text}`}>
-              <span className={`h-2 w-2 rounded-full ${t.dot} shadow-[0_0_14px_currentColor]`} />
-              DIVISION {number} / {eyebrow}
+      <div className="division-command-shell">
+        <section className="division-command-hero">
+          <div className="division-command-copy">
+            <div className="division-command-kicker">
+              <span className="division-live-dot" />
+              <span>DIVISION {number}</span>
+              <span className="division-command-slash">/</span>
+              <span>{eyebrow}</span>
             </div>
-            <h1 className="sist-metal mt-5 max-w-5xl text-5xl font-semibold leading-[.93] tracking-[-.045em] sm:text-6xl lg:text-8xl">
-              {title}
-            </h1>
-            <p className="mt-7 max-w-4xl text-base leading-8 text-[#a8b1bc] md:text-lg">
-              {intro}
-            </p>
+
+            <h1>{title}</h1>
+            <p className="division-command-intro">{intro}</p>
+
+            <div className="division-command-actions">
+              <Link href="/contact" className="action-primary">REQUEST BRIEFING ↗</Link>
+              <Link href="/system" className="action-secondary">VIEW SYSTEM →</Link>
+            </div>
+
+            <div className="division-command-metrics">
+              <div><span>STATUS</span><strong>ACTIVE</strong></div>
+              <div><span>ARCHITECTURE</span><strong>AIP™</strong></div>
+              <div><span>REVIEW</span><strong>ADVERSARIAL</strong></div>
+              <div><span>OUTPUT</span><strong>DEPLOYABLE</strong></div>
+            </div>
           </div>
 
-          <aside className={`sist-modern-card division-seal-panel ${t.border} ${t.glow}`}>
-            <div className="division-seal-frame division-detail-seal" role="img" aria-label={`${title} official seal`}>
+          <div className="division-command-insignia">
+            <div className="division-orbit division-orbit-outer" />
+            <div className="division-orbit division-orbit-inner" />
+            <div className="division-seal-frame division-hero-seal" role="img" aria-label={`${title} official seal`}>
               <img
                 src="/division-seals.webp"
                 alt=""
@@ -66,64 +75,62 @@ export default function DivisionDetail({
                 style={{ transform: `translateX(-${sealIndex * 20}%)` }}
               />
             </div>
-            <div className="mt-5 flex items-center justify-between text-[8px] tracking-[.28em]">
-              <span className="text-[#929daa]">DIVISION NODE</span>
-              <span className={t.text}>ONLINE</span>
-            </div>
-            <div className="mt-6 grid grid-cols-5 gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <span key={i} className={`h-1.5 ${i < Number(number) ? t.dot : "bg-white/10"}`} />
-              ))}
-            </div>
-            <p className="mt-5 text-xs leading-6 text-[#98a3af]">
-              Specialized operating environment connected to the common SIST intelligence architecture.
-            </p>
-          </aside>
-        </div>
-
-        <div className="mt-10 grid gap-5 lg:grid-cols-[1.25fr_.75fr]">
-          <section className={`sist-modern-card min-h-[430px] ${t.border} ${t.glow}`}>
-            <div className="flex items-center justify-between">
-              <span className={`text-[8px] tracking-[.32em] ${t.text}`}>PRIMARY OPERATING SCOPE</span>
-              <span className="font-mono text-[9px] text-[#6f7986]">NODE-{number}</span>
-            </div>
-            <h2 className="mt-5 font-serif text-3xl font-normal tracking-[-.03em] text-[#f3eee4] sm:text-4xl">Focus areas</h2>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {focus.map((item, index) => (
-                <div key={item} className="group border border-white/10 bg-white/[.025] p-4 transition hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[.045]">
-                  <div className="flex items-start gap-3">
-                    <span className={`mt-1 font-mono text-[9px] ${t.text}`}>{String(index + 1).padStart(2, "0")}</span>
-                    <p className="m-0 text-sm leading-6 text-[#b1bac5]">{item}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <div className="grid gap-5">
-            {mission && (
-              <section className="sist-modern-card">
-                <span className="text-[8px] tracking-[.32em] text-[#8893a0]">MISSION</span>
-                <h2 className="mt-4 font-serif text-2xl font-normal text-[#f3eee4]">Why this division exists.</h2>
-                <p className="mt-4 text-sm leading-7 text-[#a1abb7]">{mission}</p>
-              </section>
-            )}
-
-            {approach && (
-              <section className="sist-modern-card">
-                <span className="text-[8px] tracking-[.32em] text-[#8893a0]">INTELLIGENCE APPROACH</span>
-                <h2 className="mt-4 font-serif text-2xl font-normal text-[#f3eee4]">How the work is structured.</h2>
-                <p className="mt-4 text-sm leading-7 text-[#a1abb7]">{approach}</p>
-              </section>
-            )}
+            <span className="division-insignia-label">SYSTEM INTELLIGENCE & STRATEGIC TACTICS</span>
           </div>
-        </div>
+        </section>
 
-        <div className="mt-10 flex flex-wrap gap-3 border-t border-white/10 pt-7">
-          <Link href="/divisions" className="sist-modern-link">← ALL DIVISIONS</Link>
-          <Link href="/system" className="sist-modern-link">SYSTEM ARCHITECTURE →</Link>
-        </div>
-      </section>
+        <section className="division-signal-rail" aria-label="Division operating status">
+          <span>NODE-{number}</span>
+          <span>PROVENANCE / ENABLED</span>
+          <span>ADVERSARIAL REVIEW / ENABLED</span>
+          <span>COUNCIL SYNTHESIS / CONNECTED</span>
+          <span>DEPLOYMENT / READY</span>
+        </section>
+
+        <section className="division-command-section">
+          <div className="division-command-heading">
+            <span className="eyebrow">PRIMARY OPERATING SCOPE</span>
+            <h2>Built to hold the record together under pressure.</h2>
+          </div>
+
+          <div className="division-focus-grid">
+            {focus.map((item, index) => (
+              <article key={item} className="division-focus-card">
+                <span className="division-focus-index">{String(index + 1).padStart(2, "0")}</span>
+                <div className="division-focus-line" />
+                <h3>{item}</h3>
+                <span className="division-focus-status">ACTIVE DOMAIN</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="division-command-section division-dual-panel">
+          {mission && (
+            <article className="division-statement-panel">
+              <span className="eyebrow">MISSION</span>
+              <h2>Why this division exists.</h2>
+              <p>{mission}</p>
+              <div className="division-panel-mark">M</div>
+            </article>
+          )}
+
+          {approach && (
+            <article className="division-statement-panel">
+              <span className="eyebrow">INTELLIGENCE APPROACH</span>
+              <h2>How the work is structured.</h2>
+              <p>{approach}</p>
+              <div className="division-panel-mark">A</div>
+            </article>
+          )}
+        </section>
+
+        <section className="division-command-footer">
+          <Link href="/divisions">← ALL DIVISIONS</Link>
+          <span>DIVISION {number} / SIST NETWORK</span>
+          <Link href="/system">SYSTEM ARCHITECTURE →</Link>
+        </section>
+      </div>
     </main>
   );
 }
