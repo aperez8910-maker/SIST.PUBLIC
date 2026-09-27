@@ -214,20 +214,28 @@
 
 .hero-command h1 {
   margin:18px 0 0;
-  max-width:760px;
+  width:100%;
+  max-width:100%;
+  min-width:0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight:400;
-  font-size:clamp(62px,7vw,118px);
-  line-height:.84;
+  font-size:clamp(50px,4.6vw,78px);
+  line-height:.86;
   letter-spacing:-.065em;
   text-transform:uppercase;
   color:#f2ede3;
   text-shadow:0 14px 55px rgba(0,0,0,.78);
+  overflow-wrap:normal;
+  word-break:normal;
 }
 .hero-command h1 em {
   display:block;
+  width:100%;
+  max-width:100%;
   color:var(--sist-gold-hi);
   font-style:normal;
+  font-size:.92em;
+  letter-spacing:-.075em;
 }
 
 .hero-command .hero-copy {
@@ -648,6 +656,8 @@
 
 @media (max-width:1180px) {
   .evo-hero { grid-template-columns:1fr; }
+  .hero-command h1 { font-size:clamp(58px,10vw,104px); max-width:940px; }
+  .hero-command h1 em { font-size:.95em; }
   .hero-lattice { min-height:640px; }
   .capability-grid { grid-template-columns:1fr 1fr; }
   .evo-panel.large { grid-row:auto; grid-column:1/-1; min-height:420px; }
@@ -685,7 +695,8 @@
   .evo-shell { width:min(100% - 20px,1680px); padding-top:66px; }
   .evo-hero { padding-top:10px; }
   .hero-command { min-height:660px; padding:34px 26px; }
-  .hero-command h1 { font-size:clamp(52px,15vw,82px); }
+  .hero-command h1 { font-size:clamp(46px,11.5vw,76px); line-height:.9; }
+  .hero-command h1 em { font-size:.9em; }
   .hero-metrics { grid-template-columns:1fr 1fr; }
   .hero-lattice { min-height:560px; }
   .lattice-canvas { min-height:500px; overflow-x:auto; }
@@ -700,7 +711,9 @@
 
 @media (max-width:520px) {
   .evo-brand-copy span { display:none; }
-  .hero-command { min-height:610px; }
+  .hero-command { min-height:610px; padding-left:22px; padding-right:22px; }
+  .hero-command h1 { font-size:clamp(40px,11vw,58px); letter-spacing:-.055em; }
+  .hero-command h1 em { font-size:.86em; letter-spacing:-.06em; }
   .hero-command .hero-copy { font-size:12px; }
   .hero-metrics { grid-template-columns:1fr 1fr; }
   .hero-metric { min-height:76px; padding:13px; }
