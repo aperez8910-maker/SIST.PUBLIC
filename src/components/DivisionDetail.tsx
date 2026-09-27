@@ -58,7 +58,14 @@ export default function DivisionDetail({
           </div>
 
           <aside className={`sist-modern-card division-seal-panel ${t.border} ${t.glow}`}>
-            <div className="division-detail-seal division-seal" data-seal={sealIndex} role="img" aria-label={`${title} official seal`} />
+            <div className="division-seal-frame division-detail-seal" role="img" aria-label={`${title} official seal`}>
+              <img
+                src="/division-seals.webp"
+                alt=""
+                className="division-seal-strip"
+                style={{ transform: `translateX(-${sealIndex * 20}%)` }}
+              />
+            </div>
             <div className="mt-5 flex items-center justify-between text-[8px] tracking-[.28em]">
               <span className="text-[#929daa]">DIVISION NODE</span>
               <span className={t.text}>ONLINE</span>
