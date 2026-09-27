@@ -1,41 +1,47 @@
 export const divisions = [
   {
     number: "01",
-    title: "Legal Intelligence & Litigation Strategy",
+    slug: "criminal-defense",
+    sealSrc: "/division-seals/criminal-defense.webp",
+    title: "Criminal Defense Division",
     description:
-      "Structured analysis of legal information, records, evidence, procedures, and strategic decision environments.",
-    href: "/divisions/legal",
+      "Structured criminal-defense intelligence focused on records, discovery, evidence, procedure, contradictions, and adversarial strategy.",
+    href: "/divisions/criminal-defense",
   },
-
   {
     number: "02",
-    title: "Healthcare Intelligence & Advocacy",
+    slug: "healthcare",
+    sealSrc: "/division-seals/healthcare-intelligence.webp",
+    title: "Healthcare Intelligence Division",
     description:
-      "Analysis of healthcare information, records, processes, and institutional accountability environments.",
+      "Structured analysis of healthcare records, processes, billing, policy, institutional decisions, and patient-advocacy environments.",
     href: "/divisions/healthcare",
   },
-
   {
     number: "03",
-    title: "Consumer Advocacy & Institutional Accountability",
+    slug: "consumer",
+    sealSrc: "/division-seals/consumer-advocacy.webp",
+    title: "Consumer Advocacy Division",
     description:
-      "Consumer-focused intelligence analyzing documentation, disputes, organizations, and system-level issues.",
+      "Consumer-focused intelligence organizing records, representations, disputes, account history, and available accountability pathways.",
     href: "/divisions/consumer",
   },
-
   {
     number: "04",
-    title: "Forensic Intelligence & Evidence Analysis",
+    slug: "immigration-humanitarian",
+    sealSrc: "/division-seals/immigration-humanitarian.webp",
+    title: "Immigration & Humanitarian Advocacy Division",
     description:
-      "Organization, reconstruction, and analysis of complex information and evidence environments.",
-    href: "/divisions/forensic",
+      "Structured immigration and humanitarian intelligence spanning records, detention, procedure, family impact, advocacy, and escalation.",
+    href: "/divisions/immigration-humanitarian",
   },
-
   {
     number: "05",
-    title: "Strategic Intelligence & Decision Analysis",
+    slug: "institutional-accountability",
+    sealSrc: "/division-seals/institutional-accountability.webp",
+    title: "Institutional Accountability Division",
     description:
-      "Transforming intelligence findings into strategic options and decision support.",
-    href: "/divisions/strategic",
+      "Evidence reconstruction, process analysis, contradiction mapping, accountability review, and strategic escalation across complex institutions.",
+    href: "/divisions/institutional-accountability",
   },
-];
+] as const;

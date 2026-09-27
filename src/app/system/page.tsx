@@ -22,7 +22,7 @@ const css = `
 function Pill({ children, tone = "" }: { children: React.ReactNode; tone?: string }) { return <span className={`inline-flex border px-3 py-1.5 text-[8px] tracking-[.18em] ${tone}`}>{children}</span>; }
 
 export default function SystemPage() {
-  return <main className="sist-page-shell min-h-screen overflow-hidden"><style>{css}</style><div className="sist-grid pointer-events-none fixed inset-0"/><Navbar/>
+  return <main className="sist-page-shell sist-modern-page min-h-screen overflow-hidden"><style>{css}</style><div className="sist-grid pointer-events-none fixed inset-0"/><div className="sist-modern-radial pointer-events-none fixed inset-0"/><Navbar/>
     <section className="relative px-4 sm:px-8 py-5 sm:py-6"><div className="mx-auto max-w-7xl">
       <p className="text-[9px] tracking-[.45em] text-amber-300">SIST / PUBLIC ARCHITECTURE</p>
       <h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-.04em] md:text-7xl">WHAT SIST<br/>IS BUILT TO DO</h1>
