@@ -3,6 +3,7 @@ import "./globals.css";
 import "./sist-reference-theme.css";
 import "./sist-cinematic-3d.css";
 import "./sist-art.css";
+import "./sist-evolution.css";
 import Footer from "@/components/Footer";
 
 const siteUrl = "https://systemintelligenceandstrategictactics.com";
