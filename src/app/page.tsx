@@ -238,10 +238,9 @@ export default function Home() {
               <Link key={division.number} href={division.href} className="division-home-card">
                 <div className="division-seal-frame division-home-seal" aria-hidden="true">
                   <img
-                    src="/division-seals.webp"
+                    src={division.sealSrc}
                     alt=""
-                    className="division-seal-strip"
-                    style={{ transform: `translateX(-${division.sealIndex * 20}%)` }}
+                    className="division-seal-image"
                   />
                 </div>
                 <div className="division-home-copy">
