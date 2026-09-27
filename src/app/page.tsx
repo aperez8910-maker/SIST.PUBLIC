@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SystemLattice from "@/components/home/SystemLattice";
+import { divisions } from "@/data/divisions";
 
 const nav = [
   ["SYSTEM", "/system"],
@@ -223,64 +224,27 @@ export default function Home() {
           <div className="evo-section-head">
             <span className="eyebrow">DIVISION ROUTING</span>
             <div>
-              <h2>One architecture. Different operating environments.</h2>
+              <h2>Five divisions. One intelligence architecture.</h2>
               <p>
-                The public site routes the same intelligence discipline into legal, healthcare,
-                consumer, forensic, and strategic contexts while preserving a common analytical core.
+                The same controlled SIST methodology is applied across criminal defense, healthcare,
+                consumer advocacy, immigration and humanitarian advocacy, and institutional accountability.
+                Each division has its own operating identity while preserving a common evidentiary and adversarial core.
               </p>
             </div>
           </div>
 
-          <div className="capability-grid">
-            <article className="evo-panel large">
-              <span className="panel-number">LEGAL / REGULATORY</span>
-              <h3>Build the record before building the position.</h3>
-              <p>
-                Structured legal intelligence, source-backed research, contradiction mapping,
-                adversarial review, and briefing support for matters where the factual and procedural
-                record must stay visible.
-              </p>
-              <div className="panel-orbit" />
-              <div className="hero-actions" style={{ position: "relative", zIndex: 3 }}>
-                <Link href="/divisions/legal" className="action-secondary">OPEN LEGAL DIVISION →</Link>
-              </div>
-            </article>
-
-            <article className="evo-panel">
-              <span className="panel-number">HEALTHCARE</span>
-              <h3>Trace failures across systems, records, and incentives.</h3>
-              <p>Designed for accountability analysis where billing, process, policy, and evidence intersect.</p>
-              <div className="hero-actions" style={{ position: "relative", zIndex: 3 }}>
-                <Link href="/divisions/healthcare" className="action-secondary">VIEW DIVISION →</Link>
-              </div>
-            </article>
-
-            <article className="evo-panel">
-              <span className="panel-number">CONSUMER</span>
-              <h3>Turn fragmented records into an escalation-ready picture.</h3>
-              <p>Map representations, documents, account history, contradictions, and available redress paths.</p>
-              <div className="hero-actions" style={{ position: "relative", zIndex: 3 }}>
-                <Link href="/divisions/consumer" className="action-secondary">VIEW DIVISION →</Link>
-              </div>
-            </article>
-
-            <article className="evo-panel">
-              <span className="panel-number">FORENSIC</span>
-              <h3>Separate observation from inference.</h3>
-              <p>Organize technical artifacts and competing explanations without collapsing uncertainty into certainty.</p>
-              <div className="hero-actions" style={{ position: "relative", zIndex: 3 }}>
-                <Link href="/divisions/forensic" className="action-secondary">VIEW DIVISION →</Link>
-              </div>
-            </article>
-
-            <article className="evo-panel">
-              <span className="panel-number">STRATEGIC</span>
-              <h3>Convert the intelligence picture into next moves.</h3>
-              <p>Translate surviving findings into decision support, sequencing, escalation, and operational priorities.</p>
-              <div className="hero-actions" style={{ position: "relative", zIndex: 3 }}>
-                <Link href="/divisions/strategic" className="action-secondary">VIEW DIVISION →</Link>
-              </div>
-            </article>
+          <div className="division-home-grid">
+            {divisions.map((division) => (
+              <Link key={division.number} href={division.href} className="division-home-card">
+                <div className="division-home-seal division-seal" data-seal={division.sealIndex} aria-hidden="true" />
+                <div className="division-home-copy">
+                  <span className="panel-number">DIVISION {division.number}</span>
+                  <h3>{division.title}</h3>
+                  <p>{division.description}</p>
+                  <span className="division-home-access">ENTER DIVISION →</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
