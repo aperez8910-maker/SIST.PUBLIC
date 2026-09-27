@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AfterBexarCountyPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="sist-page-shell sist-modern-page min-h-screen text-white">\n      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
       <Navbar />
 
       <article className="px-6 pb-24 pt-32">
