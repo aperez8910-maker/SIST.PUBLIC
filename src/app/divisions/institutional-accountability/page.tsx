@@ -4,7 +4,7 @@ export default function InstitutionalAccountabilityDivision() {
   return (
     <DivisionDetail
       number="05"
-      sealIndex={4}
+      sealSrc="/division-seals/institutional-accountability.webp"
       eyebrow="INSTITUTIONAL ACCOUNTABILITY"
       title="INSTITUTIONAL ACCOUNTABILITY DIVISION"
       intro="The Institutional Accountability Division combines evidence reconstruction, process analysis, contradiction mapping, institutional review, and strategic escalation to examine how organizations act, document decisions, and respond under scrutiny."
