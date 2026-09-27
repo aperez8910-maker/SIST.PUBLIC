@@ -9,6 +9,7 @@ type DivisionDetailProps = {
   title: string;
   intro: string;
   focus: string[];
+  sealIndex: number;
   mission?: string;
   approach?: string;
   tone?: Tone;
@@ -28,6 +29,7 @@ export default function DivisionDetail({
   title,
   intro,
   focus,
+  sealIndex,
   mission,
   approach,
   tone = "gold",
@@ -55,8 +57,9 @@ export default function DivisionDetail({
             </p>
           </div>
 
-          <aside className={`sist-modern-card ${t.border} ${t.glow}`}>
-            <div className="flex items-center justify-between text-[8px] tracking-[.28em]">
+          <aside className={`sist-modern-card division-seal-panel ${t.border} ${t.glow}`}>
+            <div className="division-detail-seal division-seal" data-seal={sealIndex} role="img" aria-label={`${title} official seal`} />
+            <div className="mt-5 flex items-center justify-between text-[8px] tracking-[.28em]">
               <span className="text-[#929daa]">DIVISION NODE</span>
               <span className={t.text}>ONLINE</span>
             </div>
