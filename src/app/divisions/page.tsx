@@ -17,7 +17,7 @@ export default function DivisionsPage() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(215,173,75,.10),transparent_34%)]" />
       <Navbar />
 
-      <section className="relative px-4 sm:px-8 py-5 sm:py-6">
+      <section className="relative px-4 pb-20 pt-28 sm:px-8 sm:pt-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end">
             <div>
@@ -46,7 +46,8 @@ export default function DivisionsPage() {
               return (
                 <Link key={division.number} href={division.href} className={`group relative overflow-hidden border ${accent.edge} ${accent.glow} bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05] ${index === divisions.length - 1 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-10px)]" : ""}`}>
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/[0.02] blur-2xl transition group-hover:bg-white/[0.06]" />
-                  <div className="relative flex items-start justify-between">
+                  <div className="division-card-seal division-seal" data-seal={division.sealIndex} aria-hidden="true" />
+                  <div className="relative mt-6 flex items-start justify-between">
                     <span className={`font-mono text-xs ${accent.label}`}>DIVISION {division.number}</span>
                     <span className={`h-2 w-2 rounded-full ${accent.dot} shadow-[0_0_12px_currentColor]`} />
                   </div>
