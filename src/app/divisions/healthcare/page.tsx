@@ -4,7 +4,7 @@ export default function HealthcareDivision() {
   return (
     <DivisionDetail
       number="02"
-      sealIndex={1}
+      sealSrc="/division-seals/healthcare-intelligence.webp"
       eyebrow="HEALTHCARE INTELLIGENCE"
       title="HEALTHCARE INTELLIGENCE DIVISION"
       intro="The Healthcare Intelligence Division applies structured analysis to healthcare records, billing, processes, policy, institutional decisions, and patient-advocacy environments."
