@@ -1,11 +1,54 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 const research = [
-  ["01", "SIST Intelligence Architecture", "A structured framework describing the organization, analysis, and application of intelligence methodology.", "amber"],
-  ["02", "Adversarial Integration Protocol", "A methodology designed to challenge assumptions, test conclusions, and improve analytical outcomes.", "red"],
-  ["03", "Strategic Intelligence Framework", "A system for transforming complex information into structured strategic understanding.", "green"],
-  ["04", "AI Council Model", "A multi-perspective reasoning framework designed to improve analysis through specialized viewpoints.", "amber"],
+  ["01","SIST Intelligence Architecture","How the controlled multi-stage system organizes evidence, reasoning, challenge, and deployment.","ARCHITECTURE","gold"],
+  ["02","Adversarial Integration Protocol","The challenge layer used to expose unsupported assumptions, weak evidence, and fragile conclusions.","PROTOCOL","red"],
+  ["03","Strategic Intelligence Framework","Methods for converting complex records into structured, decision-relevant intelligence.","FRAMEWORK","green"],
+  ["04","AI Council Model","Independent analytical seats, visible dissent, adversarial review, and controlled synthesis.","COUNCIL MODEL","blue"],
 ] as const;
-const tone={amber:["border-amber-300/25","text-amber-300","bg-amber-300"],red:["border-red-400/30","text-red-300","bg-red-400"],green:["border-emerald-400/30","text-emerald-300","bg-emerald-400"]};
 
-export default function ResearchPage(){return <main className="sist-page-shell sist-modern-page"><div className="sist-grid pointer-events-none fixed inset-0"/><div className="sist-modern-radial pointer-events-none fixed inset-0"/><Navbar/><section className="relative px-4 sm:px-8 py-5 sm:py-6"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / KNOWLEDGE CENTER</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">RESEARCH<br />& FRAMEWORKS</h1><p className="mt-7 max-w-3xl text-base leading-8 text-[#8892a0] md:text-lg">Research, protocols, and documentation supporting the development of System Intelligence & Strategic Tactics.</p></div><div className="border border-amber-300/20 bg-white/[0.025] p-6"><p className="text-[9px] tracking-[0.3em] text-[#8892a0]">KNOWLEDGE PIPELINE</p><div className="mt-6 flex items-center gap-2">{["amber","amber","red","green"].map((x,i)=><div key={i} className="flex flex-1 items-center gap-2"><span className={`h-2 w-2 rounded-full ${tone[x as keyof typeof tone][2]}`}/>{i<3&&<span className="h-px flex-1 bg-white/10"/>}</div>)}</div><p className="mt-5 text-xs leading-6 text-[#8892a0]">Frameworks move from collection through challenge and verification.</p></div></div><div className="mt-16 grid gap-5 md:grid-cols-2">{research.map(([num,title,description,kind])=>{const t=tone[kind as keyof typeof tone];return <article key={num} className={`group relative overflow-hidden border ${t[0]} bg-white/[0.025] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.05]`}><div className="flex justify-between"><span className={`font-mono text-xs ${t[1]}`}>{num}</span><span className={`h-2 w-2 rounded-full ${t[2]}`}/></div><h2 className="mt-6 text-2xl font-semibold">{title}</h2><p className="mt-4 text-sm leading-7 text-[#8892a0]">{description}</p><div className="mt-8 border-t border-white/10 pt-5 text-[8px] tracking-[0.25em] text-[#8892a0]">RESEARCH NODE / DOCUMENTATION</div></article>})}</div></div></section></main>}
+export default function ResearchPage(){
+  return <main className="sist-evo command-page command-research">
+    <Navbar/>
+    <div className="command-shell">
+      <section className="command-hero command-hero-research">
+        <div className="command-hero-copy">
+          <span className="eyebrow">SIST / RESEARCH & FRAMEWORKS</span>
+          <h1>THE KNOWLEDGE<br/><em>BEHIND THE SYSTEM.</em></h1>
+          <p>Research documents the public methods, control concepts, analytical frameworks, and validation questions behind System Intelligence & Strategic Tactics.</p>
+          <div className="command-actions"><Link href="/system" className="action-primary">VIEW ARCHITECTURE ↗</Link><Link href="/briefings" className="action-secondary">FIELD BRIEFINGS →</Link></div>
+          <div className="command-metrics">
+            <div><span>NODES</span><strong>04</strong></div><div><span>METHOD</span><strong>STRUCTURED</strong></div><div><span>VALIDATION</span><strong className="gold">ONGOING</strong></div><div><span>ACCESS</span><strong>PUBLIC</strong></div>
+          </div>
+        </div>
+        <div className="research-lab">
+          <div className="research-axis research-axis-x"/><div className="research-axis research-axis-y"/>
+          <div className="research-ring research-ring-a"/><div className="research-ring research-ring-b"/>
+          {research.map(([n,,,kind],i)=><div key={n} className={`research-node research-node-${i+1}`}><span>{n}</span><strong>{kind}</strong><i/></div>)}
+          <div className="research-core">SIST<small>KNOWLEDGE GRAPH</small></div>
+        </div>
+      </section>
+
+      <section className="command-signal-rail"><span>METHODS / PUBLIC</span><span>PROTOCOLS / DOCUMENTED</span><span>VALIDATION / ACTIVE</span><span>FIELD LINK / CONNECTED</span><span>REVISION / CONTROLLED</span></section>
+
+      <section className="command-section">
+        <div className="command-section-head"><span className="eyebrow">RESEARCH NODES</span><div><h2>Architecture should be explainable.</h2><p>The public research layer documents what SIST is designed to do, where its limits are, and how stronger validation can test the claims made about the architecture.</p></div></div>
+        <div className="research-node-grid">
+          {research.map(([n,title,desc,kind,tone])=><article key={n} className={`research-card research-tone-${tone}`}>
+            <div className="research-card-top"><span>{n}</span><small>{kind}</small><i/></div>
+            <h2>{title}</h2><p>{desc}</p>
+            <div className="research-card-foot"><span>RESEARCH NODE</span><b>OPEN / DOCUMENTED</b></div>
+          </article>)}
+        </div>
+      </section>
+
+      <section className="command-section research-validation">
+        <article><span className="eyebrow">VALIDATION QUESTION</span><h2>Can the architecture catch defects a single pass misses?</h2><p>Controlled comparison should measure discovery, correction, error escape, HOLD behavior, reproducibility, cost, and latency across the same seeded cases.</p></article>
+        <article><span className="eyebrow">RESEARCH PRINCIPLE</span><h2>Claims should be testable.</h2><p>SIST should not rely on visual sophistication or confident language as proof. Architecture claims become stronger when they can be reproduced and challenged against a defined baseline.</p></article>
+      </section>
+
+      <section className="command-footer"><Link href="/briefings">← BRIEFINGS</Link><span>SIST / RESEARCH & FRAMEWORKS</span><Link href="/system">SYSTEM →</Link></section>
+    </div>
+  </main>;
+}
