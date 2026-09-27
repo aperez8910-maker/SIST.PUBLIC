@@ -1,60 +1,103 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-const seats = [
-  { name: "COUNCILMAN 1", role: "TRUTH", tone: "gold", index: "01" },
-  { name: "COUNCILWOMAN 2", role: "ATTACK", tone: "red", index: "02" },
-  { name: "COUNCILMAN 3", role: "ENFORCER", tone: "green", index: "03" },
-];
+const pipeline = [
+  ["01","INTAKE","Objectives, constraints, source material, and record boundaries are registered."],
+  ["02","LIBRARIAN","The record is normalized, indexed, and made traceable."],
+  ["03","INGESTOR","Facts, claims, dates, actors, and evidence are structured."],
+  ["04","RESEARCHER","Missing context, authorities, records, and outside material are developed."],
+  ["05","ANALYST","Patterns, contradictions, dependencies, and competing explanations are mapped."],
+  ["06","LAWCLERK","Rules, standards, procedural posture, and legal relevance are tested."],
+  ["07","COUNTERMEASURES","The working position is attacked and failure paths are surfaced."],
+  ["08","BRIEFER","Surviving findings are converted into clear strategic intelligence."],
+  ["09","DEPLOY","Final outputs move forward with lineage, caveats, and control state intact."],
+] as const;
 
-const domains = [
-  ["CRIMINAL DEFENSE", "9.5", "FULL AIP + 3-SEAT COUNCIL"],
-  ["CONSUMER FINANCE", "3.0", "2-SEAT TECHNICAL"],
-  ["CREDIT REPORTING", "2.0", "SINGLE-PASS + VERIFY"],
-  ["CHILD WELFARE", "1.5", "EXHIBIT / DISCREPANCY"],
-  ["VENDOR SECURITY", "1.0", "RECON + VERIFY"],
-];
+const gates = [
+  ["G1","INTAKE","Record integrity"],
+  ["G2","INGESTION","Source control"],
+  ["G3","INTELLIGENCE","Analytical sufficiency"],
+  ["G4","ADVERSARIAL","Challenge / defeat"],
+  ["G5","DEPLOYMENT","Release authority"],
+] as const;
 
-const css = `
-@keyframes route{to{stroke-dashoffset:-56}}@keyframes back{to{stroke-dashoffset:56}}@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}@keyframes orbit{to{transform:rotate(360deg) translateX(92px) rotate(-360deg)}}@keyframes sweep{0%{left:-15%;opacity:0}15%{opacity:.8}75%{opacity:.8}100%{left:110%;opacity:0}}@keyframes step{0%,18%{opacity:.3}25%,45%{opacity:1}52%,100%{opacity:.35}}@keyframes hold{0%,100%{box-shadow:0 0 0 rgba(255,77,94,0)}50%{box-shadow:0 0 25px rgba(255,77,94,.12)}}
-.route{fill:none;stroke-width:2;stroke-dasharray:5 14;animation:route 2.7s linear infinite}.back{fill:none;stroke-width:1.3;stroke-dasharray:3 15;animation:back 3.2s linear infinite;opacity:.5}.gold{stroke:rgba(215,173,75,.8)}.red{stroke:rgba(255,77,94,.8);animation-delay:-.8s}.green{stroke:rgba(56,227,154,.8);animation-delay:-1.5s}.orb{animation:pulse 1.8s ease-in-out infinite}.core{animation:pulse 3.5s ease-in-out infinite}.orbit{position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:99px}.orbit-a{background:#d7ad4b;box-shadow:0 0 12px #d7ad4b;animation:orbit 7s linear infinite}.orbit-b{background:#ff4d5e;box-shadow:0 0 12px #ff4d5e;animation:orbit 10s linear infinite reverse}.engine{position:relative;overflow:hidden}.engine:after{content:"";position:absolute;top:0;bottom:0;width:14%;background:linear-gradient(90deg,transparent,rgba(215,173,75,.15),transparent);animation:sweep 5s linear infinite;pointer-events:none}.step{animation:step 5.8s ease-in-out infinite}.step:nth-child(2){animation-delay:.4s}.step:nth-child(3){animation-delay:.8s}.step:nth-child(4){animation-delay:1.2s}.step:nth-child(5){animation-delay:1.6s}.step:nth-child(6){animation-delay:2s}.hold{animation:hold 2.4s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.route,.back,.orb,.core,.orbit,.engine:after,.step,.hold{animation:none!important}}
-`;
+export default function SystemPage(){
+  return <main className="sist-evo command-page command-system">
+    <Navbar/>
+    <div className="command-shell">
+      <section className="command-hero command-hero-system">
+        <div className="command-hero-copy">
+          <span className="eyebrow">SIST / SYSTEM ARCHITECTURE</span>
+          <h1>THE SYSTEM<br/><em>UNDER LOAD.</em></h1>
+          <p>SIST is a controlled multi-stage intelligence architecture designed to preserve source lineage, expose uncertainty, challenge working conclusions, and stop unsupported findings before deployment.</p>
+          <div className="command-actions">
+            <Link href="/interactive" className="action-primary">ENTER WORK FLOOR ↗</Link>
+            <Link href="/council" className="action-secondary">VIEW COUNCIL →</Link>
+          </div>
+          <div className="command-metrics">
+            <div><span>PIPELINE</span><strong>09 STAGES</strong></div>
+            <div><span>CONTROL</span><strong>05 GATES</strong></div>
+            <div><span>REVIEW</span><strong className="gold">ADVERSARIAL</strong></div>
+            <div><span>STATE</span><strong>ACTIVE</strong></div>
+          </div>
+        </div>
 
-function Pill({ children, tone = "" }: { children: React.ReactNode; tone?: string }) { return <span className={`inline-flex border px-3 py-1.5 text-[8px] tracking-[.18em] ${tone}`}>{children}</span>; }
-
-export default function SystemPage() {
-  return <main className="sist-page-shell sist-modern-page min-h-screen overflow-hidden"><style>{css}</style><div className="sist-grid pointer-events-none fixed inset-0"/><div className="sist-modern-radial pointer-events-none fixed inset-0"/><Navbar/>
-    <section className="relative px-4 sm:px-8 py-5 sm:py-6"><div className="mx-auto max-w-7xl">
-      <p className="text-[9px] tracking-[.45em] text-amber-300">SIST / PUBLIC ARCHITECTURE</p>
-      <h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-.04em] md:text-7xl">WHAT SIST<br/>IS BUILT TO DO</h1>
-      <p className="mt-7 max-w-4xl text-base leading-8 text-[#8892a0] md:text-lg">SIST — System Intelligence and Strategic Tactics — is an adversarial intelligence architecture for complex analysis. It separates discovery from challenge, exposes uncertainty, tests claims against opposing evidence, and controls what is allowed to advance.</p>
-
-      <section className="relative mt-16 border border-white/10 bg-white/[.018] px-4 sm:px-8 py-5 sm:py-6"><div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent"/><div className="flex items-center justify-between"><div><p className="text-[9px] tracking-[.35em] text-[#8892a0]">LIVE COUNCIL / DELIBERATION</p><p className="mt-2 text-xs tracking-[.18em] text-[#8892a0]">INDEPENDENT SEATS · ADVERSARIAL ROUTING · SYNTHESIS</p></div><span className="text-[8px] tracking-[.25em] text-emerald-300">● LIVE</span></div>
-        <div className="relative mt-12 min-h-[430px]"><svg className="absolute inset-0 h-full w-full" viewBox="0 0 1000 430" preserveAspectRatio="none" aria-hidden="true"><path className="route gold" d="M170 95 C300 95 330 190 500 215"/><path className="route red" d="M500 95 C500 145 500 175 500 215"/><path className="route green" d="M830 95 C700 95 670 190 500 215"/><path className="back gold" d="M500 215 C390 260 280 280 170 330"/><path className="back red" d="M500 215 C500 270 500 300 500 330"/><path className="back green" d="M500 215 C610 260 720 280 830 330"/></svg>
-          <div className="relative grid gap-5 md:grid-cols-3">{seats.map(s=><article key={s.name} className="border border-white/10 bg-[#050810]/80 p-6 backdrop-blur"><div className="flex justify-between"><span className="font-mono text-[10px] text-[#8892a0]">SEAT {s.index}</span><span className={`orb h-2.5 w-2.5 rounded-full ${s.tone==='gold'?'bg-amber-300':s.tone==='red'?'bg-red-400':'bg-emerald-300'}`}/></div><h2 className="mt-8 text-sm font-semibold tracking-[.12em] text-gray-200">{s.name}</h2><p className="mt-2 text-[9px] tracking-[.32em] text-[#8892a0]">{s.role}</p><p className="mt-7 text-[9px] leading-5 text-[#8892a0]">A separated analytical function. Publicly visible purpose; proprietary operating instructions remain undisclosed.</p></article>)}</div>
-          <div className="relative mx-auto mt-24 max-w-xl"><div className="core relative border border-amber-300/25 bg-[#050810]/90 px-7 py-8 text-center"><p className="text-[8px] tracking-[.4em] text-amber-300">DELIBERATION / ACTIVE</p><h2 className="mt-3 text-lg font-semibold tracking-[.22em] text-gray-200">SYNTHESIS</h2><div className="mt-5 flex flex-wrap justify-center gap-2"><Pill>INDEPENDENT ANALYSIS</Pill><Pill>CHALLENGE</Pill><Pill>CROSS-EXAMINATION</Pill><Pill>SYNTHESIS</Pill></div><span className="orbit orbit-a"/><span className="orbit orbit-b"/></div></div>
+        <div className="system-reactor" aria-label="SIST architecture visualization">
+          <div className="reactor-orbit reactor-orbit-a"/>
+          <div className="reactor-orbit reactor-orbit-b"/>
+          <div className="reactor-orbit reactor-orbit-c"/>
+          <div className="reactor-core"><span>SIST</span><small>INTELLIGENCE CORE</small></div>
+          {["INTAKE","RESEARCH","ANALYSIS","AIP","VERIFY","DEPLOY"].map((x,i)=>
+            <div key={x} className={`reactor-node reactor-node-${i+1}`}><i/>{x}</div>
+          )}
+          <div className="reactor-readout"><span>CONTROL STATE</span><strong>ALL GATES RESPONSIVE</strong></div>
         </div>
       </section>
 
-      <section className="relative mx-auto mt-8 max-w-7xl"><div className="mx-auto h-10 w-px bg-gradient-to-b from-transparent via-amber-300/60 to-transparent"/><div className="engine border border-amber-300/25 bg-[#050810]/90 p-5 sm:p-6 text-center"><p className="text-[8px] tracking-[.4em] text-amber-300">ADVERSARIAL INTEGRATION PROTOCOL</p><h2 className="mt-3 text-xl font-semibold tracking-[.2em] text-gray-200">AIP ENGINE</h2><p className="mx-auto mt-3 max-w-3xl text-xs leading-6 text-[#8892a0]">The AIP is the public-facing name for the adversarial control layer: integrated reasoning is challenged, vulnerabilities are exposed, corrections are forced where necessary, and unsupported conclusions can be held or stopped.</p><div className="mt-7 flex flex-wrap justify-center gap-2 text-[8px] tracking-[.18em]">{["HIGH REASONING RISK","INDEPENDENT ANALYSIS","VULNERABILITIES EXPOSED","ADVERSARIAL ATTACK","CORRECTION","SURVIVES / HOLDS"].map((x,i)=><span key={x} className="step border border-white/10 px-3 py-2 text-[#8892a0]"><b className="mr-2 font-mono text-gray-700">0{i+1}</b>{x}</span>)}</div></div></section>
+      <section className="command-signal-rail">
+        <span>PROVENANCE / ON</span><span>LINEAGE / ON</span><span>CHALLENGE / ON</span><span>HOLD / AVAILABLE</span><span>DEPLOY / CONTROLLED</span>
+      </section>
 
-      <section className="mt-24 grid gap-5 lg:grid-cols-2"><div className="border border-white/10 bg-white/[.018] p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-amber-300">WHY SIST EXISTS</p><h2 className="mt-4 text-3xl font-semibold text-gray-200">A confident answer is not the same thing as a correct answer.</h2><p className="mt-5 text-sm leading-7 text-[#8892a0]">An error introduced early can propagate through otherwise coherent reasoning. SIST is designed to put challenge and evidence control inside the reasoning path rather than waiting until the final answer to discover a defect.</p><div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-4">{["DISCOVER","CHALLENGE","REASSESS","RELEASE"].map((x,i)=><div key={x} className="border border-white/10 bg-[#050810]/40 p-4"><span className="font-mono text-[8px] text-gray-700">0{i+1}</span><p className="mt-3 text-[9px] tracking-[.2em] text-gray-300">{x}</p></div>)}</div></div>
-        <div className="border border-amber-300/15 bg-amber-300/[.025] p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-amber-300">CORE THESIS</p><blockquote className="mt-6 text-2xl font-medium leading-9 text-gray-200">“SIST does not ask, ‘Can we answer this?’ It asks, ‘What would have to be true for this answer to survive?’”</blockquote><p className="mt-6 text-xs leading-6 text-[#8892a0]">The public architecture describes the objective. It does not disclose proprietary prompts, hidden thresholds, routing heuristics, model-selection logic, or orchestration instructions.</p></div></section>
+      <section className="command-section">
+        <div className="command-section-head">
+          <span className="eyebrow">09-STAGE ORCHESTRATION</span>
+          <div><h2>Intelligence moves through a controlled path.</h2><p>The stages do not simply produce more text. Each stage changes what the system knows, what it doubts, or what it is allowed to advance.</p></div>
+        </div>
+        <div className="system-pipeline">
+          {pipeline.map(([n,t,d],i)=><article key={n} className={`system-stage ${i===6?"challenge":i===8?"verify":""}`}>
+            <span>{n}</span><i/><h3>{t}</h3><p>{d}</p><small>{i===6?"ADVERSARIAL NODE":i===8?"CONTROLLED RELEASE":"PROCESS NODE"}</small>
+          </article>)}
+        </div>
+      </section>
 
-      <section className="mt-6 grid gap-5 lg:grid-cols-2"><div className="border border-white/10 bg-[#050810]/30 p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-amber-300">WHAT SIST DOES</p><div className="mt-6 space-y-4 text-sm text-[#8892a0]">{[["01","DECOMPOSE","Separate facts, assumptions, ambiguity, and evidence gaps."],["02","DISCOVER","Search for material facts that were not explicitly supplied."],["03","CHALLENGE","Attack the working theory with contradictions and alternative explanations."],["04","VERIFY","Test whether claims have sufficient support to advance."],["05","CONTROL","Allow PASS, REVISE, HOLD, or ABORT behavior where appropriate."]].map(([n,t,d])=><div key={n} className="border-b border-white/10 pb-4"><span className="font-mono text-[8px] text-gray-700">{n}</span><h3 className="mt-1 text-[10px] tracking-[.2em] text-gray-200">{t}</h3><p className="mt-2 text-xs leading-5 text-[#8892a0]">{d}</p></div>)}</div></div>
-        <div className="border border-white/10 bg-[#050810]/30 p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-red-300">WHAT SIST IS NOT</p><div className="mt-6 space-y-3 text-xs leading-6 text-[#8892a0]">{["Not a guarantee of truth.","Not a replacement for human judgment or institutional authority.","Not simply three AIs voting on an answer.","Not a magic hallucination remover.","Not a substitute for missing ground truth or evidence.","Not a claim that more agents automatically means more accuracy.","Not autonomous authority to make consequential decisions."] .map(x=><p key={x}><span className="mr-2 text-red-400">×</span>{x}</p>)}</div></div></section>
+      <section className="command-section">
+        <div className="command-section-head">
+          <span className="eyebrow">GATE CONTROL</span>
+          <div><h2>Nothing advances just because it sounds complete.</h2><p>Five control gates divide the lifecycle so a defect can be held, repaired, superseded, replaced, or stopped before deployment.</p></div>
+        </div>
+        <div className="gate-grid">
+          {gates.map(([g,t,d],i)=><article key={g} className={`gate-card gate-${i+1}`}><span>{g}</span><h3>{t}</h3><p>{d}</p><div className="gate-status"><i/>ENFORCED</div></article>)}
+        </div>
+      </section>
 
-      <section className="mt-24 border border-white/10 bg-white/[.018] p-5 sm:p-6"><div className="max-w-4xl"><p className="text-[9px] tracking-[.4em] text-amber-300">EVIDENCE SHADOW MAP</p><h2 className="mt-4 text-3xl font-semibold text-gray-200">Ask what should exist—not only what already exists.</h2><p className="mt-5 text-sm leading-7 text-[#8892a0]">SIST can frame an investigation around known evidence, expected evidence, missing evidence, and conditions that could falsify the working theory. The purpose is to reduce confirmation pressure and make evidence gaps visible.</p></div><div className="mt-8 grid gap-2 md:grid-cols-4">{[["KNOWN","What is established?"],["EXPECTED","What should exist if the account is true?"],["MISSING","What critical record or fact is absent?"],["FALSIFICATION","What would prove the theory wrong?"]].map(([t,d],i)=><div key={t} className="relative border border-white/10 bg-[#050810]/40 p-5"><span className="font-mono text-[8px] text-amber-300/60">0{i+1}</span><h3 className="mt-3 text-[10px] tracking-[.2em] text-gray-200">{t}</h3><p className="mt-2 text-xs leading-5 text-[#8892a0]">{d}</p></div>)}</div></section>
+      <section className="command-section system-dual">
+        <article className="command-feature command-feature-gold">
+          <span className="eyebrow">ADVERSARIAL INTEGRATION PROTOCOL</span>
+          <h2>A conclusion must survive attack.</h2>
+          <p>The AIP control layer forces the working position through contradiction, alternative explanations, evidentiary weakness, source problems, and failure-path analysis before it is treated as deployable intelligence.</p>
+          <div className="feature-flow">{["POSITION","ATTACK","REPAIR","RE-TEST","SURVIVE / HOLD"].map(x=><span key={x}>{x}</span>)}</div>
+        </article>
+        <article className="command-feature command-feature-red">
+          <span className="eyebrow">HOLD STATE</span>
+          <h2>No evidence. No advancement.</h2>
+          <p>HOLD is a deliberate system state. When a critical fact cannot be supported or a material contradiction remains unresolved, SIST can stop instead of converting uncertainty into a confident answer.</p>
+          <div className="hold-indicator"><i/>HOLD AUTHORITY AVAILABLE</div>
+        </article>
+      </section>
 
-      <section className="mt-6 border border-red-400/15 bg-red-400/[.02] p-5 sm:p-6 hold"><p className="text-[9px] tracking-[.4em] text-red-300">HOLD / SAFETY STATE</p><h2 className="mt-4 text-3xl font-semibold text-gray-200">HOLD is not failure.</h2><p className="mt-5 max-w-4xl text-sm leading-7 text-[#8892a0]">HOLD is the system refusing to turn insufficient evidence into a released conclusion. If a critical claim cannot be adequately supported or a material contradiction cannot be resolved, the correct action may be to stop, seek more evidence, revise, or abort.</p><p className="mt-6 text-lg tracking-[.08em] text-gray-300">“No evidence. No advancement.”</p></section>
-
-      <section className="mt-24"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-[9px] tracking-[.4em] text-amber-300">BENCHMARKS / ARCHITECTURE NEED</p><h2 className="mt-4 text-3xl font-semibold text-gray-200">The numbers need context.</h2></div><Pill tone="border-amber-300/20 text-amber-300">NOT PERFORMANCE SCORES</Pill></div><div className="mt-6 border border-amber-300/15 bg-amber-300/[.025] p-6"><p className="text-sm leading-7 text-[#8892a0]"><strong className="text-gray-200">Architecture Need scores are not SIST quality scores.</strong> They estimate how much adversarial infrastructure a problem warranted. A low score does not mean SIST performed poorly; it means a lighter architecture was appropriate. A high score indicates that ambiguity, opposition, consequences, or evidence incompleteness justified deeper adversarial processing.</p><p className="mt-4 text-xs leading-6 text-[#8892a0]">Think of it as proportional deployment: a 1.5-level problem does not need a 9.3-level architecture. SIST is intended to scale its architecture to the problem rather than force maximum complexity onto every task.</p></div>
-        <div className="mt-5 grid gap-3 md:grid-cols-5">{domains.map(([name,score,arch])=><article key={name} className="border border-white/10 bg-[#050810]/40 p-5"><p className="text-[8px] tracking-[.18em] text-[#8892a0]">{name}</p><p className="mt-4 text-3xl font-semibold text-gray-200">{score}<span className="text-xs text-gray-700"> / 10</span></p><p className="mt-2 text-[7px] tracking-[.12em] text-amber-300">ARCHITECTURE NEED</p><p className="mt-5 text-[8px] leading-5 text-[#8892a0]">{arch}</p></article>)}</div></section>
-
-      <section className="mt-6 grid gap-5 lg:grid-cols-2"><div className="border border-emerald-300/15 bg-emerald-300/[.02] p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-emerald-300">OBSERVED IN CURRENT BENCHMARK</p><ul className="mt-6 space-y-3 text-sm leading-6 text-[#8892a0]"><li>• Novel Discovery was observed across all five domains, with reported scores from 8.0 to 9.5.</li><li>• The criminal-defense run reported five material issues caught and 0/5 material issues escaping the evaluated pipeline.</li><li>• The benchmark observed contradiction detection, evidence-gap identification, adversarial correction, and architecture selection.</li></ul></div><div className="border border-white/10 bg-[#050810]/30 p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-[#8892a0]">NOT YET PROVEN</p><ul className="mt-6 space-y-3 text-sm leading-6 text-[#8892a0]"><li>• Universal superiority over single-model AI.</li><li>• Statistical significance across a large sample.</li><li>• Generalization to every domain or failure mode.</li><li>• Zero-error operation or immunity from correlated model failure.</li><li>• That additional agents always improve accuracy or justify their cost.</li></ul></div></section>
-
-      <section className="mt-6 border border-white/10 bg-white/[.018] p-5 sm:p-6"><p className="text-[9px] tracking-[.4em] text-amber-300">NEXT VALIDATION / CONTROLLED COMPARISON</p><h2 className="mt-4 text-3xl font-semibold text-gray-200">The next question is measurable.</h2><p className="mt-5 max-w-4xl text-sm leading-7 text-[#8892a0]">A stronger validation program compares the same seeded cases under three conditions: a single model, SIST independent analysis, and SIST with the full adversarial control layer. Cases can contain wrong-but-similar authority, contradictory dates, missing records, misleading statements, ambiguous provenance, arithmetic inconsistencies, and unsupported assumptions.</p><div className="mt-8 grid gap-2 md:grid-cols-3">{[["A","SINGLE MODEL","BASELINE"],["B","SIST INDEPENDENT","ARCHITECTURE WITHOUT FULL AIP"],["C","SIST + AIP","FULL ADVERSARIAL CONTROL"]].map(([n,t,d])=><div key={n} className="border border-white/10 bg-[#050810]/40 p-5"><span className="font-mono text-amber-300">{n}</span><h3 className="mt-3 text-[10px] tracking-[.18em] text-gray-200">{t}</h3><p className="mt-2 text-[8px] tracking-[.15em] text-[#8892a0]">{d}</p></div>)}</div><p className="mt-8 text-xs tracking-[.08em] text-[#8892a0]">Measure discovery, correction, catch rate, error escape rate, HOLD decisions, cost, latency, and reproducibility.</p></section>
-
-      <section className="mt-24 border-y border-white/10 py-5 sm:py-6 text-center"><p className="text-[9px] tracking-[.45em] text-amber-300">SIST PUBLIC THESIS</p><blockquote className="mx-auto mt-7 max-w-7xl text-3xl font-medium leading-tight tracking-[-.02em] text-gray-200 md:text-5xl">“AI does not become reliable because it sounds confident. It becomes more defensible when its reasoning is challenged, its evidence is examined, its contradictions are exposed, and its unsupported conclusions can be stopped.”</blockquote><p className="mx-auto mt-8 max-w-3xl text-sm leading-7 text-[#8892a0]">SIST does not promise perfect intelligence. It builds resistance against defective intelligence.</p><div className="mt-8 flex flex-wrap justify-center gap-2"><Pill>DISCOVER</Pill><Pill>CHALLENGE</Pill><Pill>VERIFY</Pill><Pill>HOLD WHEN NECESSARY</Pill><Pill>RELEASE WHAT SURVIVES</Pill></div></section>
-    </div></section>
+      <section className="command-footer">
+        <Link href="/">← HOME</Link><span>SIST / SYSTEM ARCHITECTURE</span><Link href="/council">COUNCIL →</Link>
+      </section>
+    </div>
   </main>;
 }
