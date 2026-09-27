@@ -1949,3 +1949,13 @@ main.min-h-screen.bg-\[\#050810\] section[class*="border"],
   .division-statement-panel { padding:28px 24px; min-height:340px; }
   .division-command-footer { flex-direction:column; align-items:flex-start; }
 }
+
+
+/* Direct division seal assets — no sprite transforms */
+.division-seal-image {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:inherit;
+}
