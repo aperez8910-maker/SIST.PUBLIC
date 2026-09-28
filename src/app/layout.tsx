@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SIST | System Intelligence & Strategic Tactics",
   description:
-    "System Intelligence & Strategic Tactics is an intelligence architecture for structured research, adversarial review, strategic synthesis, and decision support.",
+    "SIST is an independent AI research and intelligence-analysis platform for structured records, adversarial review, source-grounded synthesis, and human decision support.",
   keywords: [
     "System Intelligence",
     "Strategic Tactics",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SIST | System Intelligence & Strategic Tactics",
     description:
-      "Structured intelligence, adversarial review, and strategic synthesis.",
+      "Independent AI research, structured intelligence, adversarial review, and human-directed synthesis.",
     type: "website",
     siteName: "System Intelligence & Strategic Tactics",
     url: siteUrl,
@@ -51,7 +51,7 @@ const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   description:
-    "An intelligence architecture for structured research, adversarial review, strategic synthesis, and decision support.",
+    "An independent AI research and intelligence-analysis platform for structured records, adversarial review, strategic synthesis, and decision support.",
   email: "support@systemintelligenceandstrategictactics.com",
   sameAs: ["https://github.com/aperez8910-maker/SIST.PUBLIC"],
 };
