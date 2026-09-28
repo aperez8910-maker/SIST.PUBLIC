@@ -14,8 +14,8 @@ export default function DivisionsPage() {
             <h1>DIVISIONAL<br/><em>COMMAND.</em></h1>
             <p>
               Five specialized operating environments connected to one adversarial intelligence architecture.
-              Each division preserves the same evidentiary discipline, lineage controls, challenge process,
-              and deployable output standard.
+              Different institutions create different rules and records, but the underlying intelligence problem is often the same:
+              fragmented evidence, conflicting claims, procedural complexity, missing information, and asymmetric access to the record.
             </p>
           </div>
 
@@ -61,6 +61,23 @@ export default function DivisionsPage() {
               <div className="division-card-gridmark" aria-hidden="true" />
             </Link>
           ))}
+        </section>
+
+        <section className="division-command-section division-domain-rationale">
+          <div className="division-command-heading">
+            <span className="eyebrow">WHY FIVE DIVISIONS</span>
+            <h2>Different domains. The same intelligence discipline.</h2>
+          </div>
+          <div className="division-rationale-grid">
+            <article><span>01</span><h3>FRAGMENTED RECORDS</h3><p>Important facts are spread across documents, systems, people, and timelines.</p></article>
+            <article><span>02</span><h3>CONFLICTING CLAIMS</h3><p>The record can contain competing accounts, omissions, and institutional narratives.</p></article>
+            <article><span>03</span><h3>PROCEDURAL COMPLEXITY</h3><p>Rules, deadlines, standards, and decision points can matter as much as the underlying facts.</p></article>
+            <article><span>04</span><h3>ASYMMETRIC INFORMATION</h3><p>Institutions often control more records, expertise, and process knowledge than the person confronting them.</p></article>
+          </div>
+          <div className="division-scope-note">
+            <strong>OPERATING SCOPE</strong>
+            <p>SIST is an independent AI research and intelligence-analysis platform. Its divisions are analytical operating domains—not government agencies, law firms, medical providers, or licensed representatives.</p>
+          </div>
         </section>
 
         <section className="division-command-footer">
