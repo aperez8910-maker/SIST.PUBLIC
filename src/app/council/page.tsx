@@ -2,9 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 const seats = [
-  {id:"01",name:"COUNCILMAN 1",role:"INDEPENDENT ANALYSIS",tone:"gold",body:"Develops an independent position from the record before synthesis pressure is introduced."},
-  {id:"02",name:"COUNCILWOMAN 2",role:"ADVERSARIAL ATTACK",tone:"red",body:"Targets assumptions, weak links, contradictions, alternate explanations, and unsupported confidence."},
-  {id:"03",name:"COUNCILMAN 3",role:"VERIFICATION / ENFORCEMENT",tone:"green",body:"Tests whether the surviving position is sufficiently grounded to move forward."},
+  {id:"01",name:"INDEPENDENT ANALYSIS",designation:"COUNCILMAN 1™",tone:"gold",body:"Develops an independent position from the record before synthesis pressure is introduced."},
+  {id:"02",name:"ADVERSARIAL REVIEW",designation:"COUNCILWOMAN 2™",tone:"red",body:"Targets assumptions, weak links, contradictions, alternate explanations, and unsupported confidence."},
+  {id:"03",name:"RESEARCH & VERIFICATION",designation:"COUNCILMAN 3™",tone:"green",body:"Tests whether the surviving position is supported by the record and identifies material gaps before release."},
 ] as const;
 
 export default function CouncilPage(){
@@ -15,14 +15,14 @@ export default function CouncilPage(){
         <div className="command-hero-copy">
           <span className="eyebrow">SIST / COUNCIL CHAMBER</span>
           <h1>INDEPENDENT<br/><em>MINDS. ONE RECORD.</em></h1>
-          <p>The Council is not a vote. Independent analytical seats develop, attack, verify, and synthesize positions while preserving the underlying evidence and disagreement.</p>
+          <p>The Council is not a vote or a collection of characters. Three AI seats perform separate analytical functions while a human ENFORCER™ remains the final authority over synthesis and deployment. Evidence, dissent, and unresolved questions stay visible.</p>
           <div className="command-actions">
             <Link href="/interactive" className="action-primary">ENTER WORK FLOOR ↗</Link>
             <Link href="/system" className="action-secondary">SYSTEM ARCHITECTURE →</Link>
           </div>
           <div className="command-metrics">
-            <div><span>SEATS</span><strong>03</strong></div>
-            <div><span>MODE</span><strong>INDEPENDENT</strong></div>
+            <div><span>AI SEATS</span><strong>03</strong></div>
+            <div><span>HUMAN AUTHORITY</span><strong>01</strong></div>
             <div><span>CHALLENGE</span><strong className="gold">ACTIVE</strong></div>
             <div><span>SYNTHESIS</span><strong>CONTROLLED</strong></div>
           </div>
@@ -30,7 +30,7 @@ export default function CouncilPage(){
         <div className="council-chamber">
           <div className="council-ring council-ring-a"/><div className="council-ring council-ring-b"/>
           {seats.map((s,i)=><div key={s.id} className={`council-orbit-seat council-seat-${i+1} council-tone-${s.tone}`}>
-            <span>{s.id}</span><strong>{s.name}</strong><small>{s.role}</small>
+            <span>{s.id}</span><strong>{s.name}</strong><small>{s.designation}</small>
           </div>)}
           <div className="council-core"><span>SYNTHESIS</span><small>CONTROLLED POSITION</small></div>
         </div>
@@ -45,10 +45,19 @@ export default function CouncilPage(){
         <div className="council-seat-grid">
           {seats.map(s=><article key={s.id} className={`council-seat-card council-tone-${s.tone}`}>
             <div className="seat-top"><span>SEAT {s.id}</span><i/></div>
-            <h2>{s.name}</h2><strong>{s.role}</strong><p>{s.body}</p>
+            <h2>{s.name}</h2><strong>{s.designation}</strong><p>{s.body}</p>
             <div className="seat-trace"><span/><span/><span/></div>
           </article>)}
         </div>
+      </section>
+
+      <section className="council-human-authority">
+        <div>
+          <span className="eyebrow">SEAT 00 / HUMAN AUTHORITY</span>
+          <h2>ENFORCER™</h2>
+          <p>The human operator controls objectives, resolves judgment calls, reviews the synthesis, and decides whether anything is released or acted on. No AI seat has final authority.</p>
+        </div>
+        <div className="human-authority-status"><i/><span>FINAL APPROVAL</span><strong>HUMAN CONTROLLED</strong></div>
       </section>
 
       <section className="command-section council-process">
