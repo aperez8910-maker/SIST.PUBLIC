@@ -10,7 +10,7 @@ const pipeline = [
   ["06","LAWCLERK","Rules, standards, procedural posture, and legal relevance are tested."],
   ["07","COUNTERMEASURES","The working position is attacked and failure paths are surfaced."],
   ["08","BRIEFER","Surviving findings are converted into clear strategic intelligence."],
-  ["09","DEPLOY","Final outputs move forward with lineage, caveats, and control state intact."],
+  ["09","DEPLOY MASTER","Final outputs move forward only after lineage, caveats, control state, and human release authority are preserved."],
 ] as const;
 
 const gates = [
