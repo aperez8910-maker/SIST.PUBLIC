@@ -44,6 +44,26 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="sist-footer-security">
+          <div>
+            <span>HOSTING SECURITY / VERCEL</span>
+            <strong>AES-256 AT REST</strong>
+            <small>Platform-hosted data at rest</small>
+          </div>
+          <div>
+            <span>TRANSPORT SECURITY</span>
+            <strong>HTTPS / TLS 1.3</strong>
+            <small>Data in transit to the hosted site</small>
+          </div>
+          <a
+            href="https://vercel.com/docs/security/compliance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            VERIFY PLATFORM CONTROLS ↗
+          </a>
+        </div>
+
         <div className="sist-footer-scope">
           <strong>OPERATING SCOPE</strong>
           <p>
