@@ -1,83 +1,66 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-amber-300/18 bg-[#020304] px-6 py-8 text-white">
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <div className="max-w-sm">
-            <div className="flex items-center gap-3">
-              <Image src="/logo.png" alt="SIST™" width={46} height={46} priority className="object-contain" />
-              <h2 className="text-lg font-bold tracking-[0.18em] text-amber-200">SYSTEM INTELLIGENCE AND STRATEGIC TACTICS™</h2>
+    <footer className="sist-footer">
+      <div className="sist-footer-inner">
+        <div className="sist-footer-main">
+          <div className="sist-footer-brand">
+            <div className="sist-footer-lockup">
+              <Image src="/logo.png" alt="SIST™" width={52} height={52} priority />
+              <div>
+                <strong>SIST™</strong>
+                <span>SYSTEM INTELLIGENCE & STRATEGIC TACTICS</span>
+              </div>
             </div>
-            <p className="mt-2 text-xs leading-6 text-gray-400">
-              Adversarial intelligence architecture for structured research, challenge, verification, and decision support.
+            <p>
+              Independent AI research and intelligence-analysis platform for structured records,
+              adversarial review, source-grounded synthesis, and human decision support.
             </p>
           </div>
 
-          <div className="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4">
-            <div className="rounded border border-white/10 bg-white/[0.02] p-4">
-              <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
-                SECURE CHANNEL
-              </div>
-              <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">ALL COMMUNICATIONS ENCRYPTED</div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">AES-256 · TLS 1.3</div>
-            </div>
-
-            <div className="rounded border border-white/10 bg-white/[0.02] p-4">
-              <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
-                SYSTEM STATUS
-              </div>
-              <div className="mt-2 text-[9px] tracking-[0.22em] text-emerald-300">OPERATIONAL</div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">INTAKE ACTIVE</div>
-            </div>
-
-            <div className="rounded border border-white/10 bg-white/[0.02] p-4">
-              <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
-                AIP SENTINEL™
-              </div>
-              <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">CHALLENGE ACTIVE</div>
-              <div className="mt-1 text-[8px] tracking-[0.18em] text-gray-500">VERIFICATION ONLINE</div>
-            </div>
-
-            <div className="rounded border border-white/10 bg-white/[0.02] p-4">
-              <div className="flex items-center gap-2 text-[9px] font-semibold tracking-[0.32em] text-gray-400">
-                <Image src="/logo.png" alt="" width={16} height={16} priority className="object-contain opacity-80" />
-                SUPPORT
-              </div>
-              <div className="mt-2 text-[9px] tracking-[0.22em] text-amber-300">
-                <a href="mailto:support@systemintelligenceandstrategictactics.com" className="hover:text-amber-200">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</a>
-              </div>
-            </div>
+          <div className="sist-footer-grid">
+            <Link href="/system" className="sist-footer-card">
+              <span>PUBLIC ARCHITECTURE</span>
+              <strong>09-STAGE PIPELINE</strong>
+              <small>IMPLEMENTED / HUMAN CONTROLLED</small>
+            </Link>
+            <Link href="/research" className="sist-footer-card">
+              <span>RESEARCH</span>
+              <strong>METHODS & LIMITS</strong>
+              <small>PUBLIC DOCUMENTS / VALIDATION</small>
+            </Link>
+            <Link href="/briefings" className="sist-footer-card">
+              <span>FIELD RECORDS</span>
+              <strong>BRIEFINGS</strong>
+              <small>METHOD IN PRACTICE</small>
+            </Link>
+            <Link href="/contact" className="sist-footer-card">
+              <span>REQUEST BRIEFING</span>
+              <strong>OPEN INTAKE</strong>
+              <small>HIGH-LEVEL FIRST CONTACT</small>
+            </Link>
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center md:justify-start">
-          <a
-            href="https://codetrendy.com/listing/systemintelligenceandstrategictactics?utm_source=systemintelligenceandstrategictactics.com&utm_medium=badge"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="inline-flex rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
-          >
-            {/* Use the provider's badge directly to preserve its original rendering. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://codetrendy.com/api/badge?style=classic"
-              alt="Listed on CodeTrendy"
-              height="54"
-              className="h-[54px] w-auto max-w-full"
-            />
-          </a>
+        <div className="sist-footer-scope">
+          <strong>OPERATING SCOPE</strong>
+          <p>
+            SIST is not a government agency, law firm, medical provider, or licensed representative.
+            The platform provides AI-assisted research, record analysis, adversarial review, and decision support.
+            Human users remain responsible for professional review and consequential decisions.
+          </p>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 md:flex-row">
-          <div className="text-center text-[8px] tracking-[0.34em] text-gray-500 md:text-left">
-            © {new Date().getFullYear()} SIST™ — SYSTEM INTELLIGENCE AND STRATEGIC TACTICS™. ALL RIGHTS RESERVED.
-          </div>
-          <div className="text-center text-[8px] tracking-[0.3em] text-gray-600 md:text-right">SECURE · INDEPENDENT · UNCOMPROMISING</div>
+        <div className="sist-footer-links">
+          <a href="https://github.com/aperez8910-maker/SIST.PUBLIC" target="_blank" rel="noopener noreferrer">PUBLIC REPOSITORY ↗</a>
+          <a href="mailto:support@systemintelligenceandstrategictactics.com">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</a>
+        </div>
+
+        <div className="sist-footer-bottom">
+          <span>© {new Date().getFullYear()} SIST™ — SYSTEM INTELLIGENCE & STRATEGIC TACTICS™. ALL RIGHTS RESERVED.</span>
+          <span>INDEPENDENT · HUMAN-DIRECTED · SOURCE-GROUNDED</span>
         </div>
       </div>
     </footer>
