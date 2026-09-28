@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
           <div>
             <span>TRANSPORT SECURITY</span>
-            <strong>HTTPS / TLS 1.3</strong>
-            <small>Data in transit to the hosted site</small>
+            <strong>HTTPS / TLS 1.2+</strong>
+            <small>TLS 1.3 supported by the Vercel edge</small>
           </div>
           <a
             href="https://vercel.com/docs/security/compliance"
