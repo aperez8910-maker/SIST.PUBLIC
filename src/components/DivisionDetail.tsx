@@ -124,6 +124,14 @@ export default function DivisionDetail({
           )}
         </section>
 
+        <section className="division-scope-disclosure">
+          <span>INDEPENDENT ANALYTICAL PLATFORM</span>
+          <p>
+            This division provides research, record analysis, adversarial review, and decision-support output.
+            SIST is not a government agency, law firm, healthcare provider, or licensed representative, and the platform does not itself enter an attorney-client, clinician-patient, or representative-client relationship.
+          </p>
+        </section>
+
         <section className="division-command-footer">
           <Link href="/divisions">← ALL DIVISIONS</Link>
           <span>DIVISION {number} / SIST NETWORK</span>
