@@ -2,10 +2,10 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 const research = [
-  ["01","SIST Intelligence Architecture","How the controlled multi-stage system organizes evidence, reasoning, challenge, and deployment.","ARCHITECTURE","gold"],
-  ["02","Adversarial Integration Protocol","The challenge layer used to expose unsupported assumptions, weak evidence, and fragile conclusions.","PROTOCOL","red"],
-  ["03","Strategic Intelligence Framework","Methods for converting complex records into structured, decision-relevant intelligence.","FRAMEWORK","green"],
-  ["04","AI Council Model","Independent analytical seats, visible dissent, adversarial review, and controlled synthesis.","COUNCIL MODEL","blue"],
+  ["01","SIST Intelligence Architecture","How the controlled multi-stage system organizes evidence, reasoning, challenge, and deployment.","ARCHITECTURE","gold","/research/system-intelligence-architecture"],
+  ["02","Adversarial Integration Protocol","The challenge layer used to expose unsupported assumptions, weak evidence, and fragile conclusions.","PROTOCOL","red","/research/adversarial-integration-protocol"],
+  ["03","Strategic Intelligence Framework","Methods for converting complex records into structured, decision-relevant intelligence.","FRAMEWORK","green","/research/strategic-intelligence-framework"],
+  ["04","AI Council Model","Independent analytical seats, visible dissent, adversarial review, and controlled synthesis.","COUNCIL MODEL","blue","/research/ai-council-model"],
 ] as const;
 
 export default function ResearchPage(){
@@ -35,11 +35,11 @@ export default function ResearchPage(){
       <section className="command-section">
         <div className="command-section-head"><span className="eyebrow">RESEARCH NODES</span><div><h2>Architecture should be explainable.</h2><p>The public research layer documents what SIST is designed to do, where its limits are, and how stronger validation can test the claims made about the architecture.</p></div></div>
         <div className="research-node-grid">
-          {research.map(([n,title,desc,kind,tone])=><article key={n} className={`research-card research-tone-${tone}`}>
+          {research.map(([n,title,desc,kind,tone,href])=><Link key={n} href={href} className={`research-card research-tone-${tone}`}>
             <div className="research-card-top"><span>{n}</span><small>{kind}</small><i/></div>
             <h2>{title}</h2><p>{desc}</p>
-            <div className="research-card-foot"><span>RESEARCH NODE</span><b>OPEN / DOCUMENTED</b></div>
-          </article>)}
+            <div className="research-card-foot"><span>PUBLIC RESEARCH DOCUMENT</span><b>READ DOCUMENT →</b></div>
+          </Link>)}
         </div>
       </section>
 
