@@ -1,57 +1,58 @@
-# SIST DIVISIONS
+# SIST™ DIVISIONS
 
 ## System Intelligence & Strategic Tactics
 
-SIST operates as one intelligence architecture with specialized divisions. Each division applies the SIST methodology to a distinct domain.
+SIST operates as one intelligence architecture with five specialized analytical divisions.
+
+The divisions are not separate government or professional authorities. They are domain-specific operating environments that apply the same evidentiary and adversarial methodology to different types of records and institutional processes.
+
+The cross-domain logic is consistent: fragmented records, conflicting claims, procedural complexity, missing evidence, and information asymmetry often create the same underlying intelligence problem even when the substantive rules differ.
 
 ---
 
 # DIVISION 01
 
-## Legal Intelligence & Litigation Strategy
+## Criminal Defense Division
 
 ### Purpose
 
-The founding division of SIST.
-
-This division applies structured intelligence, adversarial analysis, and evidence organization to legal information, procedures, arguments, and strategy.
+Structured criminal-defense intelligence focused on records, discovery, evidence, procedure, contradictions, and adversarial strategy support.
 
 ### Focus Areas
 
-- Legal research
-- Statutory analysis
-- Case analysis
-- Procedural review
-- Evidence organization
+- Record and discovery organization
 - Timeline reconstruction
-- Argument analysis
-- Litigation preparation
-- Counterargument development
+- Evidence mapping
+- Contradiction analysis
+- Procedural research
+- Authority and issue development
+- Counterargument analysis
+- Defense-strategy support
 
 ### Core Principle
 
-Analyze the law. Challenge the argument. Prepare for the counterargument.
+Build the record. Test the theory. Expose what does not hold.
 
 ---
 
 # DIVISION 02
 
-## Healthcare Intelligence & Advocacy
+## Healthcare Intelligence Division
 
 ### Purpose
 
-A specialized division focused on understanding complex healthcare information, records, processes, and institutional interactions.
+Structured analysis of healthcare records, processes, billing, policy, institutional decisions, and patient-advocacy environments.
 
 ### Focus Areas
 
 - Medical record organization
 - Healthcare timeline analysis
-- Insurance documentation
-- Billing review
-- Claims analysis
+- Billing and claims review
+- Policy and process research
 - Provider communication analysis
-- Administrative accountability
-- Patient advocacy support
+- Institutional decision review
+- Evidence-gap identification
+- Patient-advocacy support
 
 ### Core Principle
 
@@ -61,70 +62,81 @@ Complex healthcare information requires structured intelligence.
 
 # DIVISION 03
 
-## Consumer Advocacy & Institutional Accountability
+## Consumer Advocacy Division
 
 ### Purpose
 
-A division dedicated to analyzing consumer issues, institutional conduct, and organizational accountability.
+Consumer-focused intelligence organizing records, representations, disputes, account history, and accountability pathways.
 
 ### Focus Areas
 
 - Consumer disputes
-- Financial institutions
-- Corporate conduct
-- Contract analysis
-- Complaint preparation
-- Policy analysis
-- Institutional response review
-- Accountability research
+- Financial and account records
+- Corporate representations
+- Contract and policy review
+- Complaint records
+- Timeline reconstruction
+- Contradiction analysis
+- Escalation research
 
 ### Core Principle
 
-The record reveals the truth.
+The record should be stronger than the narrative.
 
 ---
 
 # DIVISION 04
 
-## Forensic Intelligence & Evidence Analysis
+## Immigration & Humanitarian Advocacy Division
 
 ### Purpose
 
-A division focused on reconstructing events through structured examination of evidence and information.
+Structured immigration and humanitarian intelligence spanning records, detention, procedure, family impact, advocacy, and escalation.
 
 ### Focus Areas
 
-- Digital evidence
-- Document analysis
-- Data relationships
-- Timeline reconstruction
-- Pattern detection
-- Contradiction identification
-- Evidence mapping
+- Record organization
+- Custody and detention timelines
+- Filing and procedural history
+- Family-impact documentation
+- Humanitarian equities
+- Authority and policy research
+- Contradiction mapping
+- Advocacy support
 
 ### Core Principle
 
-Evidence creates the map. Analysis reveals the path.
+Keep the person, the record, and the procedure in the same operating picture.
 
 ---
 
 # DIVISION 05
 
-## Strategic Intelligence & Decision Analysis
+## Institutional Accountability Division
 
 ### Purpose
 
-A division designed to transform complex information into strategic understanding and decision support.
+Evidence reconstruction, process analysis, contradiction mapping, accountability review, and strategic escalation across complex institutions.
 
 ### Focus Areas
 
-- Strategic research
-- Risk assessment
-- Scenario analysis
-- Decision modeling
-- Intelligence synthesis
-- Strategic planning
+- Institutional records
+- Process reconstruction
+- Digital and document evidence
+- Timeline analysis
+- Policy comparison
+- Contradiction identification
+- Accountability research
+- Escalation strategy support
 
 ### Core Principle
 
-Intelligence is valuable when it creates action.
+Evidence creates the map. Accountability begins with the record.
+
+---
+
+## Operating scope
+
+SIST is an independent AI research and intelligence-analysis platform. These divisions do not make SIST a government agency, law firm, healthcare provider, or licensed representative. Outputs are research, analytical, and decision-support products subject to human review.
+
+© 2026 Alexander Emilio Perez. All rights reserved.

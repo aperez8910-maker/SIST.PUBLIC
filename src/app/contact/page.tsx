@@ -1,3 +1,52 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import IntakeForm from "@/components/IntakeForm";
 
-export default function ContactPage(){return <main className="sist-page-shell sist-modern-page"><div className="sist-grid pointer-events-none fixed inset-0"/><div className="sist-modern-radial pointer-events-none fixed inset-0"/><Navbar/><section className="relative px-4 sm:px-8 py-5 sm:py-6"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[1fr_380px] lg:items-end"><div><p className="text-[9px] tracking-[0.4em] text-amber-300">SIST / SECURE INQUIRY CHANNEL</p><h1 className="sist-metal mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">CONNECT<br />WITH SIST</h1><p className="mt-7 max-w-3xl text-base leading-8 text-[#8892a0] md:text-lg">For inquiries regarding System Intelligence & Strategic Tactics, research, partnerships, and intelligence framework discussions.</p></div><div className="border border-emerald-400/20 bg-emerald-400/[0.025] p-6"><div className="flex justify-between text-[9px] tracking-[0.3em]"><span className="text-[#8892a0]">CHANNEL STATUS</span><span className="text-emerald-300">OPEN</span></div><div className="mt-6 flex items-center gap-3"><span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400"/><span className="text-xs text-[#8892a0]">GENERAL INQUIRIES</span></div><p className="mt-4 text-xs leading-6 text-[#8892a0]">Human-directed communication channel for SIST.</p></div></div><div className="mt-16 grid gap-5 lg:grid-cols-2"><div className="border border-amber-300/25 bg-amber-300/[0.025] p-5 sm:p-6"><p className="text-[9px] tracking-[0.3em] text-amber-300">GENERAL INQUIRIES</p><h2 className="mt-5 text-2xl font-semibold">Open a channel.</h2><p className="mt-4 text-sm leading-7 text-[#8892a0]">Research collaboration, strategic intelligence discussions, framework development, and institutional partnerships.</p><a href="mailto:support@systemintelligenceandstrategictactics.com" className="mt-8 block border border-amber-300/25 bg-[#050810]/30 p-5 text-sm text-amber-200 transition hover:border-amber-300/60">support@systemintelligenceandstrategictactics.com</a></div><div className="border border-red-400/20 bg-red-400/[0.02] p-5 sm:p-6"><p className="text-[9px] tracking-[0.3em] text-red-300">AREAS OF INTEREST</p><ul className="mt-6 space-y-4 text-sm text-[#8892a0]"><li className="border-b border-white/10 pb-4">— Research collaboration</li><li className="border-b border-white/10 pb-4">— Strategic intelligence discussions</li><li className="border-b border-white/10 pb-4">— Framework development</li><li>— Institutional partnerships</li></ul></div></div></div></section></main>}
+export default function ContactPage() {
+  return (
+    <main className="sist-evo command-page command-contact">
+      <Navbar />
+      <div className="command-shell">
+        <section className="contact-command-hero">
+          <div>
+            <span className="eyebrow">SIST / REQUEST BRIEFING</span>
+            <h1>OPEN AN<br/><em>INTELLIGENCE INTAKE.</em></h1>
+            <p>
+              Start with the objective, the operating domain, the known record, and the outcome you need to reach.
+              The first contact should define the intelligence problem—not dump sensitive evidence into a public form.
+            </p>
+          </div>
+          <aside className="contact-channel-card">
+            <div><span>CHANNEL</span><strong>PUBLIC INTAKE</strong></div>
+            <div><span>FILES</span><strong>NOT COLLECTED HERE</strong></div>
+            <div><span>REVIEW</span><strong>HUMAN DIRECTED</strong></div>
+            <div><span>NEXT STEP</span><strong>HANDLING METHOD CONFIRMED</strong></div>
+          </aside>
+        </section>
+
+        <section className="contact-intake-layout">
+          <div className="contact-intake-copy">
+            <span className="eyebrow">WHAT HAPPENS NEXT</span>
+            <h2>Define the matter before the system touches the record.</h2>
+            <p>After the initial contact, the objective and scope can be clarified, the appropriate division identified, and a handling method established for any records that actually need review.</p>
+            <div className="contact-step-grid">
+              <article><span>01</span><h3>OBJECTIVE</h3><p>What question or decision needs to be resolved?</p></article>
+              <article><span>02</span><h3>RECORD</h3><p>What exists, what is missing, and where are the contradictions?</p></article>
+              <article><span>03</span><h3>OUTPUT</h3><p>What should the intelligence product help you decide or prepare?</p></article>
+              <article><span>04</span><h3>HANDLING</h3><p>Confirm how sensitive records should be transmitted before sending them.</p></article>
+            </div>
+            <div className="contact-scope-card">
+              <strong>INDEPENDENT PLATFORM</strong>
+              <p>SIST provides AI-assisted research, record analysis, adversarial review, and decision support. It is not a government agency, law firm, medical provider, or licensed representative.</p>
+            </div>
+            <Link href="/divisions" className="contact-domain-link">VIEW OPERATING DIVISIONS →</Link>
+          </div>
+          <div className="contact-form-panel">
+            <div className="contact-form-head"><span>INTAKE / PUBLIC CHANNEL</span><strong>STEP 01</strong></div>
+            <IntakeForm />
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
