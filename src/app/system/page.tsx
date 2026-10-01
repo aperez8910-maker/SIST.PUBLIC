@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/system");
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
@@ -23,6 +28,7 @@ const gates = [
 
 export default function SystemPage(){
   return <main className="sist-evo command-page command-system">
+      <PageStructuredData path="/system" />
     <Navbar/>
     <div className="command-shell">
       <section className="command-hero command-hero-system">

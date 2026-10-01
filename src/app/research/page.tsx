@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/research");
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
@@ -10,6 +15,7 @@ const research = [
 
 export default function ResearchPage(){
   return <main className="sist-evo command-page command-research">
+      <PageStructuredData path="/research" />
     <Navbar/>
     <div className="command-shell">
       <section className="command-hero command-hero-research">

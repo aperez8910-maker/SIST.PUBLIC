@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function LegacyStrategicDivision() {
-  redirect("/divisions/institutional-accountability");
+  permanentRedirect("/divisions/institutional-accountability");
 }

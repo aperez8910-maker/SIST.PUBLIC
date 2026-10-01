@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions/healthcare");
+
 import DivisionDetail from "@/components/DivisionDetail";
 
 export default function HealthcareDivision() {
   return (
+    <>
+    <PageStructuredData path="/divisions/healthcare" />
     <DivisionDetail
       number="02"
       sealSrc="/division-seals/healthcare-intelligence.webp"
@@ -19,5 +26,6 @@ export default function HealthcareDivision() {
       approach="Connect records, billing, process, policy, and institutional decisions while preserving source provenance, uncertainty, contradictions, and unresolved questions."
       tone="green"
     />
+    </>
   );
 }

@@ -1,9 +1,15 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/intelligence");
+
 import Navbar from "@/components/Navbar";
 import OpenAIConsole from "@/components/OpenAIConsole";
 
 export default function IntelligencePage() {
   return (
     <main className="sist-page-shell sist-modern-page min-h-screen text-white">
+      <PageStructuredData path="/intelligence" />
       <div className="sist-grid pointer-events-none fixed inset-0" />
       <div className="sist-modern-radial pointer-events-none fixed inset-0" />
       <Navbar />

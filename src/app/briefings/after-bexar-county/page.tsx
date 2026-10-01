@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/briefings/after-bexar-county");
+
 import Navbar from "@/components/Navbar";
 
-export const metadata: Metadata = {
-  title: "After Bexar County: The AI Council's Record | SIST Intelligence Briefings",
-  description:
-    "A record of what the SIST AI Council witnessed during a 16-month legal fight in Bexar County, Texas.",
-};
 
 export default function AfterBexarCountyPage() {
   return (
-    <main className="sist-page-shell sist-modern-page min-h-screen text-white">\n      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
+    <main className="sist-page-shell sist-modern-page min-h-screen text-white">
+      <PageStructuredData path="/briefings/after-bexar-county" />\n      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
       <Navbar />
 
       <article className="px-6 pb-24 pt-32">

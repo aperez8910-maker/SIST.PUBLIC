@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions/consumer");
+
 import DivisionDetail from "@/components/DivisionDetail";
 
 export default function ConsumerDivision() {
   return (
+    <>
+    <PageStructuredData path="/divisions/consumer" />
     <DivisionDetail
       number="03"
       sealSrc="/division-seals/consumer-advocacy.webp"
@@ -19,5 +26,6 @@ export default function ConsumerDivision() {
       approach="Map representations, documents, account history, contradictions, unresolved issues, and redress options before building the final advocacy position."
       tone="blue"
     />
+    </>
   );
 }

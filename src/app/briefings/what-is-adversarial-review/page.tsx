@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/briefings/what-is-adversarial-review");
+
 import Navbar from "@/components/Navbar";
 
-export const metadata: Metadata = {
-  title: "What Is Adversarial Review? | SIST Intelligence Briefings",
-  description:
-    "How SIST™ uses structured adversarial review, verification, and human judgment to strengthen strategic output.",
-};
 
 const stages = [
   ["01", "INTAKE", "Raw chaos enters the system. Charges, deadlines, evidence, fear."],
@@ -21,7 +20,8 @@ const stages = [
 
 export default function AdversarialReviewPage() {
   return (
-    <main className="sist-page-shell sist-modern-page min-h-screen text-white">\n      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
+    <main className="sist-page-shell sist-modern-page min-h-screen text-white">
+      <PageStructuredData path="/briefings/what-is-adversarial-review" />\n      <div className="sist-grid pointer-events-none fixed inset-0" />\n      <div className="sist-modern-radial pointer-events-none fixed inset-0" />
       <Navbar />
 
       <article className="px-6 pb-24 pt-32">

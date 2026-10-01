@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions/criminal-defense");
+
 import DivisionDetail from "@/components/DivisionDetail";
 
 export default function CriminalDefenseDivision() {
   return (
+    <>
+    <PageStructuredData path="/divisions/criminal-defense" />
     <DivisionDetail
       number="01"
       sealSrc="/division-seals/criminal-defense.webp"
@@ -19,5 +26,6 @@ export default function CriminalDefenseDivision() {
       approach="Separate allegations from evidence, reconstruct the procedural posture, map inconsistencies and evidentiary gaps, then pressure-test competing theories through adversarial review."
       tone="gold"
     />
+    </>
   );
 }

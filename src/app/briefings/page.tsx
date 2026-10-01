@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/briefings");
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
@@ -8,6 +13,7 @@ const records=[
 
 export default function BriefingsPage(){
   return <main className="sist-evo command-page command-briefings">
+      <PageStructuredData path="/briefings" />
     <Navbar/>
     <div className="command-shell">
       <section className="command-hero command-hero-briefings">

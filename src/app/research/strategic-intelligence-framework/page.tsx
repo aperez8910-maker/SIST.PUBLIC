@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/research/strategic-intelligence-framework");
+
 import ResearchDocument from "@/components/ResearchDocument";
 
 export default function Page() {
-  return <ResearchDocument
+  return <>
+    <PageStructuredData path="/research/strategic-intelligence-framework" />
+    <ResearchDocument
     code="R-03"
     title="Strategic Intelligence Framework"
     subtitle="A framework for converting complicated records into an operating picture that distinguishes what is known, what is claimed, what is missing, and what decision paths remain."
@@ -19,5 +26,5 @@ export default function Page() {
       "It does not replace licensed professional services where those are required.",
       "Strategic options are decision support, not guaranteed outcomes.",
     ]}
-  />;
+  /></>;
 }

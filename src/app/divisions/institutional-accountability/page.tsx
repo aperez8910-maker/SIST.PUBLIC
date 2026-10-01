@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions/institutional-accountability");
+
 import DivisionDetail from "@/components/DivisionDetail";
 
 export default function InstitutionalAccountabilityDivision() {
   return (
+    <>
+    <PageStructuredData path="/divisions/institutional-accountability" />
     <DivisionDetail
       number="05"
       sealSrc="/division-seals/institutional-accountability.webp"
@@ -19,5 +26,6 @@ export default function InstitutionalAccountabilityDivision() {
       approach="Reconstruct facts and process, identify failures and inconsistencies, test institutional explanations against the record, pressure-test findings, and translate surviving intelligence into escalation or decision support."
       tone="red"
     />
+    </>
   );
 }

@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions/immigration-humanitarian");
+
 import DivisionDetail from "@/components/DivisionDetail";
 
 export default function ImmigrationHumanitarianDivision() {
   return (
+    <>
+    <PageStructuredData path="/divisions/immigration-humanitarian" />
     <DivisionDetail
       number="04"
       sealSrc="/division-seals/immigration-humanitarian.webp"
@@ -19,5 +26,6 @@ export default function ImmigrationHumanitarianDivision() {
       approach="Reconstruct status and procedure, separate verified records from assumptions, document humanitarian equities, identify unresolved issues, and pressure-test advocacy paths before deployment."
       tone="violet"
     />
+    </>
   );
 }

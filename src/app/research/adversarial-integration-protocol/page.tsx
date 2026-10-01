@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/research/adversarial-integration-protocol");
+
 import ResearchDocument from "@/components/ResearchDocument";
 
 export default function Page() {
-  return <ResearchDocument
+  return <>
+    <PageStructuredData path="/research/adversarial-integration-protocol" />
+    <ResearchDocument
     code="R-02"
     title="Adversarial Integration Protocol™"
     subtitle="The public theory behind SIST's challenge layer: a working conclusion should be exposed to structured opposition before it is treated as deployable intelligence."
@@ -19,5 +26,5 @@ export default function Page() {
       "Adversarial review can fail when multiple systems share the same blind spot.",
       "Challenge output still requires human review.",
     ]}
-  />;
+  /></>;
 }

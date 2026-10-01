@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/research/system-intelligence-architecture");
+
 import ResearchDocument from "@/components/ResearchDocument";
 
 export default function Page() {
-  return <ResearchDocument
+  return <>
+    <PageStructuredData path="/research/system-intelligence-architecture" />
+    <ResearchDocument
     code="R-01"
     title="SIST Intelligence Architecture"
     subtitle="A public description of the controlled multi-stage architecture used to organize records, develop intelligence, challenge working conclusions, and preserve human authority."
@@ -19,5 +26,5 @@ export default function Page() {
       "No disclosure of private prompts, routing logic, thresholds, or credentials.",
       "No claim that the architecture replaces professional judgment or institutional authority.",
     ]}
-  />;
+  /></>;
 }

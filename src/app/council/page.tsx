@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/council");
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
@@ -9,6 +14,7 @@ const seats = [
 
 export default function CouncilPage(){
   return <main className="sist-evo command-page command-council">
+      <PageStructuredData path="/council" />
     <Navbar/>
     <div className="command-shell">
       <section className="command-hero command-hero-council">

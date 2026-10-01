@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/contact");
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import IntakeForm from "@/components/IntakeForm";
@@ -5,6 +10,7 @@ import IntakeForm from "@/components/IntakeForm";
 export default function ContactPage() {
   return (
     <main className="sist-evo command-page command-contact">
+      <PageStructuredData path="/contact" />
       <Navbar />
       <div className="command-shell">
         <section className="contact-command-hero">

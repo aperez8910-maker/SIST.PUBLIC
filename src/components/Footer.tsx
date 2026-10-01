@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { founderLinkedIn, founderName, founderPath } from "@/lib/seo";
 
 export default function Footer() {
   return (
@@ -68,6 +69,8 @@ export default function Footer() {
         </div>
 
         <div className="sist-footer-links">
+          <Link href={founderPath}>{founderName} · Founder & System Architect</Link>
+          <a href={founderLinkedIn} target="_blank" rel="noopener noreferrer">FOUNDER ON LINKEDIN</a>
           <a href="https://github.com/aperez8910-maker/SIST.PUBLIC" target="_blank" rel="noopener noreferrer">PUBLIC REPOSITORY ↗</a>
           <a href="mailto:support@systemintelligenceandstrategictactics.com">SUPPORT@SYSTEMINTELLIGENCEANDSTRATEGICTACTICS.COM</a>
         </div>

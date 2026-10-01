@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/divisions");
+
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { divisions } from "@/data/divisions";
@@ -5,6 +10,7 @@ import { divisions } from "@/data/divisions";
 export default function DivisionsPage() {
   return (
     <main className="sist-evo divisions-command-page">
+      <PageStructuredData path="/divisions" />
       <Navbar />
 
       <div className="divisions-command-shell">

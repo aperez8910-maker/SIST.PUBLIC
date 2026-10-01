@@ -1,7 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/PageStructuredData";
+
+export const metadata = pageMetadata("/research/ai-council-model");
+
 import ResearchDocument from "@/components/ResearchDocument";
 
 export default function Page() {
-  return <ResearchDocument
+  return <>
+    <PageStructuredData path="/research/ai-council-model" />
+    <ResearchDocument
     code="R-04"
     title="AI Council Model"
     subtitle="A public description of independent analytical seats, visible disagreement, controlled synthesis, and final human authority."
@@ -19,5 +26,5 @@ export default function Page() {
       "The public document does not disclose private prompts or exact orchestration logic.",
       "No AI seat has autonomous authority to make consequential decisions.",
     ]}
-  />;
+  /></>;
 }
