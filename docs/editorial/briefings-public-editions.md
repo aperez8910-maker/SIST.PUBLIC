@@ -1,4 +1,4 @@
-# Briefings archive: public editorial editions
+# Briefings archive: SIST investigations and research
 
 The archive uses `src/data/briefings.ts` as its report inventory. The index, generated routes, canonical metadata, and sitemap derive from that inventory. Two pre-existing field notes and four public research documents remain linked.
 
@@ -10,11 +10,11 @@ The due-process briefing uses the April 26, 2026 AI-assisted paper and the later
 
 The accountability briefing uses the corrected September 2026 white paper. The safety briefing uses the September 28 public disclosure. The consumer briefing uses the Netspend CFPB v4 report with account/claim identifiers removed and strong allegations qualified. The privacy briefing uses the Consent-to-Consequences public release v1.2. The benchmark briefing uses Public Benchmark Report v1. The sample briefing uses the corrected sanitized public client report. The technical privacy briefing uses the corrected Datadog discovery report, with capability/runtime/authentication claims narrowed and an official documentation link.
 
-The founder perspective derives from the existing founder profile, Bexar field reflection, and corrected accountability paper. It does not imply authorship of every AI-assisted source report.
+The founder perspective identifies Alexander’s investigative and directing role and the AI collaboration used for analysis and drafting. Source editions remain named without attributing every source document exclusively to one person.
 
 ## Publication treatment
 
-Webpages are substantial editorial briefings, not verbatim source PDFs or private exhibits. Every report names its source edition and describes its limits. No new dates are represented as current case or deployment status. Self-reported benchmark observations remain distinct from independently validated results. Proposed controls remain distinct from deployed implementation.
+Webpages present SIST’s investigations, findings, and research contributions directly. These reports were developed through Alexander Emilio Perez’s investigations and human-directed AI collaboration. They are public report briefings rather than verbatim PDFs or private exhibits. Every report names its source edition and describes its limits. No new dates are represented as current case or deployment status. Self-reported benchmark observations remain distinct from independently validated results. Proposed controls remain distinct from deployed implementation.
 
 Private counsel and habeas support packets, confidential settlement/vendor assessments, internal uncensored reports, private forensic packets, and reviewer working documents containing unpublished manuscript material are excluded from public distribution. No sensitive document is uploaded to `public/`. A public index is not a complete private document inventory.
 

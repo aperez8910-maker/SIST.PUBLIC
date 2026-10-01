@@ -23,7 +23,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ slug:
       <Link href="/briefings" className="briefing-back">← ALL BRIEFINGS & REPORTS</Link>
       <header className="research-document-hero">
         <div><span className="eyebrow">SIST / {report.category}</span><h1>{report.title}</h1><p>{report.description}</p></div>
-        <aside><span>PUBLICATION TYPE</span><strong>{report.edition}</strong><small>Published by System Intelligence & Strategic Tactics.<br />Founded by <Link href="/alexander-emilio-perez">Alexander Emilio Perez</Link>.</small></aside>
+        <aside><span>PUBLICATION TYPE</span><strong>{report.edition}</strong><small>SIST investigation & research.<br />Led by <Link href="/alexander-emilio-perez">Alexander Emilio Perez</Link>.</small></aside>
       </header>
       <div className="research-document-grid">
         <article className="research-document-body">
@@ -32,13 +32,13 @@ export default async function BriefingPage({ params }: { params: Promise<{ slug:
             <h2>{section.title}</h2><p>{section.body}</p>
             {section.points && <ul>{section.points.map(point => <li key={point}>{point}</li>)}</ul>}
           </section>)}
-          <section id="source-notes"><span className="eyebrow">SOURCE & EDITION NOTES</span><h2>About this public edition</h2><p>{report.source}</p><p>This webpage is an editorial briefing derived from the listed source material. It preserves the report’s main questions and limitations; it is not a reproduction of the original paper or its private exhibits. The source document’s date describes its evidence context, not the current status of a proceeding or system.</p>
+          <section id="source-notes"><span className="eyebrow">REPORT SOURCES</span><h2>Research record</h2><p>{report.source}</p><p>Developed through Alexander Emilio Perez’s investigations and human-directed AI collaboration. This briefing presents the report’s findings and research contribution. Source dates identify the period assessed; private exhibits remain outside the public release.</p>
             {report.references && <ul>{report.references.map(ref => <li key={ref.href}><a href={ref.href} target="_blank" rel="noopener noreferrer">{ref.label} ↗</a></li>)}</ul>}
           </section>
         </article>
         <aside className="research-document-side">
-          <nav aria-label="Briefing contents"><span className="eyebrow">IN THIS BRIEFING</span><ol className="briefing-contents">{report.sections.map((section,index) => <li key={section.title}><a href={`#section-${index + 1}`}>{section.title}</a></li>)}<li><a href="#source-notes">Source & edition notes</a></li></ol></nav>
-          <span className="eyebrow">EVIDENCE LIMITS</span><h2>Scope of the findings</h2><ul>{report.limits.map(item => <li key={item}>{item}</li>)}</ul>
+          <nav aria-label="Briefing contents"><span className="eyebrow">IN THIS BRIEFING</span><ol className="briefing-contents">{report.sections.map((section,index) => <li key={section.title}><a href={`#section-${index + 1}`}>{section.title}</a></li>)}<li><a href="#source-notes">Report sources</a></li></ol></nav>
+          <span className="eyebrow">RESEARCH STATUS</span><h2>What remains open</h2><ul>{report.limits.map(item => <li key={item}>{item}</li>)}</ul>
           <div className="research-doc-linkset"><Link href="/briefings">← REPORT ARCHIVE</Link><Link href="/alexander-emilio-perez">MEET THE FOUNDER →</Link><Link href="/research">RESEARCH & METHODS →</Link></div>
         </aside>
       </div>

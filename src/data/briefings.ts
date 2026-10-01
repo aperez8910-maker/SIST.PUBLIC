@@ -4,135 +4,442 @@ export type Briefing = {
   limits: string[]; references?: { label: string; href: string }[];
 };
 
-// Public editorial editions: original case files and account identifiers are not distributed.
+// SIST investigations and research developed under Alexander Emilio Perez’s direction.
 export const reports: Briefing[] = [
   {
-    slug: "alexander-emilio-perez-building-sist", title: "Alexander Emilio Perez: Building SIST", category: "FOUNDER PERSPECTIVE",
-    description: "How Alexander Emilio Perez connects evidence, adversarial review, and human authority across SIST’s research and field reports.",
-    edition: "FOUNDER PROFILE", source: "SIST founder profile; After Bexar County; corrected independent-accountability white paper, September 2026.",
-    sections: [
-      { title: "The founder behind the method", body: "Alexander Emilio Perez is the founder and system architect of System Intelligence & Strategic Tactics. Based in Austin, Texas, he created SIST around a practical problem: important decisions often depend on scattered documents, incomplete timelines, conflicting accounts, and assumptions that nobody has explicitly checked. His role combines system design, record organization, direction of the AI Council, and responsibility for what is released." },
-      { title: "From a difficult record to a repeatable process", body: "The Bexar County field reflection describes a prolonged legal fight in which Alexander used AI to organize records, reconstruct events, prepare questions, and challenge explanations. The human remained responsible for the work. The later corrected accountability paper places this experience alongside an unresolved immigration matter, asking whether a persistent analytical layer makes material issues easier to see and harder to overlook.", points: ["Reconstruct the chronology from source records before settling on a story.", "Compare an allegation with the institution’s own documents and the strongest alternative explanation.", "Preserve missing evidence and unanswered questions as explicit work items.", "Convert analysis into a concise packet a person can inspect and use."] },
-      { title: "Why the AI Council needs human authority", body: "SIST gives analysis, verification, and challenge distinct roles. Agreement among models is useful input, but it is not proof that a conclusion is correct. Alexander’s ENFORCER role retains judgment and release responsibility. A persuasive answer can still be held when its source is missing, its rule does not apply, or its proposed action exceeds the available authority." },
-      { title: "A growing body of public work", body: "The public archive connects the founder’s operating method to immigration record integrity, systemic due process, consumer disputes, privacy evidence infrastructure, observational benchmarking, and frontier AI safety. These publications serve different purposes: a field report documents an observation, a white paper proposes a design, and a benchmark reports a bounded evaluation. Their evidence standards and limitations remain visible rather than being flattened into one claim of success." },
-      { title: "What the next stage requires", body: "The corrected accountability paper calls for additional matters, measurement of false positives, and evidence of decision impact. The frontier safety disclosure proposes controlled comparisons and adversarial testing. Alexander’s public research agenda therefore has a clear burden: show which issues the system finds, which findings survive verification, what the review changes, and where the method fails." },
-    ], limits: ["The founder profile describes SIST’s work and research direction; it does not imply a professional license or academic credential.", "Case experience is not a controlled demonstration of superiority or a guarantee of future outcomes."],
+    "slug": "alexander-emilio-perez-building-sist",
+    "title": "Alexander Emilio Perez: Building SIST",
+    "category": "FOUNDER PERSPECTIVE",
+    "description": "Alexander Emilio Perez built SIST through hands-on investigation, record reconstruction, and human-directed AI collaboration. These reports document that work.",
+    "edition": "FOUNDER / RESEARCH ORIGINS",
+    "source": "SIST founder profile; After Bexar County; corrected independent-accountability white paper, September 2026.",
+    "sections": [
+      {
+        "title": "Built through investigation",
+        "body": "Alexander Emilio Perez founded System Intelligence & Strategic Tactics in response to problems he was confronting directly: fragmented institutional records, conflicting explanations, missing evidence, and decisions with real consequences. He brought the records, identified the questions, challenged the answers, and directed the research. Working with AI to analyze and draft the findings became part of a repeatable intelligence process."
+      },
+      {
+        "title": "How the reports were developed",
+        "body": "SIST’s reports grew from that collaboration. Alexander supplied observations, documents, captures, and the practical context. AI-assisted research helped organize the material, compare sources, develop explanations, and draft reports. Alexander continued testing those explanations against the record. The resulting publications belong to SIST’s body of work: investigations and research developed under his direction."
+      },
+      {
+        "title": "From Bexar County to a broader method",
+        "body": "The Bexar County work connected police and court records, procedural events, evidence gaps, and competing theories. Immigration research extended the same approach to agency notices, identifiers, case histories, and service questions. Consumer and privacy investigations applied it to determination letters, account portals, browser artifacts, and disclosures. Across those settings, the recurring task was to uncover what a summary or a single screen left out."
+      },
+      {
+        "title": "The founder’s role in the Council",
+        "body": "Alexander directs the AI Council and holds the ENFORCER role: deciding which questions matter, requiring explanations to survive challenge, and retaining authority over release. Independent analysis, research, and counterargument serve that judgment. The method depends on his engagement with the evidence and his willingness to revise a theory when the record defeats it."
+      },
+      {
+        "title": "What this archive represents",
+        "body": "The archive brings together SIST’s discoveries, case analysis, system design, and validation work. It shows what was investigated, what the analysis produced, and what remains open. It also sets the next research agenda: repeat the work across more matters, measure false positives, compare against baselines, and document which verified findings change decisions."
+      }
+    ],
+    "limits": [
+      "Case studies describe experience; controlled performance comparisons remain a separate research task."
+    ]
   },
   {
-    slug: "immigration-record-integrity", title: "Immigration Record Integrity: When Errors Cross Systems", category: "IMMIGRATION & ACCOUNTABILITY",
-    description: "SIST’s public immigration assessment examines conflicting dates and identifiers, error propagation, and the records needed to test causation.",
-    edition: "PUBLIC / REDACTED BRIEFING", source: "SIST USCIS Record Integrity Public Report, branded public/redacted edition, September 2026, pp. 2–10.",
-    sections: [
-      { title: "Executive finding", body: "The report examines a distributed decision environment: intake, case management, identity matching, screening, evidence organization, human adjudication, and downstream sharing. Its central question is whether the person making a decision received a complete and correctly linked record. The public paper identifies historical government oversight findings concerning data integrity and validation failures. Those findings establish a failure class; they do not establish that the same mechanism caused an individual’s adverse outcome." },
-      { title: "The redacted case pattern", body: "The underlying public edition describes a ten-year date inconsistency, a recurring conflicting record identifier, and a disputed waiver or legal-treatment issue. It withholds the affected person’s identity. These observations justify specific verification questions. They do not establish that an AI system denied a benefit, that a particular screening tool produced the disputed legal conclusion, or that the discrepancies caused detention.", points: ["A wrong date on a notice could reflect document generation, manual entry, migration, or another source.", "A conflicting identifier could be a display error, a correctly linked alternate identifier, or an operationally separate record.", "A legal-treatment dispute could arise from human reasoning, incomplete antecedent facts, or a combination."] },
-      { title: "How a record error could travel", body: "SIST proposes an error-propagation model: an incorrect value enters a source record; a control fails to reconcile it; another system copies or queries it; screening or classification shapes attention around the assembled file; a human acts; the discrepancy is discovered later. This is a testable model rather than a finding that every step occurred. Each transition needs its own evidence, including original forms, authoritative case history, interface records, and the file actually used downstream." },
-      { title: "What historical oversight contributes", body: "The paper’s source matrix includes DHS Inspector General reports on green-card issuance, case-data quality, and E-Verify identity controls. OIG-17-11 addresses safeguards in green-card issuance. OIG-21-56 addresses deficiencies in identity and employment verification. These historical audits help identify where a present investigation should look. They cannot substitute for the current case record or prove that a historical defect remains unchanged today." },
-      { title: "The evidence that would change the assessment", body: "The decisive inquiry is provenance: where did each disputed value originate, how was the conflict handled, and which identifier and history did the receiving agency use? A field-level discrepancy ledger should keep the correct value, disputed value, earliest known appearance, original supporting document, and later appearances together.", points: ["Compare actual filed forms with agency-generated notices and electronic history.", "Examine identity linkage, alias, merge, and file-consolidation records where available.", "Determine which record and identifier downstream enforcement and court proceedings relied on.", "Seek screening or query records as questions; do not assume a particular system was involved.", "Record evidence that weakens the theory as carefully as evidence that supports it."] },
-      { title: "Adversarial challenge and public conclusion", body: "The report retains ordinary clerical error, correct alias handling, independent legal error, and enforcement based on other records as live alternatives. If the downstream record used the established identifier and contained the complete history, a fragmented-record explanation becomes weaker. If it used a conflicting identifier with missing history, that explanation warrants closer investigation. The public conclusion is a need for provenance review and contestable records, with case-specific causation unresolved." },
-    ], limits: ["No finding that USCIS is a single autonomous AI adjudicator.", "No established causal link between automation, the disputed fields, and detention.", "Historical oversight findings do not establish the present status of every system.", "Identifiers, family details, location, and private case documents are withheld."],
-    references: [{label: "DHS OIG-17-11 — Green Card Issuance",href:"https://www.oig.dhs.gov/sites/default/files/assets/2017/OIG-17-11-Nov16.pdf"},{label:"DHS OIG-21-56 — Electronic Employment Eligibility Verification",href:"https://www.oig.dhs.gov/sites/default/files/assets/2021-08/OIG-21-56-Aug21.pdf"}],
+    "slug": "immigration-record-integrity",
+    "title": "Immigration Record Integrity: When Errors Cross Systems",
+    "category": "IMMIGRATION & ACCOUNTABILITY",
+    "description": "SIST identified conflicting dates and identifiers in immigration records, mapped how agency systems can propagate errors, and defined the evidence needed to trace their consequences.",
+    "edition": "PUBLIC / REDACTED BRIEFING",
+    "source": "SIST USCIS Record Integrity Public Report, branded public/redacted edition, September 2026, pp. 2–10.",
+    "sections": [
+      {
+        "title": "What SIST investigated",
+        "body": "SIST examined discrepancies in an immigration record alongside the architecture of the agency systems handling it. The investigation connected agency notices, identity fields, case-history questions, and government oversight material. The central issue was the integrity of the record reaching a human decision-maker: were the facts complete, correctly linked, and consistent across the systems involved?"
+      },
+      {
+        "title": "What we discovered in the records",
+        "body": "The case analysis identified a ten-year date inconsistency, a repeatedly conflicting record identifier, and a disputed waiver or legal-treatment issue. Repetition made the identifier discrepancy an important investigative lead. A mismatch appearing across transactions requires more than correcting the appearance of one notice; it requires establishing which internal record the systems actually used.",
+        "points": [
+          "A notice placed an event in 2015 while later agency records placed it in 2025.",
+          "An established identifier and a similar but different identifier appeared in the record set.",
+          "The legal-treatment question needed to be examined separately from the technical source of the discrepancies."
+        ]
+      },
+      {
+        "title": "The systems finding",
+        "body": "SIST mapped a decision environment spanning intake, case management, identity resolution, screening, evidence organization, human adjudication, and inter-agency sharing. The research connected that architecture with historical oversight findings about incorrect official documents, incomplete transfers, verification failures, and weak monitoring. The important discovery was that a human decision can depend on upstream data whose conflicts are difficult to see from the final screen."
+      },
+      {
+        "title": "How an error can become institutional history",
+        "body": "The report developed a traceable error-propagation model: a disputed value enters a source system, survives a validation step, appears in another system, shapes the assembled file, and reaches a human reviewer. Each transition creates a separate evidence question. This model turns a general concern about automation into a concrete investigation of source values, identity linkage, transaction history, and downstream use."
+      },
+      {
+        "title": "The investigation’s next decisive records",
+        "body": "The strongest next step is to locate where each conflicting value first appeared and determine whether the identifiers were linked or operationally separate. SIST organized the inquiry around records that could confirm or defeat the explanation.",
+        "points": [
+          "Original submitted forms and agency-generated notices.",
+          "Electronic case history and field-change records.",
+          "Identity-linkage, alias, merge, and file-consolidation records.",
+          "The identifier and history used by downstream enforcement and court proceedings.",
+          "Relevant screening and query records, if those systems were involved."
+        ]
+      },
+      {
+        "title": "Why the findings matter",
+        "body": "A date or identifier error can be dismissed as cosmetic before anyone checks its operational role. SIST’s investigation made that distinction explicit. The published finding is that the record contained concrete discrepancies warranting a provenance investigation. Whether those discrepancies changed a particular decision or caused detention remains unresolved until the downstream records establish the connection."
+      }
+    ],
+    "limits": [
+      "The discrepancies and the error-propagation theory are distinct findings; case-specific causation remains unresolved.",
+      "Historical audits provide context, not a current audit of every agency system."
+    ],
+    "references": [
+      {
+        "label": "DHS OIG-17-11 — Green Card Issuance",
+        "href": "https://www.oig.dhs.gov/sites/default/files/assets/2017/OIG-17-11-Nov16.pdf"
+      },
+      {
+        "label": "DHS OIG-21-56 — Electronic Employment Eligibility Verification",
+        "href": "https://www.oig.dhs.gov/sites/default/files/assets/2021-08/OIG-21-56-Aug21.pdf"
+      }
+    ]
   },
   {
-    slug: "systemic-due-process", title: "Systemic Due Process: Access, Evidence, and Procedural Accountability", category: "DUE PROCESS & INSTITUTIONS",
-    description: "A public editorial briefing on the Alexander Emilio Perez due-process paper, examining motion tracking, digital access, representation, and evidence preservation.",
-    edition: "PUBLIC EDITORIAL BRIEFING", source: "Systemic Due Process Violations and Procedural Sabotage in the Felony Prosecution of Alexander Emilio Perez, April 26, 2026; AI-assisted draft marked Generated by Kimi.ai. Context updated using the September 2026 corrected accountability paper.",
-    sections: [
-      { title: "Why this paper belongs in the archive", body: "The original paper examines Alexander Emilio Perez’s experience of a criminal process through a systems lens. It assembles a chronology and raises concerns about unresolved motions, digital access, counsel communication, bond events, and missing evidence. This public edition preserves those investigative themes while distinguishing the paper’s allegations and legal theories from independently established facts. It does not reproduce its accusations as judicial findings." },
-      { title: "Follow the motion through the whole process", body: "A filing receipt is one event in a longer chain. The draft describes discovery and suppression motions that it says were submitted but not heard or ruled upon during the period assessed. A reliable audit separates submission, acceptance, service, a request for a hearing, scheduling, consideration, and disposition. Without that separation, both a litigant and a reviewer can confuse a document’s presence in the record with resolution of the issue it raises.", points: ["Preserve the exact motion and its accepted version.", "Keep filing receipts, service evidence, hearing requests, and docket entries together.", "Identify what the record establishes about each step and what still requires confirmation.", "Describe delay without assuming motive from elapsed time alone."] },
-      { title: "Digital access is a procedural question", body: "The paper alleges loss of electronic case access after a grievance. Its public significance is the need to determine what access was restricted, when it changed, what reason was recorded, and what other channels remained available. Timing can justify investigation, but timing alone does not prove retaliation. System logs, account notices, access policies, clerk communications, and alternative filing routes would be needed to evaluate the effect and competing explanations." },
-      { title: "Representation must be evaluated through the record", body: "The original analysis raises concerns about communication, discovery review, motion practice, and access to an investigator’s work. A public assessment should examine the actual work performed, the procedural posture, counsel’s explanation, and information unavailable to the outside analyst. Lack of a particular certification alone does not establish incompetence. Nor does the presence of counsel establish that every material issue was examined. The productive output is a source-specific question list for qualified professional review." },
-      { title: "Evidence preservation and linked events", body: "The paper connects body-camera evidence, disputed bond events, and later procedural consequences. The analytical task is to preserve original records and distinguish each event’s factual basis. A prior bond reinstatement should be compared with a later surrender and order; it should not be treated automatically as a legal bar to every subsequent action. A missing recording is an evidence gap until retention, request, disclosure, and availability records clarify what occurred." },
-      { title: "Historical context and correction", body: "The April paper is a snapshot, not a current docket report. The later corrected accountability paper describes dismissal of the firearm allegation and resolution of the remaining drug matter under misdemeanor-punishment treatment. That later account differs from the earlier draft’s description of the charge posture. This archive therefore retains the analytical history while avoiding publication of superseded case status as current fact. Neither paper alone establishes that SIST caused an outcome." },
-      { title: "The systemic lesson", body: "An institution can have many individual records yet leave the path from request to response difficult to reconstruct. SIST’s contribution is an auditable chronology, a map of evidence gaps, and bounded questions about access, representation, and disposition. Legal remedies, preservation requirements, and allegations of misconduct require current authority and case-specific professional review. The original draft’s categorical legal propositions are not adopted here as settled law." },
-    ], limits: ["The original paper contains allegations and AI-generated legal analysis, not findings by a court or regulator.", "This is an editorial public edition, not the original paper in full or a filing packet.", "No present case status, intentional misconduct, automatic waiver, invalid warrant, or entitlement to relief is established by this briefing.", "Private parties, case identifiers, personal contact details, and family records are omitted."],
+    "slug": "systemic-due-process",
+    "title": "Systemic Due Process: Access, Evidence, and Procedural Accountability",
+    "category": "DUE PROCESS & INSTITUTIONS",
+    "description": "SIST reconstructed Alexander Emilio Perez’s procedural history and examined unresolved motions, electronic access, representation, bond events, and missing evidence as connected accountability issues.",
+    "edition": "SIST INVESTIGATION / PUBLIC BRIEFING",
+    "source": "Systemic Due Process Violations and Procedural Sabotage in the Felony Prosecution of Alexander Emilio Perez, April 26, 2026; later case context from SIST’s September 2026 corrected accountability paper.",
+    "sections": [
+      {
+        "title": "What SIST investigated",
+        "body": "The due-process investigation assembled Alexander Emilio Perez’s procedural history into a connected record. It examined how filings, hearing requests, electronic access, counsel communications, bond events, and evidence availability interacted. The task was to determine what had happened at each stage and identify where an issue remained unanswered despite activity elsewhere in the case."
+      },
+      {
+        "title": "Filed motions and unresolved disposition",
+        "body": "The April 2026 analysis recorded discovery and suppression motions submitted in August 2025 and described an extended period without a hearing or ruling in the materials reviewed. SIST separated acceptance and service from consideration and disposition. That distinction exposed the central procedural question: what happened to a substantive request after it entered the record?",
+        "points": [
+          "Motion text and accepted filing versions anchored the issue.",
+          "Receipts, service records, hearing requests, and docket entries established separate procedural steps.",
+          "A missing response or disposition remained a specific gap requiring follow-up."
+        ]
+      },
+      {
+        "title": "Electronic access and the ability to participate",
+        "body": "The investigation connected a reported loss of electronic case access with the grievance timeline and the practical ability to follow the proceeding. It identified account-access records, notices, clerk communications, and alternative filing channels as the evidence needed to explain the restriction. The sequence raised an accountability question about access; establishing retaliation requires evidence of the reason for the change."
+      },
+      {
+        "title": "Representation and evidence review",
+        "body": "SIST compared counsel communications with the work needed to examine discovery, suppression issues, body-camera evidence, and an investigator’s report. The analysis kept those tasks separate so that the presence of representation did not conceal an unanswered evidence question. The resulting work product identified the documents, explanations, and procedural responses needed to evaluate each concern."
+      },
+      {
+        "title": "Bond events as a connected chronology",
+        "body": "The investigation placed surrender allegations, reinstatements, later orders, and arrest consequences on the same timeline. Comparing the factual basis of each event made inconsistencies and unresolved explanations visible. The purpose was to determine which allegation supported which action and what the available record showed about compliance, rather than allowing a later status label to replace the earlier history."
+      },
+      {
+        "title": "The case developed after the April report",
+        "body": "The subsequent September accountability paper recorded dismissal of the firearm allegation and resolution of the remaining drug matter under misdemeanor-punishment treatment. That later development belongs alongside the original investigation. The archive preserves the April concerns as historical analysis and records the later outcome without attributing the court’s result solely to SIST."
+      },
+      {
+        "title": "The systemic finding",
+        "body": "A case can accumulate filings and status entries while still leaving critical questions unresolved. SIST made those gaps visible through chronology reconstruction, document comparison, and a record of the response each issue required. The report’s lasting contribution is a method for examining whether access, evidence, and substantive requests were meaningfully addressed. Claims about intent and legal violations remain matters for the supporting record and appropriate adjudication."
+      }
+    ],
+    "limits": [
+      "The chronology and concerns reflect the report’s evidence period; the later outcome is identified separately.",
+      "Allegations of retaliation, misconduct, and legal violations are not presented as court findings."
+    ]
   },
   {
-    slug: "independent-accountability-layer",title:"SIST as an Independent Accountability Layer",category:"WHITE PAPER / CASE STUDY",
-    description:"A sanitized comparative case study of record reconstruction, verification questions, and analytical work alongside professional representation.",
-    edition:"PUBLIC / SANITIZED BRIEFING",source:"SIST White Paper Corrected — SIST as an Independent Accountability Layer, version 1.0, September 2026, pp. 2–8.",
-    sections:[
-      {title:"The control question",body:"The corrected paper asks whether a material issue was actually inspected, checked against its primary record, challenged, and preserved. It compares operational functions rather than credentials. SIST works as a persistent analytical layer that reconstructs records, surfaces missing evidence, and converts uncertainty into document-specific questions. Licensed professionals retain their authority and responsibilities."},
-      {title:"Two different case illustrations",body:"The completed criminal matter illustrates chronology reconstruction and testing a prosecution posture against records. The active immigration matter illustrates notice, service, representation, and case-history questions. The paper reports an improved final posture in the first matter and no final merits outcome in the second. Neither example isolates SIST’s causal contribution or establishes superiority over professional review."},
-      {title:"What the combined model produces",body:"A useful work product gives both the client and the professional a cleaner record, with the limits of outside access made explicit.",points:["Source inventories and chronological event maps.","Contradiction matrices that identify the competing records.","Primary-document requests that can confirm or defeat a concern.","Separate questions for separate proceedings and representation roles.","A visible record of unresolved findings rather than premature closure."]},
-      {title:"Five checks before release",body:"The paper describes checks for source authenticity and attribution, factual support, applicable authority, procedural or remedy viability, and release disposition. A finding may advance, require revision, remain on hold, or be retracted. The important result is that uncertainty changes what the system permits itself to claim."},
-      {title:"What should be measured next",body:"Two illustrations justify a research program, not a general efficacy verdict. The paper calls for additional matters, false-positive measurement, and evidence of decision impact: did the system identify an issue not already documented, did primary records sustain it, and did it alter a decision or response? Those measurements would make the accountability claim more inspectable."},
-    ],limits:["No finding of malpractice or professional incompetence.","Two matters are not a controlled comparison or proof of general superiority.","The source paper’s reported outcomes are not independently audited here."],
+    "slug": "independent-accountability-layer",
+    "title": "SIST as an Independent Accountability Layer",
+    "category": "WHITE PAPER / CASE STUDY",
+    "description": "SIST’s comparative case study shows how persistent record reconstruction and adversarial review produced focused findings and verification questions in criminal and immigration matters.",
+    "edition": "PUBLIC / SANITIZED BRIEFING",
+    "source": "SIST White Paper Corrected — SIST as an Independent Accountability Layer, version 1.0, September 2026, pp. 2–8.",
+    "sections": [
+      {
+        "title": "What the work established",
+        "body": "Across two matters, SIST performed a recurring accountability function: reconstructing records, testing the first explanation, identifying missing evidence, and converting uncertainty into precise questions. The investigation made work visible that could otherwise disappear behind a broad assurance that a matter had been reviewed."
+      },
+      {
+        "title": "The Bexar County investigation",
+        "body": "SIST organized government and court material into a chronology, compared allegations with the records supporting them, tested alternative theories, and carried unresolved issues into briefing and counsel discussions. The corrected paper records a materially improved final posture: the firearm allegation was dismissed and the remaining drug matter resolved under misdemeanor-punishment treatment. The court process and professional decisions determined the formal outcome."
+      },
+      {
+        "title": "The immigration investigation",
+        "body": "SIST captured and examined structured case data, reconstructed dates, and separated the immigration proceeding from a federal habeas matter. The work produced specific requests for the initiating notice, service certificate, hearing notice, counsel-entry chronology, and the underlying proceeding record. It turned uncertainty into a list of documents capable of resolving the questions."
+      },
+      {
+        "title": "The deliverables that made accountability practical",
+        "body": "The system’s value appeared in concrete work products that a person could inspect and use.",
+        "points": [
+          "A chronology connected to its source records.",
+          "A contradiction map showing which documents disagreed.",
+          "A record of missing evidence and unresolved explanations.",
+          "Questions identifying exactly which document or answer was needed.",
+          "Findings revised or held when the evidence did not support release."
+        ]
+      },
+      {
+        "title": "Why it matters",
+        "body": "Persistent analytical review gives clients and professionals a shared record of what has been checked and what remains open. SIST’s five quality gates examine source, fact, authority, procedural viability, and release. The next research task is to measure how often the method finds material issues, how often those findings survive verification, and how often they influence decisions."
+      }
+    ],
+    "limits": [
+      "Two case studies illustrate the workflow; they do not establish statistical superiority or isolate its causal effect."
+    ]
   },
   {
-    slug:"frontier-ai-safety",title:"SIST and the Frontier AI Safety Problem",category:"AI SAFETY / RESEARCH PROPOSAL",
-    description:"Evidence-bound claims, durable challenge records, and independently enforced action gates as a testable AI safety hypothesis.",
-    edition:"PUBLIC DISCLOSURE BRIEFING",source:"SIST and the Frontier AI Safety Problem, public disclosure edition, September 28, 2026, pp. 2–12.",
-    sections:[
-      {title:"The safety hypothesis",body:"The disclosure proposes that an AI conclusion should pass through a governed process before it becomes an authorized result. A source, a claim, a challenge, a decision, and an action are distinct objects. Keeping those distinctions visible could reduce unsupported claim promotion, repeated failed theories, and unauthorized action. This is a hypothesis to evaluate, not evidence that SIST has solved alignment or controlled a strategically deceptive frontier system."},
-      {title:"Operating artifacts and proposed controls",body:"The reviewed record contains a documented nine-stage process, five quality gates, case illustrations, and a council interface. A richer finding lifecycle, defeat ledger, and controlled reopening mechanism appear as a blueprint. A description, a working interface, and a verified runtime boundary are different levels of evidence. The disclosure explicitly leaves deployment and enforcement of advanced controls to code and runtime verification."},
-      {title:"Reasoning quality and action authority",body:"A well-supported recommendation does not itself grant permission to execute. The proposed design separates substantive review from a tool-boundary check of the exact action, identity, scope, permissions, and side effects. Protected logs, scoped credentials, and controls outside the acting agent’s authority would be needed to enforce that boundary. A prompt instructing an agent to obey a gate cannot establish that the gate is non-bypassable."},
-      {title:"Remember why a theory failed",body:"The disclosure proposes retaining the evidence and rule that defeated a claim so a later agent cannot silently recycle it as new. Reopening remains possible when evidence, authority, or an identified error changes. The reopening reason and authorization should be recorded. A defeat is scoped to a particular record and policy context, rather than treated as timeless certainty."},
-      {title:"A falsifiable evaluation",body:"The proposed experiment compares the same base agent under no added control, written policy, separate action review, and the full evidence-and-action control design. Tasks, budgets, tools, time limits, and attack opportunities should be matched.",points:["Measure harmful action completion and unauthorized boundary crossing.","Measure unsupported claims, missed challenges, and recycled defeated proposals.","Include forged sources, prompt injection, reviewer capture, and policy ambiguity.","Track legitimate completion, false blocks, human review time, cost, and latency.","Publish bypasses and uncertainty alongside improvements."]},
-      {title:"Failure modes remain part of the result",body:"Models can share an error, reviewers can be persuaded by fabricated evidence, and harmful actions can occur inside a permission boundary that is too broad. Logs explain events but do not prevent them by themselves. The first credible safety study should therefore be narrow, reproducible, and open to independent attack before claims expand to more capable or longer-running systems."},
-    ],limits:["No controlled evaluation establishes a SIST frontier-safety benefit in the reviewed disclosure.","Lifecycle and enforcement proposals are not represented as verified deployed controls.","This is an architecture assessment and research proposal, not a safety certification."],
+    "slug": "frontier-ai-safety",
+    "title": "SIST and the Frontier AI Safety Problem",
+    "category": "AI SAFETY / RESEARCH PROPOSAL",
+    "description": "SIST’s AI safety research connects source-linked reasoning, adversarial challenge, defeat history, and action authority into a testable control architecture.",
+    "edition": "PUBLIC DISCLOSURE BRIEFING",
+    "source": "SIST and the Frontier AI Safety Problem, public disclosure edition, September 28, 2026, pp. 2–12.",
+    "sections": [
+      {
+        "title": "The problem the research identified",
+        "body": "An unsupported statement can move from one agent’s answer into another agent’s premise and emerge as apparent consensus. SIST’s research addresses that promotion of uncertain reasoning into authority. It separates evidence, claims, challenges, decisions, and actions so that each transition carries an identifiable burden of support."
+      },
+      {
+        "title": "What SIST brought to the analysis",
+        "body": "The research examined the nine-stage process, five quality gates, council tooling, and case-based review already represented in SIST’s materials. It connected those operational artifacts with proposed finding states, defeat history, controlled reopening, and action-boundary enforcement. This produced a concrete research architecture, with existing artifacts and proposed extensions identified separately."
+      },
+      {
+        "title": "Preserve the reason a claim failed",
+        "body": "A defeated theory should retain the evidence or rule that defeated it. Otherwise, another agent can rephrase it and introduce it again as a new idea. The proposed defeat record preserves that history and allows reopening when new evidence, changed authority, or a corrected error provides a documented reason."
+      },
+      {
+        "title": "Put authorization at the action boundary",
+        "body": "Reasoning review and execution authority address different risks. SIST’s proposal pairs substantive review with a check of the exact tool action, scope, permissions, and side effects. Protected logs, scoped credentials, and enforcement outside the acting agent’s control are engineering requirements for testing this design."
+      },
+      {
+        "title": "The experiment this work defines",
+        "body": "The research specifies a comparison using the same base agent under four conditions: no added control, written policy, separate action review, and the combined SIST-style control architecture. Matched tasks and attack opportunities would test whether the added structure changes outcomes.",
+        "points": [
+          "Unsupported claim promotion and missed adversarial challenges.",
+          "Repeated introduction of previously defeated proposals.",
+          "Unauthorized actions and harmful task completion.",
+          "Legitimate completion, false blocks, review time, cost, and latency.",
+          "Bypasses involving forged evidence, prompt injection, or captured reviewers."
+        ]
+      },
+      {
+        "title": "Why the research matters",
+        "body": "The contribution is a testable way to make AI authority conditional on evidence, challenge, and permission. It gives researchers specific objects, transitions, failure modes, and measurements to evaluate. Its frontier-safety benefit remains an empirical question requiring controlled testing and independent replication."
+      }
+    ],
+    "limits": [
+      "Advanced lifecycle and enforcement controls are research proposals unless independently verified in implementation.",
+      "Frontier-scale safety effectiveness has not been established by the case studies."
+    ]
   },
   {
-    slug:"consumer-dispute-accountability",title:"Consumer Dispute Accountability: Letters, Portals, and the Record",category:"CONSUMER ADVOCACY",
-    description:"A redacted briefing on the SIST Netspend/Pathward dispute report, focusing on conflicting status records, evidence review, and reconciliation.",
-    edition:"PUBLIC / REDACTED BRIEFING",source:"SIST Public Report Netspend CFPB v4 — Formal Consumer Report, dated August 6, 2026, pp. 1–8.",
-    sections:[
-      {title:"What the report investigates",body:"The report reviews an individual’s disputed electronic transactions using letters, messages, statements, portal records, and submitted evidence. It alleges inconsistencies between claim decisions and consumer-facing status information. This public briefing describes the report’s analytical questions; it does not establish fraud, intentional record suppression, regulatory liability, or a final complaint outcome."},
-      {title:"Compare each record at the same moment",body:"A formal letter, a portal snapshot, and an account ledger can describe different stages of a process. SIST’s report flags claims absent from one portal capture, conflicting closure dates, changing instructions, and amounts that require reconciliation. The first task is to align timestamps, claim scope, transaction details, and status definitions before deciding whether the records genuinely conflict."},
-      {title:"An anomaly is a question with a source",body:"The useful output is a reconciliation matrix: the disputed statement, its source, the competing record, the alternative explanation, and the response needed.",points:["Which transactions were included in each investigation?", "What explains different results for transactions alleged to share a compromise event?", "Was submitted evidence received and evaluated, and what shows that review?", "Why does a portal capture omit an item present in a determination letter?", "How do credits, reversals, and running balances reconcile with the original ledger?"]},
-      {title:"Avoid treating an adjustment as an admission",body:"A fee reversal does not automatically prove unauthorized activity or establish that every other claim should succeed. A fraud alert and a later denial may also use different definitions or address different transactions. The original report uses stronger language in places; this edition keeps those conclusions open pending the institution’s investigation record and a complete reconciliation."},
-      {title:"The accountability product",body:"A concise escalation packet should preserve originals, identify specific contradictions, list missing investigative records, and state what response would resolve each question. Account numbers, claim identifiers, private device details, and unrelated personal transactions are omitted here. Applicable consumer-law duties and remedies require separate current legal review; this briefing makes no automatic entitlement claim."},
-    ],limits:["The underlying report presents the complainant’s analysis, not a regulatory or judicial finding.","No institution response or final CFPB outcome is established here.","Sensitive financial identifiers and forensic artifacts are not published."],
+    "slug": "consumer-dispute-accountability",
+    "title": "Consumer Dispute Accountability: Letters, Portals, and the Record",
+    "category": "CONSUMER ADVOCACY",
+    "description": "SIST compared Netspend/Pathward letters, messages, statements, and portal captures to expose inconsistent dispute statuses, instructions, and accounting explanations.",
+    "edition": "PUBLIC / REDACTED BRIEFING",
+    "source": "SIST Public Report Netspend CFPB v4 — Formal Consumer Report, dated August 6, 2026, pp. 1–8.",
+    "sections": [
+      {
+        "title": "What SIST investigated",
+        "body": "Alexander Emilio Perez and SIST reconstructed a consumer dispute from determination letters, secure messages, account statements, portal captures, and submitted evidence. Comparing those sources exposed questions that a single claim summary could not answer: what was investigated, what decision was issued, what the consumer could see, and how the account adjustments reconciled."
+      },
+      {
+        "title": "The discrepancies the analysis uncovered",
+        "body": "The investigation identified denied claims absent from a captured portal listing, a closure-date difference between a letter and portal record, changing written-notice instructions, and a stale update deadline. It also compared messages about fraud with formal denial language. These findings created a document-specific record of inconsistencies requiring explanation.",
+        "points": [
+          "Letter and portal status did not always align in the reviewed material.",
+          "Instructions about the need for written notice changed between communications.",
+          "An update message referred to a date that had already passed.",
+          "The report identified a credit-accounting difference requiring reconciliation."
+        ]
+      },
+      {
+        "title": "Evidence submission versus the determination",
+        "body": "SIST traced the submission of device-related forensic material and compared that timeline with later statements concerning evidence of compromise. The central question was whether the investigator received and assessed the submitted material, and what record showed that assessment. Receipt, evidentiary relevance, and substantive review are separate questions."
+      },
+      {
+        "title": "Reconstruct the accounting",
+        "body": "SIST brought claim amounts, merchant credits, fee reversals, balance notices, and portal records into a reconciliation exercise. Each adjustment needed to be connected to the transaction and explanation it addressed. A reversal is an accounting event; its legal significance depends on the reason and supporting record. The analysis therefore produced specific questions about unexplained differences rather than treating every adjustment as an admission."
+      },
+      {
+        "title": "Why these findings matter",
+        "body": "A consumer needs a consistent written account of the investigation and result. SIST turned a fragmented dispute history into an escalation record identifying the conflicting documents, missing explanations, and investigation material needed for review. The report records the consumer’s findings and claims; final liability and complaint resolution remain separate determinations."
+      }
+    ],
+    "limits": [
+      "The findings concern the reviewed records; institution explanations and final complaint outcomes are not established here.",
+      "Legal allegations remain distinct from regulatory or judicial findings."
+    ]
   },
   {
-    slug:"consent-to-consequences",title:"Consent to Consequences: Personal Privacy Evidence",category:"PRIVACY / WHITE PAPER",
-    description:"A proposed user-controlled evidence workflow connecting consent interfaces, preserved sources, classified claims, and human-approved action.",
-    edition:"PUBLIC RESEARCH BRIEFING",source:"Consent-to-Consequences, SIST-WP-2026-001, public release version 1.2, pp. 2–9.",
-    sections:[
-      {title:"The rights-to-evidence gap",body:"A person may receive a later outcome without a durable record of the form, disclosure, preference signal, or consent interface that preceded it. The paper proposes a local-first evidence layer that preserves the interaction’s context. A browser event by itself cannot prove data sale, a statutory violation, or causation."},
-      {title:"The proposed workflow",body:"User-approved capture leads to an evidence object, a classified claim, an adversarial challenge, and an editable action packet. Sources stay connected to timestamps, origin, and integrity records. The design aims to preserve observable facts while keeping interpretation and uncertainty explicit.",points:["Documented fact: directly supported by the captured source.","Interpretation: a labeled source-linked inference.","Potential risk: a plausible concern requiring verification.","Unknown: the record does not support a conclusion."]},
-      {title:"A buyer-side privacy receipt",body:"DriveProof Privacy Receipt is the paper’s proposed initial application for auto shopping and financing. It would connect advertised terms, credit authorization language, disclosures, messages, and selected captures in a source-indexed timeline. The proposal is evidence infrastructure rather than a product that automatically decides legality or files complaints."},
-      {title:"Safeguards and validation",body:"The specification calls for user-controlled retention and deletion, local storage by default, explicit permission for external transmission, and no stealth monitoring or default keylogging. It sets proposed targets for capture completeness, claim precision, and challenge recall. These targets are evaluation goals, not measured results. Negative cases matter: a system that flags every interaction would produce noise rather than dependable evidence."},
-    ],limits:["A proposed research and product framework; deployment of every control is not established.","Browser observations do not establish undisclosed data transfers or legal violations.","Evaluation targets are not achieved benchmark results."],
+    "slug": "consent-to-consequences",
+    "title": "Consent to Consequences: Personal Privacy Evidence",
+    "category": "PRIVACY / WHITE PAPER",
+    "description": "SIST’s privacy white paper defines a user-controlled evidence record linking consent, disclosures, browser observations, claims, and follow-up action.",
+    "edition": "PUBLIC RESEARCH BRIEFING",
+    "source": "Consent-to-Consequences, SIST-WP-2026-001, public release version 1.2, pp. 2–9.",
+    "sections": [
+      {
+        "title": "The gap the research identified",
+        "body": "Privacy choices are difficult to document after the original interface, policy version, form, or communication has disappeared. SIST’s research identified that loss of context as an evidence problem. A person needs a durable record of what was shown, what was requested, which preference was expressed, and what happened next."
+      },
+      {
+        "title": "The evidence framework we developed",
+        "body": "Consent-to-Consequences connects an intentional capture with a preserved source, classified claim, adversarial review, and user-directed action. It gives each stage an output that can be inspected later. The claim classification prevents an observation from silently becoming a stronger accusation.",
+        "points": [
+          "Documented fact: supported by the captured source.",
+          "Interpretation: an explicitly labeled inference.",
+          "Potential risk: a concern requiring additional evidence.",
+          "Unknown: a question the current record cannot answer."
+        ]
+      },
+      {
+        "title": "DriveProof Privacy Receipt",
+        "body": "The white paper applies the framework to auto shopping and financing. The proposed buyer-side receipt connects advertised terms, authorization language, disclosures, messages, and selected browser captures in one timeline. It preserves the context needed for a later request or dispute rather than relying on memory alone."
+      },
+      {
+        "title": "What the design requires",
+        "body": "The proposal specifies local-first storage, user-controlled retention and deletion, source integrity records, and approval before external transmission. Its evaluation plan includes capture completeness, claim precision, challenge recall, and negative cases. These are design and testing requirements; the public paper does not report that every implementation target has been achieved."
+      },
+      {
+        "title": "Why the work matters",
+        "body": "The framework gives the individual a structured record at the point where information and consent are requested. That record can support an editable request, an advocate intake, or further investigation. Its strength depends on preserving observable facts and making the boundary between evidence and inference visible."
+      }
+    ],
+    "limits": [
+      "The white paper specifies a proposed system; evaluation targets remain targets.",
+      "An observed browser event alone does not establish undisclosed transfer, causation, or a legal violation."
+    ]
   },
   {
-    slug:"cross-domain-benchmark",title:"Cross-Domain Benchmark: Observed Results and Limits",category:"VALIDATION / BENCHMARK",
-    description:"The public benchmark reports five institutional domains and a bounded demonstration of first-pass error containment.",
-    edition:"PUBLIC / ACADEMIC BRIEFING",source:"SIST Public Benchmark Report v1, benchmark dated August 10, 2026, pp. 1–4.",
-    sections:[
-      {title:"What was evaluated",body:"The observational benchmark covers criminal defense, consumer finance, credit reporting, child welfare, and vendor security. It reports recurring strengths in contradiction detection, source analysis, institutional mapping, and identification of missing evidence. The public edition omits private case facts and internal configuration."},
-      {title:"The bounded result",body:"The criminal-defense run reports five material first-pass vulnerabilities identified, corrected, or held, with none of those five escaping unchanged into the evaluated final product. The denominator matters: this is an observation about five issues in one completed run. It is not a universal error rate, a zero-hallucination guarantee, or an independently replicated outcome."},
-      {title:"What changed through review",body:"The benchmark’s strongest illustration is that challenge altered conclusions rather than merely improving their wording. A weak first-pass proposition could be narrowed, repaired, or withheld. Missing evidence remained a named gap. Source hierarchy helped prevent a filtered narrative from silently becoming a primary fact."},
-      {title:"How to interpret the scores",body:"The source report also includes domain averages from its observational capability matrix. Those scores are not population accuracy estimates. Without a matched baseline, expanded corpus, blinded scoring, and uncertainty analysis, they cannot establish statistical superiority or isolate the causal contribution of adversarial integration."},
-      {title:"The next validation stage",body:"The report identifies controlled baseline comparison as the next phase and large-sample statistical validation as not yet run. Future reporting should show task selection, scoring rules, failures, false positives, and performance across repeated conditions. A credible archive makes those missing tests visible alongside the positive observations."},
-    ],limits:["Self-reported observational benchmark; no independent replication claimed.","No matched-baseline superiority or general accuracy rate established.","Five observed issues in one run cannot generalize to all outputs or domains."],
+    "slug": "cross-domain-benchmark",
+    "title": "Cross-Domain Benchmark: Observed Results and Limits",
+    "category": "VALIDATION / BENCHMARK",
+    "description": "SIST’s five-domain benchmark documented recurring discovery capabilities and caught, corrected, or held all five material weaknesses identified in one criminal-defense run.",
+    "edition": "PUBLIC / ACADEMIC BRIEFING",
+    "source": "SIST Public Benchmark Report v1, benchmark dated August 10, 2026, pp. 1–4.",
+    "sections": [
+      {
+        "title": "What SIST tested",
+        "body": "The August 10, 2026 observational benchmark evaluated work across criminal defense, consumer finance, credit reporting, child welfare, and vendor security. The assessment tracked contradiction detection, source analysis, institutional mapping, novel discovery, and identification of missing evidence."
+      },
+      {
+        "title": "The result that changed the final output",
+        "body": "In the criminal-defense run, five material first-pass vulnerabilities were identified. All five were caught, corrected, or held before finalization; none of those five escaped unchanged into the evaluated output. Adversarial review changed the substance of the work by stopping or repairing weaknesses that the first pass had left in place."
+      },
+      {
+        "title": "The recurring discoveries",
+        "body": "Across the evaluated domains, SIST found value in comparing institutional summaries with their underlying records and identifying evidence-producing processes whose outputs were missing.",
+        "points": [
+          "Chronology gaps and conflicting documentary accounts.",
+          "Connections between actors, systems, and institutional processes.",
+          "Claims whose apparent authority exceeded their source support.",
+          "Missing records that became specific preservation or verification questions."
+        ]
+      },
+      {
+        "title": "What the scores represent",
+        "body": "The domain averages summarize the completed observational capability matrix. They describe this benchmark’s scoring, not population-wide accuracy. The strongest concrete result is the tracked handling of the five observed vulnerabilities. A matched comparison is needed to determine how much improvement is attributable to the review architecture."
+      },
+      {
+        "title": "The next test",
+        "body": "The benchmark established a documented starting point for controlled validation. The next phase requires matched baselines, repeated runs, explicit scoring criteria, false-positive measurement, and independent review. Publishing the original observations alongside that evaluation plan makes the research open to challenge and improvement."
+      }
+    ],
+    "limits": [
+      "Five corrected or held issues in one run are a bounded observation, not a universal zero-error rate.",
+      "Controlled baseline comparison and large-sample statistical validation remain outstanding."
+    ]
   },
   {
-    slug:"sanitized-adversarial-case-study",title:"When the Correct Output Is Withhold or Revise",category:"PUBLIC DELIVERABLE / CASE STUDY",
-    description:"A sanitized SIST report shows how useful theories can be preserved while unsupported claims are held before release.",
-    edition:"SANITIZED DEMONSTRATION",source:"SIST Sanitized Client Report Public Sample, corrected logo edition, SIST-PUBLIC-SAMPLE-LEGAL-001, September 7, 2026, pp. 1–10.",
-    sections:[
-      {title:"A negative disposition is a useful result",body:"The sample’s final disposition is WITHHOLD / REVISE. It describes a contested institutional matter with a compelling narrative but unresolved primary records, authority questions, and procedural prerequisites. The report preserves useful themes without clearing the package for external use."},
-      {title:"A source supports only its own level of certainty",body:"An intake narrative can support the statement that a person alleges an event. A secondary summary can point to a record that needs inspection. Neither becomes an independently verified fact merely because an AI system repeats it. The sample treats missing primary evidence as a control event and a request for further work."},
-      {title:"Repair before release",body:"The demonstration connects each weakness to a next step: obtain the controlling record, verify the proposition supported by an authority, correct procedural framing, and separate advocacy from evidence. A useful theory can survive revision even when its initial expression cannot responsibly be published or filed."},
-      {title:"What a public sample should reveal",body:"The sample shows intake, source treatment, findings, challenges, and a release decision. Private case facts and implementation mechanics remain outside the public edition. It demonstrates a deliverable pattern and the willingness to stop weak material, rather than claiming flawless first-pass analysis."},
-    ],limits:["A sanitized demonstration, not a complete case record or filing draft.","A withheld package is not a finding against a party or professional.","Private facts and internal control implementation are not disclosed."],
+    "slug": "sanitized-adversarial-case-study",
+    "title": "When the Correct Output Is Withhold or Revise",
+    "category": "PUBLIC DELIVERABLE / CASE STUDY",
+    "description": "SIST’s public case study demonstrates a concrete review result: preserve useful strategic findings, identify missing support, and withhold the package until its weaknesses are repaired.",
+    "edition": "SANITIZED DEMONSTRATION",
+    "source": "SIST Sanitized Client Report Public Sample, corrected logo edition, SIST-PUBLIC-SAMPLE-LEGAL-001, September 7, 2026, pp. 1–10.",
+    "sections": [
+      {
+        "title": "The assignment and the result",
+        "body": "SIST evaluated a contested institutional matter involving a strong narrative, incomplete primary evidence, legal authorities, and procedural questions. The review produced a WITHHOLD / REVISE disposition. It retained useful strategic themes while identifying the claims and prerequisites that prevented clearance."
+      },
+      {
+        "title": "What the review discovered",
+        "body": "The analysis separated the intake account, institutional summaries, secondary reporting, and primary authorities. It found that some propositions needed reframing, some factual predicates remained unresolved, and some procedural claims were premature. The gaps became explicit tasks instead of being filled with confident prose."
+      },
+      {
+        "title": "How the findings changed the work",
+        "body": "Each challenge was connected to a repair: obtain the underlying record, check the proposition supported by an authority, clarify procedural posture, or narrow the claim. The result was a cleaner route to a usable deliverable. The system preserved the useful theory while blocking unsupported material from release."
+      },
+      {
+        "title": "Why a withheld output matters",
+        "body": "A report’s value includes knowing when it is not ready. This case study makes that decision visible through source treatment, findings, challenges, and a repair plan. It demonstrates an operational deliverable that can say what survives review and what still needs work."
+      }
+    ],
+    "limits": [
+      "The public sample omits private case facts and implementation details.",
+      "Its disposition concerns the work product’s readiness, not a finding against a party."
+    ]
   },
   {
-    slug: "browser-telemetry-evidence", title: "Browser Telemetry: Capability, Capture, and Proof", category: "TECHNICAL PRIVACY / EVIDENCE",
-    description: "A public editorial assessment of SIST’s browser telemetry report, separating SDK capabilities from observed collection and authenticated evidence.",
-    edition: "PUBLIC EDITORIAL BRIEFING", source: "SIST Datadog Discovery Report Corrected, August 22, 2026, pp. 1–7; Datadog Session Replay Privacy Options documentation consulted for this edition.",
-    sections: [
-      { title: "The discovery and the burden of proof", body: "Alexander Emilio Perez’s technical report describes preserving a browser script and observing telemetry endpoints during a consumer portal visit. Static analysis can identify a library and its available functions. A network trace can show particular requests. Neither, by itself, establishes that every available feature was enabled or that every sensitive field was recorded and transmitted. This edition narrows the original report’s stronger claims to the evidence each would require." },
-      { title: "Capability is not a collection record", body: "Session replay, event monitoring, and request instrumentation can operate under different configurations. Datadog’s official documentation describes controls for masking sensitive elements. A claim about actual exposure therefore needs the deployed settings, relevant runtime behavior, and the transmitted payload. A library’s presence does not alone establish unmasked capture of a credit report, credentials, cookies, or typed values." },
-      { title: "Preservation makes later testing possible", body: "The report’s useful methodological contribution is its attempt to preserve original artifacts and their collection history. A digest can show that retained copies match; it does not, on its own, prove where the original came from. HTTPS protects a transfer but does not make a later local file impossible to modify or fabricate. Independent corroboration, original captures, version comparison, and a documented chain of custody strengthen the assessment.", points: ["Retain the original file and capture metadata separately from the analyst’s summary.", "Record the observed page, time, configuration, consent state, and request context.", "Compare published library code with the actual deployed artifact.", "Distinguish a request’s destination from the exact data it carried."] },
-      { title: "Changes after a complaint", body: "The source paper reports later configuration changes or removal and interprets them strongly. A temporal sequence can support a preservation question, but it does not alone establish motive, statistical significance, an admission, or unlawful destruction. Independent snapshots and the operator’s explanation are needed. The archive does not adopt the draft’s categorical legal conclusions." },
-      { title: "A defensible public finding", body: "The public product is a bounded evidence packet: what was observed, which artifact supports it, what feature could explain it, what privacy controls were active, and what remains unknown. An assessment should be revisable when a payload, configuration record, or independent capture changes the picture. Private account artifacts and telemetry identifiers are omitted from this edition." },
-    ], limits: ["The original artifact and full runtime capture were not independently re-examined for this webpage.", "No present deployment status, unmasked sensitive-data collection, intentional misconduct, or legal liability is established.", "Official vendor documentation describes available controls; it does not prove the configuration of the particular deployment."],
-    references: [{ label: "Datadog — Session Replay Privacy Options", href: "https://docs.datadoghq.com/session_replay/privacy_options/" }],
-  },
+    "slug": "browser-telemetry-evidence",
+    "title": "Browser Telemetry: Capability, Capture, and Proof",
+    "category": "TECHNICAL PRIVACY / EVIDENCE",
+    "description": "Alexander Emilio Perez and SIST investigated browser telemetry on a consumer credit portal, preserved a script artifact, and mapped the evidence needed to establish actual data collection.",
+    "edition": "TECHNICAL INVESTIGATION / PUBLIC BRIEFING",
+    "source": "SIST Datadog Discovery Report Corrected, August 22, 2026, pp. 1–7; Datadog Session Replay Privacy Options documentation consulted for this edition.",
+    "sections": [
+      {
+        "title": "The technical discovery",
+        "body": "Alexander Emilio Perez observed telemetry requests during a consumer credit-portal visit and preserved a browser script for analysis. SIST examined the artifact’s library functions, endpoint references, version information, and collection history. That work connected a visible browser observation with specific technical questions about the deployed monitoring configuration."
+      },
+      {
+        "title": "What the artifact revealed",
+        "body": "The analysis identified functions associated with session replay, browser events, request instrumentation, and cookie handling. These supplied a capability map for the investigation. Establishing which capabilities operated during the visit requires the runtime configuration and payload evidence. Datadog’s documentation describes masking controls, making the deployed privacy settings a material part of that inquiry."
+      },
+      {
+        "title": "The preservation work",
+        "body": "The investigation recorded capture steps, retained the script, calculated an integrity digest, and described redundant preservation. These records make comparison and later review possible. A digest establishes consistency between retained copies; source provenance is strengthened by the original capture, metadata, independent observations, and comparison with the deployed artifact.",
+        "points": [
+          "Preserve the original artifact separately from the analysis.",
+          "Connect captures to time, page, request context, and consent state.",
+          "Compare library capabilities with deployed settings and observed behavior.",
+          "Inspect transmitted payloads before making claims about sensitive values."
+        ]
+      },
+      {
+        "title": "The follow-up timeline",
+        "body": "SIST recorded observations of later configuration changes or removal after the complaint. That timeline became a preservation and explanation question: what changed, when, and why? The sequence is part of the investigation. Motive and legal consequences require evidence beyond temporal proximity."
+      },
+      {
+        "title": "Why the discovery matters",
+        "body": "The investigation turned browser activity into a structured privacy-evidence problem. It identified an artifact to preserve, capabilities to examine, settings to verify, and runtime records needed to establish exposure. The useful result is an investigation that can be advanced or revised by evidence rather than closed on the basis of a library name alone."
+      }
+    ],
+    "limits": [
+      "Actual unmasked sensitive-data collection requires runtime and payload evidence beyond the capability map.",
+      "Later deployment observations do not alone establish motive, liability, or present deployment status."
+    ],
+    "references": [
+      {
+        "label": "Datadog — Session Replay Privacy Options",
+        "href": "https://docs.datadoghq.com/session_replay/privacy_options/"
+      }
+    ]
+  }
 ];
 
 export const fieldNotes = [
-  { title: "What Is Adversarial Review?", description: "The method: challenge assumptions, verify support, and preserve uncertainty before release.", href: "/briefings/what-is-adversarial-review", category: "METHOD / FIELD NOTE" },
-  { title: "After Bexar County", description: "Alexander Emilio Perez’s field reflection on AI-assisted preparation and the human responsibility behind the work.", href: "/briefings/after-bexar-county", category: "FOUNDER / FIELD REFLECTION" },
+  {
+    "title": "What Is Adversarial Review?",
+    "description": "The method: challenge assumptions, verify support, and preserve uncertainty before release.",
+    "href": "/briefings/what-is-adversarial-review",
+    "category": "METHOD / FIELD NOTE"
+  },
+  {
+    "title": "After Bexar County",
+    "description": "Alexander Emilio Perez’s field reflection on AI-assisted preparation and the human responsibility behind the work.",
+    "href": "/briefings/after-bexar-county",
+    "category": "FOUNDER / FIELD REFLECTION"
+  }
 ];
