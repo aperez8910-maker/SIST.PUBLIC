@@ -35,8 +35,11 @@ export default function FounderPage() {
               <p>The Adversarial Integration Protocol examines weak assumptions, contradictions, alternative explanations, and missing support before a finding advances. The public research documents describe the method and its limits.</p>
             </section>
             <section>
-              <h2>Explore the work</h2>
+              <h2>Public reports and research</h2>
+              <p>The SIST archive includes immigration record integrity, systemic due-process analysis, independent accountability, consumer disputes, privacy evidence infrastructure, frontier AI safety, and observational validation. Public editions retain their sources, uncertainty, and evidence limits.</p>
               <ul>
+                <li><Link href="/briefings">SIST briefings, reports, and white papers</Link></li>
+                <li><Link href="/briefings/alexander-emilio-perez-building-sist">Alexander Emilio Perez: Building SIST</Link></li>
                 <li><Link href="/system">SIST intelligence architecture and operating pipeline</Link></li>
                 <li><Link href="/council">AI Council and human authority</Link></li>
                 <li><Link href="/research/adversarial-integration-protocol">Adversarial Integration Protocol</Link></li>

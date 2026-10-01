@@ -1,57 +1,44 @@
-import { pageMetadata } from "@/lib/seo";
-import PageStructuredData from "@/components/PageStructuredData";
-
-export const metadata = pageMetadata("/briefings");
-
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import PageStructuredData from "@/components/PageStructuredData";
+import { reports, fieldNotes } from "@/data/briefings";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
-const records=[
-  {id:"01",type:"AIP™ FIELD NOTE",title:"What Is Adversarial Review?",desc:"An introduction to structured challenge, verification, controlled uncertainty, and human-directed synthesis.",href:"/briefings/what-is-adversarial-review",tone:"gold"},
-  {id:"02",type:"COUNCIL RECORD",title:"After Bexar County",desc:"A field record examining what the Council observed across a prolonged real-world adversarial process.",href:"/briefings/after-bexar-county",tone:"red"},
-] as const;
-
-export default function BriefingsPage(){
+export const metadata = pageMetadata("/briefings");
+const methodPaths = ["/research/system-intelligence-architecture", "/research/adversarial-integration-protocol", "/research/strategic-intelligence-framework", "/research/ai-council-model"] as const;
+const methodTitles = ["Intelligence Architecture", "Adversarial Integration Protocol", "Strategic Intelligence Framework", "AI Council Model"];
+const categories = [...new Set(reports.map(report => report.category))];
+const count = reports.length + fieldNotes.length;
+const archiveSchema = {
+  "@context":"https://schema.org", "@type":"CollectionPage", "@id":`${siteUrl}/briefings#webpage`,
+  name:"SIST Briefings & Report Archive", url:`${siteUrl}/briefings`,
+  mainEntity:{"@type":"ItemList", numberOfItems:count, itemListElement:[...reports.map(report=>({title:report.title,href:`/briefings/${report.slug}`})),...fieldNotes].map((item,index)=>({"@type":"ListItem",position:index+1,name:item.title,url:`${siteUrl}${item.href}`}))},
+};
+export default function BriefingsPage() {
   return <main className="sist-evo command-page command-briefings">
-      <PageStructuredData path="/briefings" />
-    <Navbar/>
+    <PageStructuredData path="/briefings" />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(archiveSchema).replace(/</g,"\\u003c")}} />
+    <Navbar />
     <div className="command-shell">
       <section className="command-hero command-hero-briefings">
-        <div className="command-hero-copy">
-          <span className="eyebrow">SIST / INTELLIGENCE BRIEFINGS</span>
-          <h1>FIELD NOTES<br/><em>FROM THE SYSTEM.</em></h1>
-          <p>Field notes connect SIST’s methods to evidence review, adversarial challenge, and human decisions.</p>
-          <div className="command-actions"><Link href="/research" className="action-primary">OPEN RESEARCH ↗</Link><Link href="/system" className="action-secondary">VIEW SYSTEM →</Link></div>
-          <div className="command-metrics">
-            <div><span>PUBLISHED</span><strong>02</strong></div><div><span>FORMAT</span><strong>FIELD RECORD</strong></div><div><span>REVIEW</span><strong className="gold">SOURCE-GROUNDED</strong></div><div><span>ARCHIVE</span><strong>ACTIVE</strong></div>
-          </div>
+        <div className="command-hero-copy"><span className="eyebrow">SIST / BRIEFINGS & REPORT ARCHIVE</span>
+          <h1>THE WORK.<br /><em>THE EVIDENCE.</em></h1>
+          <p>Reports, white papers, case studies, and field reflections from System Intelligence & Strategic Tactics, founded by Alexander Emilio Perez. Explore the findings, the questions they raise, and the evidence still needed.</p>
+          <div className="command-actions"><a href="#published-reports" className="action-primary">EXPLORE REPORTS ↓</a><Link href="/alexander-emilio-perez" className="action-secondary">MEET THE FOUNDER →</Link></div>
+          <div className="command-metrics"><div><span>BRIEFINGS</span><strong>{String(count).padStart(2,"0")}</strong></div><div><span>COVERAGE</span><strong>RESEARCH & FIELD</strong></div><div><span>EDITION</span><strong className="gold">PUBLIC</strong></div><div><span>METHODS</span><strong>{methodPaths.length} DOCUMENTS</strong></div></div>
         </div>
-        <div className="briefing-archive-visual">
-          <div className="archive-grid"/>
-          <div className="archive-file archive-file-a"><span>AIP / 01</span><strong>ADVERSARIAL REVIEW</strong><i/></div>
-          <div className="archive-file archive-file-b"><span>COUNCIL / 02</span><strong>FIELD RECORD</strong><i/></div>
-          <div className="archive-stamp">SIST<br/><small>ARCHIVE</small></div>
-        </div>
+        <div className="briefing-archive-visual" aria-hidden="true"><div className="archive-grid" /><div className="archive-file archive-file-a"><span>IMMIGRATION / REPORT</span><strong>RECORD INTEGRITY</strong><i /></div><div className="archive-file archive-file-b"><span>DUE PROCESS / REPORT</span><strong>PROCEDURAL ACCOUNTABILITY</strong><i /></div><div className="archive-stamp">SIST<br /><small>ARCHIVE</small></div></div>
       </section>
-
-      <section className="command-signal-rail"><span>ARCHIVE / ONLINE</span><span>PROVENANCE / TRACKED</span><span>FIELD NOTES / 02</span><span>RESEARCH LINK / ACTIVE</span><span>PUBLIC RECORD / OPEN</span></section>
-
-      <section className="command-section">
-        <div className="command-section-head"><span className="eyebrow">PUBLISHED RECORDS</span><div><h2>Intelligence worth keeping leaves a trace.</h2><p>Each briefing connects a field observation to SIST’s methods and limits.</p></div></div>
-        <div className="briefing-record-grid">
-          {records.map(r=><Link key={r.id} href={r.href} className={`briefing-record briefing-tone-${r.tone}`}>
-            <div className="briefing-record-head"><span>{r.type}</span><strong>{r.id}</strong></div>
-            <div className="briefing-record-body"><small>PUBLIC INTELLIGENCE RECORD</small><h2>{r.title}</h2><p>{r.desc}</p><b>READ FULL RECORD →</b></div>
-            <div className="briefing-record-mark">{r.id}</div>
-          </Link>)}
-        </div>
+      <section className="command-signal-rail"><span>IMMIGRATION</span><span>DUE PROCESS</span><span>AI SAFETY</span><span>CONSUMER ADVOCACY</span><span>PRIVACY & VALIDATION</span></section>
+      <section className="command-feature command-feature-gold briefing-founder"><span className="eyebrow">FOUNDER / ALEXANDER EMILIO PEREZ</span><h2>The person behind the process.</h2><p>Alexander built SIST to organize fragmented records, test competing explanations, and keep consequential decisions under human control. The archive connects that work to the system’s research agenda and public field reports.</p><div className="command-actions"><Link href="/briefings/alexander-emilio-perez-building-sist" className="action-primary">READ THE FOUNDER PERSPECTIVE →</Link><Link href="/alexander-emilio-perez" className="action-secondary">FOUNDER PROFILE ↗</Link></div></section>
+      <section className="command-section" id="published-reports"><div className="command-section-head"><span className="eyebrow">PUBLIC REPORTS & WHITE PAPERS</span><div><h2>A stronger record of SIST’s work.</h2><p>Read substantive public editions with executive findings, analytical questions, source notes, and clear limitations. Related drafts are consolidated into one briefing per topic.</p></div></div>
+        <nav className="briefing-topic-nav" aria-label="Report topics">{categories.map((category,index)=><a href={`#report-${index}`} key={category}>{category}</a>)}</nav>
+        <div className="briefing-record-grid">{reports.map((report,index)=><Link id={`report-${categories.indexOf(report.category)}`} key={report.slug} href={`/briefings/${report.slug}`} className={`briefing-record briefing-tone-${index%2?"red":"gold"}`}><div className="briefing-record-head"><span>{report.category}</span><strong>{String(index+1).padStart(2,"0")}</strong></div><div className="briefing-record-body"><small>{report.edition}</small><h2>{report.title}</h2><p>{report.description}</p><b>READ PUBLIC BRIEFING →</b></div></Link>)}</div>
       </section>
-
-      <section className="command-feature command-feature-gold">
-        <span className="eyebrow">ARCHIVE STANDARD</span><h2>Method, observation, and consequence.</h2><p>Briefings are intended to show how the architecture behaves in practice: what was challenged, what changed, what survived, and what still requires caution.</p>
-      </section>
-
-      <section className="command-footer"><Link href="/council">← COUNCIL</Link><span>SIST / INTELLIGENCE BRIEFINGS</span><Link href="/research">RESEARCH →</Link></section>
+      <section className="command-section"><div className="command-section-head"><span className="eyebrow">METHOD & FIELD REFLECTIONS</span><div><h2>How the work gets done.</h2><p>Understand adversarial review and the human responsibility behind the analysis.</p></div></div><div className="briefing-related">{fieldNotes.map(note=><Link key={note.href} href={note.href}><small>{note.category}</small><strong>{note.title}</strong><p>{note.description}</p><span>READ FIELD NOTE →</span></Link>)}</div></section>
+      <section className="command-section"><div className="command-section-head"><span className="eyebrow">RESEARCH DOCUMENTS</span><div><h2>The architecture behind the reports.</h2><p>Public methods remain available alongside the archive.</p></div></div><div className="briefing-related">{methodPaths.map((path,index)=><Link key={path} href={path}><small>PUBLIC METHOD DOCUMENT</small><strong>{methodTitles[index]}</strong><span>OPEN RESEARCH →</span></Link>)}</div></section>
+      <section className="command-feature command-feature-gold"><span className="eyebrow">PUBLICATION STANDARD</span><h2>Findings with context. Questions with sources.</h2><p>Public briefings distinguish observations, allegations, assessments, and proposals. Source dates and unresolved questions remain visible. Sensitive case exhibits and private working packets are not part of the public editions.</p></section>
+      <section className="command-footer"><Link href="/alexander-emilio-perez">← FOUNDER</Link><span>SIST / BRIEFINGS & REPORTS</span><Link href="/research">RESEARCH →</Link></section>
     </div>
   </main>;
 }

@@ -27,3 +27,11 @@ https://github.com/aperez8910-maker/SIST.PUBLIC
 
 ## Contact
 support@systemintelligenceandstrategictactics.com
+
+## Founder
+Alexander Emilio Perez — Founder & System Architect
+https://systemintelligenceandstrategictactics.com/alexander-emilio-perez
+
+## Public report archive
+Public editorial briefings derived from SIST source reports; distinguish allegations, findings, proposed controls, and observational results.
+https://systemintelligenceandstrategictactics.com/briefings

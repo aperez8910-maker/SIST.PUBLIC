@@ -1,3 +1,4 @@
+import { reports } from "@/data/briefings";
 import type { Metadata } from "next";
 
 export const siteUrl = "https://systemintelligenceandstrategictactics.com";
@@ -77,8 +78,8 @@ export const seoPages = {
     "article": true
   },
   "/briefings": {
-    "title": "Intelligence Briefings & Adversarial Review",
-    "description": "Read SIST field briefings on adversarial review, evidence organization, AI-assisted analysis, and the human decisions behind strategic intelligence."
+    "title": "Briefings, Reports & White Papers | Alexander Emilio Perez",
+    "description": "Explore SIST reports on immigration, due process, AI safety, privacy, consumer advocacy, and validation, with founder Alexander Emilio Perez’s perspective."
   },
   "/briefings/what-is-adversarial-review": {
     "title": "What Is Adversarial Review?",
@@ -101,13 +102,14 @@ export const seoPages = {
   "/contact": {
     "title": "Contact SIST & Request an Intelligence Briefing",
     "description": "Contact SIST to define your research objective, operating domain, record-analysis needs, and desired intelligence briefing before sharing sensitive records."
-  }
+  },
+  ...Object.fromEntries(reports.map(report => [`/briefings/${report.slug}`, { title: report.title, description: report.description, article: true }])) as Record<string, SeoPage>,
 } satisfies Record<string, SeoPage>;
 
-export type SeoPath = keyof typeof seoPages;
+export type SeoPath = keyof typeof seoPages | `/briefings/${string}`;
 
 export function pageMetadata(path: SeoPath): Metadata {
-  const page: SeoPage = seoPages[path];
+  const page: SeoPage = (seoPages as Record<string, SeoPage>)[path];
   const title = path === "/" ? page.title : `${page.title} | SIST`;
   const url = path === "/" ? siteUrl : `${siteUrl}${path}`;
   const images = [{ url: `${siteUrl}/opengraph-image.png`, width: 1200, height: 630, alt: siteName }];
@@ -132,7 +134,7 @@ export const founderSchema = {
 };
 
 export function pageSchema(path: SeoPath) {
-  const page: SeoPage = seoPages[path];
+  const page: SeoPage = (seoPages as Record<string, SeoPage>)[path];
   const url = path === "/" ? siteUrl : `${siteUrl}${path}`;
   const webPage = {
     "@type": path === founderPath ? "ProfilePage" : "WebPage",
@@ -156,6 +158,7 @@ export function pageSchema(path: SeoPath) {
       inLanguage: "en-US",
       mainEntityOfPage: { "@id": `${url}#webpage` },
       publisher: { "@id": `${siteUrl}/#organization` },
+      ...(path === "/briefings/alexander-emilio-perez-building-sist" ? { about: { "@id": founderId } } : {}),
     });
   }
   return { "@context": "https://schema.org", "@graph": graph };
