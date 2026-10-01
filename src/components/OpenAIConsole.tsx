@@ -36,38 +36,39 @@ export default function OpenAIConsole() {
   return (
     <section className="mt-8 border border-amber-300/20 bg-black/60 shadow-[0_0_80px_rgba(215,173,75,.06)]">
       <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
-        <span className="text-[8px] tracking-[.35em] text-gray-500">OPENAI / SIST INTELLIGENCE CHANNEL</span>
-        <span className="text-[8px] tracking-[.25em] text-emerald-300">SERVER-SIDE CREDENTIAL</span>
+        <span className="text-xs tracking-[.35em] text-gray-500">SIST / AI-ASSISTED ANALYSIS</span>
+        <span className="text-xs tracking-[.25em] text-emerald-300">REVIEW AGAINST SOURCES</span>
       </div>
       <div className="grid gap-6 p-6 lg:grid-cols-[1fr_1fr]">
         <div>
-          <p className="text-[9px] tracking-[.35em] text-amber-300">TASK INTAKE</p>
+          <p className="text-xs tracking-[.35em] text-amber-300">TASK INTAKE</p>
           <textarea
+            aria-label="Intelligence task"
             value={input}
             onChange={(event) => setInput(event.target.value)}
             onKeyDown={(event) => {
               if ((event.metaKey || event.ctrlKey) && event.key === "Enter") runIntelligence();
             }}
             placeholder="Enter an intelligence task, question, theory, or evidence summary..."
-            className="mt-4 min-h-44 w-full resize-y border border-white/10 bg-[#050607] p-4 text-sm leading-6 text-gray-200 outline-none placeholder:text-gray-700 focus:border-amber-300/40"
+            className="mt-4 min-h-44 w-full resize-y border border-white/10 bg-[#050607] p-4 text-base leading-6 text-gray-200 outline-none placeholder:text-gray-700 focus:border-amber-300/40"
           />
           <button
             type="button"
             onClick={runIntelligence}
             disabled={!input.trim() || loading}
-            className="mt-4 border border-amber-300/40 px-5 py-3 text-[8px] font-bold tracking-[.25em] text-amber-300 transition hover:border-amber-300 disabled:cursor-not-allowed disabled:opacity-40"
+            className="mt-4 border border-amber-300/40 px-5 py-3 text-xs font-bold tracking-[.25em] text-amber-300 transition hover:border-amber-300 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            {loading ? "PROCESSING / OPENAI" : "RUN INTELLIGENCE ↗"}
+            {loading ? "PROCESSING" : "RUN INTELLIGENCE ↗"}
           </button>
-          <span className="ml-4 text-[7px] tracking-[.15em] text-gray-700">⌘/CTRL + ENTER</span>
+          <span className="ml-4 text-xs tracking-[.15em] text-gray-700">⌘/CTRL + ENTER</span>
         </div>
 
-        <div className="min-h-44 border border-white/10 bg-[#030405] p-5">
-          <p className="text-[9px] tracking-[.35em] text-emerald-300">SURVIVING INTELLIGENCE</p>
+        <div className="min-h-44 border border-white/10 bg-[#030405] p-5" aria-live="polite">
+          <p className="text-xs tracking-[.35em] text-emerald-300">RESPONSE</p>
           {error ? (
             <p className="mt-5 text-xs leading-6 text-red-300">{error}</p>
           ) : output ? (
-            <pre className="mt-5 whitespace-pre-wrap font-sans text-xs leading-6 text-gray-300">{output}</pre>
+            <pre className="mt-5 whitespace-pre-wrap font-sans text-base leading-6 text-gray-300">{output}</pre>
           ) : (
             <p className="mt-5 text-xs leading-6 text-gray-700">Awaiting an intelligence task.</p>
           )}

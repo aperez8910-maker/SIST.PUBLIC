@@ -89,7 +89,7 @@ export default function DivisionDetail({
         <section className="division-command-section">
           <div className="division-command-heading">
             <span className="eyebrow">PRIMARY OPERATING SCOPE</span>
-            <h2>Built to hold the record together under pressure.</h2>
+            <h2>Operating focus.</h2>
           </div>
 
           <div className="division-focus-grid">
@@ -108,7 +108,7 @@ export default function DivisionDetail({
           {mission && (
             <article className="division-statement-panel">
               <span className="eyebrow">MISSION</span>
-              <h2>Why this division exists.</h2>
+              <h2>Mission.</h2>
               <p>{mission}</p>
               <div className="division-panel-mark">M</div>
             </article>
@@ -117,7 +117,7 @@ export default function DivisionDetail({
           {approach && (
             <article className="division-statement-panel">
               <span className="eyebrow">INTELLIGENCE APPROACH</span>
-              <h2>How the work is structured.</h2>
+              <h2>Method.</h2>
               <p>{approach}</p>
               <div className="division-panel-mark">A</div>
             </article>
@@ -127,8 +127,7 @@ export default function DivisionDetail({
         <section className="division-scope-disclosure">
           <span>INDEPENDENT ANALYTICAL PLATFORM</span>
           <p>
-            This division provides research, record analysis, adversarial review, and decision-support output.
-            SIST is not a government agency, law firm, healthcare provider, or licensed representative, and the platform does not itself enter an attorney-client, clinician-patient, or representative-client relationship.
+            SIST provides research, record analysis, and decision support. It is not a government agency or licensed legal, medical, or representative service.
           </p>
         </section>
 

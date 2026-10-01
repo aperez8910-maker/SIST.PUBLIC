@@ -1,42 +1,29 @@
 "use client";
 
+import { pipeline } from "@/data/pipeline";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
 import SystemLattice from "@/components/home/SystemLattice";
 import { divisions } from "@/data/divisions";
 
-const nav = [
-  ["SYSTEM", "/system"],
-  ["DIVISIONS", "/divisions"],
-  ["COUNCIL", "/council"],
-  ["BRIEFINGS", "/briefings"],
-  ["RESEARCH", "/research"],
-] as const;
 
-const pipeline = [
-  ["01", "INTAKE", "Define the objective, scope, actors, constraints, and record boundary.", "GATE 1"],
-  ["02", "LIBRARIAN", "Normalize, index, and preserve the source record so every important claim can be traced.", "RECORD"],
-  ["03", "INGESTOR", "Extract facts, claims, dates, entities, contradictions, and evidence gaps into structured intelligence.", "GATE 2"],
-  ["04", "RESEARCHER", "Develop missing context, external sources, authorities, and expected evidence.", "COLLECTION"],
-  ["05", "ANALYST", "Build competing explanations, relationships, timelines, and critical findings.", "GATE 3"],
-  ["06", "LAWCLERK", "Test rules, standards, procedure, authority, and decision relevance where the matter requires it.", "APPLIED"],
-  ["07", "COUNTERMEASURES", "Attack the working position for contradictions, weak links, alternate explanations, and failure paths.", "GATE 4"],
-  ["08", "BRIEFER", "Convert surviving findings, uncertainty, and options into a usable intelligence product.", "SYNTHESIS"],
-  ["09", "DEPLOY MASTER", "Release only what survives the record, challenge, and human-controlled deployment gate.", "GATE 5"],
-] as const;
+
+
 
 const capabilities = [
   {
     n: "01 / ARCHITECTURE",
-    title: "Parallel reasoning without losing the chain of evidence.",
-    body: "SIST separates collection, research, analysis, challenge, verification, and synthesis into controlled stages. The point is not more output. The point is to preserve lineage while forcing competing paths to survive pressure.",
+    title: "Independent reasoning. Traceable evidence.",
+    body: "Separate research, analysis, challenge, and synthesis while preserving the evidence behind each finding.",
     large: true,
   },
   {
     n: "02 / ADVERSARIAL",
     title: "A system that attacks its own position.",
-    body: "Gate review is not decorative QA. Findings can be challenged, suspended for repair, superseded, replaced through lineage, or reopened through a controlled event.",
+    body: "Control gates can hold weak findings for repair, revision, replacement, or withdrawal.",
   },
   {
     n: "03 / COUNCIL",
@@ -45,18 +32,17 @@ const capabilities = [
   },
   {
     n: "04 / PROVENANCE",
-    title: "Every serious claim should have somewhere to point.",
-    body: "Evidence, source context, contradictions, unresolved questions, and finding state are treated as part of the intelligence product rather than hidden behind the final answer.",
+    title: "Claims stay connected to sources.",
+    body: "Sources, contradictions, unresolved questions, and finding states remain part of the final record.",
   },
   {
     n: "05 / DEPLOYMENT",
-    title: "Designed to move from analysis into action.",
-    body: "The final product is structured for decisions, filings, briefings, investigations, negotiations, escalation, or further collection—not just reading.",
+    title: "Intelligence for the next decision.",
+    body: "Briefings support further research, professional review, strategic planning, and escalation.",
   },
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const update = () => {
@@ -77,42 +63,7 @@ export default function Home() {
     <main className="sist-evo">
       <div className="evo-progress" />
 
-      <nav className="evo-nav" aria-label="Primary navigation">
-        <Link href="/" className="evo-brand" aria-label="SIST home">
-          <Image src="/logo.png" alt="SIST" width={43} height={43} priority />
-          <span className="evo-brand-copy">
-            <strong>SIST™</strong>
-            <span>SYSTEM INTELLIGENCE & STRATEGIC TACTICS</span>
-          </span>
-        </Link>
-
-        <div className="evo-nav-center">
-          {nav.map(([label, href]) => (
-            <Link key={label} href={href}>{label}</Link>
-          ))}
-        </div>
-
-        <Link href="/contact" className="evo-briefing">REQUEST BRIEFING</Link>
-
-        <button
-          type="button"
-          className="evo-nav-trigger"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((v) => !v)}
-        >
-          {menuOpen ? "×" : "≡"}
-        </button>
-      </nav>
-
-      {menuOpen && (
-        <div className="evo-mobile-menu">
-          {nav.map(([label, href]) => (
-            <Link key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</Link>
-          ))}
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>REQUEST BRIEFING</Link>
-        </div>
-      )}
+      <Navbar />
 
       <div className="evo-shell">
         <section className="evo-hero" aria-labelledby="hero-title">
@@ -128,12 +79,9 @@ export default function Home() {
                 <em>under pressure.</em>
               </h1>
               <p className="hero-copy">
-                SIST is an independent AI research and intelligence-analysis platform for difficult matters where
-                records are fragmented, claims conflict, institutions hold more information than the individual,
-                or a single-pass answer is not enough. The system structures the record, develops missing context,
-                attacks its own working position, and produces a source-grounded intelligence brief for human review.
+                SIST organizes fragmented records, researches missing context, and challenges conflicting claims. The result is a source-grounded intelligence brief for human review.
               </p>
-              <p className="hero-copy">Founded by <Link href="/alexander-emilio-perez">Alexander Emilio Perez</Link>, SIST connects structured evidence, adversarial AI review, and final human judgment.</p>
+              <p className="hero-copy">Founded by <Link href="/alexander-emilio-perez">Alexander Emilio Perez</Link> in Austin, Texas.</p>
               <div className="hero-actions">
                 <Link href="/system" className="action-primary">
                   ENTER SYSTEM <span aria-hidden="true">↗</span>
@@ -173,11 +121,9 @@ export default function Home() {
           <div className="evo-section-head">
             <span className="eyebrow">AIP™ / CONTROLLED PIPELINE</span>
             <div>
-              <h2>Not a chat window. A system with gates.</h2>
+              <h2>Nine stages. Five control gates.</h2>
               <p>
-                Information moves through explicit stages rather than disappearing into a single
-                prompt-response cycle. Each stage has a job. Each transition creates a place to
-                inspect the record, challenge a theory, or stop weak intelligence before it moves forward.
+                Each stage has a defined role. Control gates test the record and can stop unsupported findings before release.
               </p>
             </div>
           </div>
@@ -201,11 +147,9 @@ export default function Home() {
           <div className="evo-section-head">
             <span className="eyebrow">SYSTEM DIFFERENTIATORS</span>
             <div>
-              <h2>The interface exposes the discipline behind the answer.</h2>
+              <h2>Evidence, challenge, and human control.</h2>
               <p>
-                SIST is presented as an operating architecture because that is what the methodology
-                depends on: separation of roles, controlled finding states, evidence lineage,
-                adversarial pressure, and a final synthesis that records what survived.
+                Separate analytical roles test the record and preserve what supports the final position.
               </p>
             </div>
           </div>
@@ -226,22 +170,21 @@ export default function Home() {
           <div className="evo-section-head">
             <span className="eyebrow">HOW AN ENGAGEMENT WORKS</span>
             <div>
-              <h2>Bring the record. SIST turns it into an intelligence problem.</h2>
+              <h2>Define the objective. Build the record.</h2>
               <p>
-                The platform is designed to make the engagement model clear: what enters the system,
-                what the architecture does with it, and what a human decision-maker receives at the other end.
+                Start with the question, available records, and known gaps. SIST structures the analysis for human review.
               </p>
             </div>
           </div>
           <div className="engagement-grid">
             <article className="engagement-card">
               <span>01 / WHO USES IT</span>
-              <h3>People and teams facing complex records or institutional decisions.</h3>
+              <h3>People and teams with complex records.</h3>
               <p>Individuals, advocates, researchers, attorneys, operators, and organizations can use the methodology as decision support.</p>
             </article>
             <article className="engagement-card">
               <span>02 / WHAT YOU BRING</span>
-              <h3>A question, objective, timeline, records, and the known gaps.</h3>
+              <h3>A clear objective and available records.</h3>
               <p>The intake starts with the problem and the available record—not a request for the system to guess what happened.</p>
             </article>
             <article className="engagement-card">
@@ -251,7 +194,7 @@ export default function Home() {
             </article>
             <article className="engagement-card">
               <span>04 / WHAT YOU RECEIVE</span>
-              <h3>An auditable intelligence brief with evidence, uncertainty, and options.</h3>
+              <h3>A traceable briefing with findings and options.</h3>
               <p>The product is structured for human judgment, further collection, escalation, negotiation, filing preparation, or strategic planning.</p>
             </article>
           </div>
@@ -261,10 +204,9 @@ export default function Home() {
           <div className="evo-section-head">
             <span className="eyebrow">PUBLIC PROOF LAYER</span>
             <div>
-              <h2>The architecture should be inspectable—not just impressive.</h2>
+              <h2>Inspect the methods and their limits.</h2>
               <p>
-                SIST separates what is implemented, what is documented publicly, and what still requires broader validation.
-                The public site is designed to make that distinction visible.
+                Explore the implemented architecture, public methodology, and questions still under validation.
               </p>
             </div>
           </div>
@@ -291,9 +233,7 @@ export default function Home() {
           <div className="proof-caveat">
             <strong>VALIDATION STATUS</strong>
             <p>
-              SIST is a working architecture, but public materials do not claim universal superiority,
-              zero-error operation, or statistical proof across every domain. Those are validation questions,
-              not marketing conclusions.
+              SIST is a working architecture. Broader performance claims require controlled validation; errors remain possible.
             </p>
           </div>
         </section>
@@ -304,9 +244,7 @@ export default function Home() {
             <div>
               <h2>Five divisions. One intelligence architecture.</h2>
               <p>
-                The same controlled SIST methodology is applied across criminal defense, healthcare,
-                consumer advocacy, immigration and humanitarian advocacy, and institutional accountability.
-                Each division has its own operating identity while preserving a common evidentiary and adversarial core.
+                Five operating domains share the same evidence discipline, adversarial review, and human release authority.
               </p>
             </div>
           </div>
@@ -338,8 +276,7 @@ export default function Home() {
               <span className="eyebrow">PUBLIC BRIEFINGS / METHOD IN PRACTICE</span>
               <h3>See how adversarial review changes the intelligence product.</h3>
               <p>
-                The briefing library exposes methodology, case-oriented analysis, and system concepts
-                so the architecture can be examined through actual written products instead of marketing language alone.
+                Read field notes on evidence, adversarial review, and human-directed decisions.
               </p>
             </div>
             <Link href="/briefings">OPEN BRIEFING LIBRARY →</Link>

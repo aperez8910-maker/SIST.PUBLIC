@@ -18,8 +18,7 @@ export default function ContactPage() {
             <span className="eyebrow">SIST / REQUEST BRIEFING</span>
             <h1>OPEN AN<br/><em>INTELLIGENCE INTAKE.</em></h1>
             <p>
-              Start with the objective, the operating domain, the known record, and the outcome you need to reach.
-              The first contact should define the intelligence problem—not dump sensitive evidence into a public form.
+              Tell us the objective, operating domain, available records, and desired outcome. Keep the first message high-level.
             </p>
           </div>
           <aside className="contact-channel-card">
@@ -33,8 +32,8 @@ export default function ContactPage() {
         <section className="contact-intake-layout">
           <div className="contact-intake-copy">
             <span className="eyebrow">WHAT HAPPENS NEXT</span>
-            <h2>Define the matter before the system touches the record.</h2>
-            <p>After the initial contact, the objective and scope can be clarified, the appropriate division identified, and a handling method established for any records that actually need review.</p>
+            <h2>Start with the objective.</h2>
+            <p>We clarify the scope, identify the division, and confirm how any sensitive records should be shared.</p>
             <div className="contact-step-grid">
               <article><span>01</span><h3>OBJECTIVE</h3><p>What question or decision needs to be resolved?</p></article>
               <article><span>02</span><h3>RECORD</h3><p>What exists, what is missing, and where are the contradictions?</p></article>

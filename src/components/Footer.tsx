@@ -62,9 +62,7 @@ export default function Footer() {
         <div className="sist-footer-scope">
           <strong>OPERATING SCOPE</strong>
           <p>
-            SIST is not a government agency, law firm, medical provider, or licensed representative.
-            The platform provides AI-assisted research, record analysis, adversarial review, and decision support.
-            Human users remain responsible for professional review and consequential decisions.
+            SIST provides independent research, record analysis, and decision support. It does not provide licensed legal, medical, or representative services. Human users retain responsibility for consequential decisions.
           </p>
         </div>
 

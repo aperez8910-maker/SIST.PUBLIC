@@ -1,0 +1,99 @@
+/* Shared rhythm and legibility across the existing SIST command surfaces. */
+:root { --sist-content-width: 1480px; --sist-gutter: clamp(16px, 3vw, 32px); }
+.evo-shell, .command-shell, .divisions-command-shell, .division-command-shell,
+.research-document-shell, .sist-footer-inner, .sist-global-nav-inner, .intelligence-shell {
+  width: min(var(--sist-content-width), calc(100% - var(--sist-gutter) * 2));
+  margin-inline: auto;
+}
+.evo-shell, .command-shell, .divisions-command-shell, .division-command-shell,
+.research-document-shell { padding-top: 96px; }
+.intelligence-shell { position: relative; padding-block: 112px 64px; }
+.intelligence-shell > header { flex-wrap: wrap; gap: 20px; }
+.command-hero > *, .research-document-hero > *, .research-document-grid > *,
+.division-command-hero > *, .sist-footer-main > * { min-width: 0; }
+.sist-global-nav-inner { gap: 20px; }
+.sist-global-brand { min-width: 0; flex-shrink: 0; }
+.sist-global-brand small { font-size: 10px !important; letter-spacing: .08em !important; }
+.sist-global-links { gap: clamp(14px, 2vw, 24px); }
+.sist-global-links a, .sist-global-briefing, .sist-global-mobile a {
+  font-size: .875rem; letter-spacing: .07em; line-height: 1.4;
+}
+.sist-global-trigger { min-width: 44px; min-height: 44px; }
+.sist-global-mobile a { padding-block: 8px; }
+:is(.sist-evo, .sist-modern-page, .sist-footer) :is(h1, h2, h3) {
+  text-wrap: balance; overflow-wrap: break-word;
+}
+:is(.sist-evo, .sist-modern-page, .sist-footer) :is(p, li) { text-wrap: pretty; }
+.hero-command .hero-copy, .command-hero-copy > p, .divisions-command-hero p,
+.division-command-intro, .research-document-hero p, .contact-command-hero > div > p {
+  font-size: 1rem; line-height: 1.75; max-width: 65ch;
+}
+.evo-section-head p, .evo-panel p, .pipe-stage p, .engagement-card p, .proof-card p,
+.proof-caveat p, .division-home-copy p, .case-strip p, .command-section p,
+.command-feature p, .council-seat-card p, .council-human-authority p, .council-process p,
+.research-card p, .research-validation p, .research-document-body p,
+.research-document-body li, .research-document-side li, .division-card-copy p,
+.division-statement-panel p, .division-rationale-grid p, .division-scope-note p,
+.division-scope-disclosure p, .contact-intake-copy > p, .contact-step-grid p,
+.contact-scope-card p, .intake-privacy-note p, .intake-prepared,
+.sist-footer-brand p, .sist-footer-scope p {
+  font-size: 1rem; line-height: 1.75; color: #b4beca; max-width: 70ch;
+}
+.eyebrow, .panel-number, .pipe-state, .hero-metric span, .command-metrics span,
+.division-command-kicker, .division-focus-status, .contact-form-head,
+.intake-form label > span, .intake-privacy-note strong, .contact-scope-card strong,
+.division-scope-note strong, .division-scope-disclosure > span,
+.proof-caveat strong, .sist-footer-scope strong, .sist-footer-card span,
+.sist-footer-card small, .research-document-hero aside span,
+.research-document-hero aside small {
+  font-size: .75rem; line-height: 1.5; letter-spacing: .08em;
+}
+.action-primary, .action-secondary, .case-strip > a, .proof-card b,
+.division-home-access, .division-card-access, .contact-domain-link,
+.research-doc-linkset a, .sist-footer-links a, .sist-footer-card strong,
+.intake-submit, .command-footer, .division-command-footer {
+  font-size: .875rem; line-height: 1.5; letter-spacing: .06em;
+}
+.intake-form input, .intake-form select, .intake-form textarea { font-size: 1rem; }
+.intake-form label > span { color: #b4beca; }
+.evo-panel, .engagement-card, .proof-card, .research-card,
+.council-seat-card, .briefing-record, .division-command-card {
+  min-width: 0; height: auto; min-height: 0;
+}
+.engagement-card h3, .proof-card h3, .research-card h2 { margin-top: 28px; }
+.proof-card, .research-card { display: flex; flex-direction: column; }
+.proof-card b, .research-card-foot { margin-top: auto; padding-top: 28px; }
+.capability-grid, .engagement-grid, .proof-grid, .research-node-grid,
+.briefing-record-grid, .division-home-grid { align-items: stretch; }
+.pipeline { grid-template-columns: repeat(9, minmax(185px, 1fr)); }
+.pipe-stage h3 { font-size: .875rem; line-height: 1.4; }
+.command-signal-rail, .division-signal-rail { gap: 12px; line-height: 1.5; }
+.research-document-side :is(h2, h3) { font: 400 1.75rem/1.15 Georgia, serif; }
+.research-document-hero h1, .division-command-hero h1, .contact-command-hero h1 { line-height: 1.02; }
+.research-doc-linkset a, .sist-footer-links a { overflow-wrap: anywhere; }
+.sist-footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+.sist-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sist-footer-card strong { margin-top: 18px; }
+.sist-footer-bottom { flex-wrap: wrap; font-size: .75rem; line-height: 1.6; letter-spacing: .04em; }
+.sist-footer-lockup span { font-size: .75rem; letter-spacing: .05em; line-height: 1.5; }
+.sist-footer-security { flex-wrap: wrap; }
+:is(a, button, input, select, textarea):focus-visible { outline: 2px solid #f1d17a; outline-offset: 4px; }
+@media (max-width: 1200px) {
+  .sist-global-links, .sist-global-briefing { display: none; }
+  .sist-global-trigger { display: flex; margin-left: auto; align-items: center; justify-content: center; border: 1px solid #c9a84c66; color: #f1d17a; font-size: 24px; }
+  .sist-global-mobile { display: flex; flex-direction: column; gap: 12px; padding: 20px var(--sist-gutter); background: #0b131c; }
+}
+@media (max-width: 650px) {
+  .sist-footer-links, .sist-footer-grid { grid-template-columns: minmax(0, 1fr); }
+  .sist-global-brand small { display: none; }
+  .hero-command, .command-hero-copy { padding-inline: 22px; }
+  .command-metrics, .hero-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .command-metrics strong, .hero-metric strong { overflow-wrap: anywhere; }
+  .research-document-hero h1 { font-size: clamp(38px, 10vw, 58px); letter-spacing: -.035em; }
+  .division-command-hero h1 { font-size: clamp(34px, 9vw, 54px); }
+  .contact-command-hero h1 { font-size: clamp(38px, 10vw, 58px); }
+  .research-document-body section, .research-document-side { padding: 28px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

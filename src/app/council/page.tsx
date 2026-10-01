@@ -21,7 +21,7 @@ export default function CouncilPage(){
         <div className="command-hero-copy">
           <span className="eyebrow">SIST / COUNCIL CHAMBER</span>
           <h1>INDEPENDENT<br/><em>MINDS. ONE RECORD.</em></h1>
-          <p>The Council is not a vote or a collection of characters. Three AI seats perform separate analytical functions while a human ENFORCER™ remains the final authority over synthesis and deployment. Evidence, dissent, and unresolved questions stay visible.</p>
+          <p>Three AI seats provide independent analysis, adversarial review, and verification. The human ENFORCER™ controls final synthesis and release. Evidence and dissent remain visible.</p>
           <div className="command-actions">
             <Link href="/interactive" className="action-primary">ENTER WORK FLOOR ↗</Link>
             <Link href="/system" className="action-secondary">SYSTEM ARCHITECTURE →</Link>

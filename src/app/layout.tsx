@@ -4,6 +4,7 @@ import "./sist-reference-theme.css";
 import "./sist-cinematic-3d.css";
 import "./sist-art.css";
 import "./sist-evolution.css";
+import "./sist-clarity.css";
 import Footer from "@/components/Footer";
 import { founderId, founderSchema, pageMetadata, siteFacebook, siteUrl } from "@/lib/seo";
 

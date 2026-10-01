@@ -19,9 +19,7 @@ export default function DivisionsPage() {
             <span className="eyebrow">SIST / SPECIALIZED INTELLIGENCE NETWORK</span>
             <h1>DIVISIONAL<br/><em>COMMAND.</em></h1>
             <p>
-              Five specialized operating environments connected to one adversarial intelligence architecture.
-              Different institutions create different rules and records, but the underlying intelligence problem is often the same:
-              fragmented evidence, conflicting claims, procedural complexity, missing information, and asymmetric access to the record.
+              Five divisions apply one intelligence architecture to fragmented evidence, conflicting claims, complex procedures, and missing records. Each preserves its domain-specific standards.
             </p>
           </div>
 
@@ -82,7 +80,7 @@ export default function DivisionsPage() {
           </div>
           <div className="division-scope-note">
             <strong>OPERATING SCOPE</strong>
-            <p>SIST is an independent AI research and intelligence-analysis platform. Its divisions are analytical operating domains—not government agencies, law firms, medical providers, or licensed representatives.</p>
+            <p>SIST provides independent research and record analysis. Its divisions do not provide licensed legal, medical, or representative services.</p>
           </div>
         </section>
 

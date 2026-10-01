@@ -63,12 +63,12 @@ export default function IntakeForm() {
       </div>
 
       <label className="intake-wide"><span>INTELLIGENCE OBJECTIVE *</span><textarea name="objective" required rows={4} placeholder="What question or decision needs to be resolved?" /></label>
-      <label className="intake-wide"><span>CURRENT RECORD / KNOWN FACTS *</span><textarea name="record" required rows={6} placeholder="Describe the matter at a high level, what records exist, and the most important known gaps or contradictions. Do not paste highly sensitive personal identifiers here." /></label>
+      <label className="intake-wide"><span>CURRENT RECORD / KNOWN FACTS *</span><textarea name="record" required rows={6} placeholder="Summarize available records, key gaps, and contradictions. Omit sensitive identifiers." /></label>
       <label className="intake-wide"><span>DESIRED OUTCOME *</span><textarea name="outcome" required rows={4} placeholder="What would a useful intelligence product help you decide, prepare, verify, or challenge?" /></label>
 
       <div className="intake-privacy-note">
         <strong>PUBLIC INTAKE BOUNDARY</strong>
-        <p>This form does not upload evidence or store a case file on the public website. Submitting prepares an email in your device's mail client. Keep the first message high-level; confirm a handling method before sending sensitive records.</p>
+        <p>This form prepares an email in your mail app; it does not send or upload records. Confirm a handling method before sharing sensitive information.</p>
       </div>
 
       <button type="submit" className="intake-submit">PREPARE INTAKE EMAIL ↗</button>

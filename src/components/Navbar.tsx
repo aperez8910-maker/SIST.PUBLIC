@@ -18,7 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sist-global-nav">
+    <nav className="sist-global-nav" aria-label="Primary navigation">
       <div className="sist-global-nav-inner">
         <Link href="/" className="sist-global-brand" aria-label="SIST home">
           <Image src="/logo.png" alt="SIST Logo" width={58} height={58} priority />
@@ -32,7 +32,7 @@ export default function Navbar() {
           {links.map((link) => {
             const active = pathname === link.href || pathname.startsWith(link.href + "/");
             return (
-              <Link key={link.href} href={link.href} className={active ? "is-active" : ""}>
+              <Link key={link.href} href={link.href} className={active ? "is-active" : ""} aria-current={active ? "page" : undefined}>
                 {link.name}
               </Link>
             );

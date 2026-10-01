@@ -22,7 +22,7 @@ export default function ResearchPage(){
         <div className="command-hero-copy">
           <span className="eyebrow">SIST / RESEARCH & FRAMEWORKS</span>
           <h1>THE KNOWLEDGE<br/><em>BEHIND THE SYSTEM.</em></h1>
-          <p>Research documents the public methods, control concepts, analytical frameworks, and validation questions behind System Intelligence & Strategic Tactics.</p>
+          <p>Explore SIST’s public architecture, review protocols, analytical frameworks, and validation questions.</p>
           <div className="command-actions"><Link href="/system" className="action-primary">VIEW ARCHITECTURE ↗</Link><Link href="/briefings" className="action-secondary">FIELD BRIEFINGS →</Link></div>
           <div className="command-metrics">
             <div><span>NODES</span><strong>04</strong></div><div><span>METHOD</span><strong>STRUCTURED</strong></div><div><span>VALIDATION</span><strong className="gold">ONGOING</strong></div><div><span>ACCESS</span><strong>PUBLIC</strong></div>
@@ -39,7 +39,7 @@ export default function ResearchPage(){
       <section className="command-signal-rail"><span>METHODS / PUBLIC</span><span>PROTOCOLS / DOCUMENTED</span><span>VALIDATION / ACTIVE</span><span>FIELD LINK / CONNECTED</span><span>REVISION / CONTROLLED</span></section>
 
       <section className="command-section">
-        <div className="command-section-head"><span className="eyebrow">RESEARCH NODES</span><div><h2>Architecture should be explainable.</h2><p>The public research layer documents what SIST is designed to do, where its limits are, and how stronger validation can test the claims made about the architecture.</p></div></div>
+        <div className="command-section-head"><span className="eyebrow">RESEARCH NODES</span><div><h2>Architecture should be explainable.</h2><p>Each document explains the method, its limits, and how its claims can be tested.</p></div></div>
         <div className="research-node-grid">
           {research.map(([n,title,desc,kind,tone,href])=><Link key={n} href={href} className={`research-card research-tone-${tone}`}>
             <div className="research-card-top"><span>{n}</span><small>{kind}</small><i/></div>

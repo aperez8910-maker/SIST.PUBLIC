@@ -1,3 +1,4 @@
+import { pipeline } from "@/data/pipeline";
 import { pageMetadata } from "@/lib/seo";
 import PageStructuredData from "@/components/PageStructuredData";
 
@@ -6,17 +7,7 @@ export const metadata = pageMetadata("/system");
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-const pipeline = [
-  ["01","INTAKE","Objectives, constraints, source material, and record boundaries are registered."],
-  ["02","LIBRARIAN","The record is normalized, indexed, and made traceable."],
-  ["03","INGESTOR","Facts, claims, dates, actors, and evidence are structured."],
-  ["04","RESEARCHER","Missing context, authorities, records, and outside material are developed."],
-  ["05","ANALYST","Patterns, contradictions, dependencies, and competing explanations are mapped."],
-  ["06","LAWCLERK","Rules, standards, procedural posture, and legal relevance are tested."],
-  ["07","COUNTERMEASURES","The working position is attacked and failure paths are surfaced."],
-  ["08","BRIEFER","Surviving findings are converted into clear strategic intelligence."],
-  ["09","DEPLOY MASTER","Final outputs move forward only after lineage, caveats, control state, and human release authority are preserved."],
-] as const;
+
 
 const gates = [
   ["G1","INTAKE","Record integrity"],
@@ -35,7 +26,7 @@ export default function SystemPage(){
         <div className="command-hero-copy">
           <span className="eyebrow">SIST / SYSTEM ARCHITECTURE</span>
           <h1>THE SYSTEM<br/><em>UNDER LOAD.</em></h1>
-          <p>SIST is a controlled multi-stage intelligence architecture designed to preserve source lineage, expose uncertainty, challenge working conclusions, and stop unsupported findings before deployment.</p>
+          <p>SIST preserves source lineage, tests working conclusions, and holds unsupported findings before human-approved release.</p>
           <div className="command-actions">
             <Link href="/interactive" className="action-primary">ENTER WORK FLOOR ↗</Link>
             <Link href="/council" className="action-secondary">VIEW COUNCIL →</Link>

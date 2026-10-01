@@ -20,7 +20,7 @@ export default function BriefingsPage(){
         <div className="command-hero-copy">
           <span className="eyebrow">SIST / INTELLIGENCE BRIEFINGS</span>
           <h1>FIELD NOTES<br/><em>FROM THE SYSTEM.</em></h1>
-          <p>Briefings document methods, field observations, adversarial lessons, and the reasoning architecture behind SIST without exposing proprietary orchestration instructions.</p>
+          <p>Field notes connect SIST’s methods to evidence review, adversarial challenge, and human decisions.</p>
           <div className="command-actions"><Link href="/research" className="action-primary">OPEN RESEARCH ↗</Link><Link href="/system" className="action-secondary">VIEW SYSTEM →</Link></div>
           <div className="command-metrics">
             <div><span>PUBLISHED</span><strong>02</strong></div><div><span>FORMAT</span><strong>FIELD RECORD</strong></div><div><span>REVIEW</span><strong className="gold">SOURCE-GROUNDED</strong></div><div><span>ARCHIVE</span><strong>ACTIVE</strong></div>
@@ -37,7 +37,7 @@ export default function BriefingsPage(){
       <section className="command-signal-rail"><span>ARCHIVE / ONLINE</span><span>PROVENANCE / TRACKED</span><span>FIELD NOTES / 02</span><span>RESEARCH LINK / ACTIVE</span><span>PUBLIC RECORD / OPEN</span></section>
 
       <section className="command-section">
-        <div className="command-section-head"><span className="eyebrow">PUBLISHED RECORDS</span><div><h2>Intelligence worth keeping leaves a trace.</h2><p>Each briefing is presented as a record—not a disposable post—with context, source discipline, and a clear relationship to the broader SIST architecture.</p></div></div>
+        <div className="command-section-head"><span className="eyebrow">PUBLISHED RECORDS</span><div><h2>Intelligence worth keeping leaves a trace.</h2><p>Each briefing connects a field observation to SIST’s methods and limits.</p></div></div>
         <div className="briefing-record-grid">
           {records.map(r=><Link key={r.id} href={r.href} className={`briefing-record briefing-tone-${r.tone}`}>
             <div className="briefing-record-head"><span>{r.type}</span><strong>{r.id}</strong></div>
