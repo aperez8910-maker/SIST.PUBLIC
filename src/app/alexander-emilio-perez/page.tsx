@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import PageStructuredData from "@/components/PageStructuredData";
-import { founderLinkedIn, pageMetadata } from "@/lib/seo";
+import { founderLinkedIn, pageMetadata, siteFacebook } from "@/lib/seo";
 
 export const metadata = pageMetadata("/alexander-emilio-perez");
 
@@ -50,6 +50,7 @@ export default function FounderPage() {
             <h2>Connect with Alexander Emilio Perez</h2>
             <div className="research-doc-linkset">
               <a href={founderLinkedIn} target="_blank" rel="noopener noreferrer">Alexander Emilio Perez on LinkedIn</a>
+              <a href={siteFacebook} target="_blank" rel="noopener noreferrer">SIST on Facebook</a>
               <a href="https://github.com/aperez8910-maker/SIST.PUBLIC" target="_blank" rel="noopener noreferrer">SIST public GitHub repository</a>
               <Link href="/contact">Contact SIST</Link>
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const siteUrl = "https://systemintelligenceandstrategictactics.com";
 export const siteName = "System Intelligence & Strategic Tactics";
+export const siteFacebook = "https://www.facebook.com/SISTprotocol/";
 export const founderName = "Alexander Emilio Perez";
 export const founderPath = "/alexander-emilio-perez";
 export const founderLinkedIn = "https://www.linkedin.com/in/alexander-perez-a848473a4";

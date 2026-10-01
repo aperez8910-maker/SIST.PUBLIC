@@ -5,7 +5,7 @@ import "./sist-cinematic-3d.css";
 import "./sist-art.css";
 import "./sist-evolution.css";
 import Footer from "@/components/Footer";
-import { founderId, founderSchema, pageMetadata, siteUrl } from "@/lib/seo";
+import { founderId, founderSchema, pageMetadata, siteFacebook, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   ...pageMetadata("/"),
@@ -35,7 +35,7 @@ const organizationSchema = {
   description:
     "An independent AI research and intelligence-analysis platform for structured records, adversarial review, strategic synthesis, and decision support.",
   email: "support@systemintelligenceandstrategictactics.com",
-  sameAs: ["https://github.com/aperez8910-maker/SIST.PUBLIC"],
+  sameAs: ["https://github.com/aperez8910-maker/SIST.PUBLIC", siteFacebook],
 };
 
 const websiteSchema = {
