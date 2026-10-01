@@ -4,23 +4,23 @@ export type Briefing = {
   limits: string[]; references?: { label: string; href: string }[];
 };
 
-// SIST investigations and research developed under Alexander Emilio Perez’s direction.
+// SIST-produced investigations, analysis, reports, and research.
 export const reports: Briefing[] = [
   {
     "slug": "alexander-emilio-perez-building-sist",
     "title": "Alexander Emilio Perez: Building SIST",
     "category": "FOUNDER PERSPECTIVE",
-    "description": "Alexander Emilio Perez built SIST through hands-on investigation, record reconstruction, and human-directed AI collaboration. These reports document that work.",
+    "description": "Alexander Emilio Perez is SIST’s founder and system architect. SIST produces the investigations, analysis, and reports documented in this archive.",
     "edition": "FOUNDER / RESEARCH ORIGINS",
     "source": "SIST founder profile; After Bexar County; corrected independent-accountability white paper, September 2026.",
     "sections": [
       {
         "title": "Built through investigation",
-        "body": "Alexander Emilio Perez founded System Intelligence & Strategic Tactics in response to problems he was confronting directly: fragmented institutional records, conflicting explanations, missing evidence, and decisions with real consequences. He brought the records, identified the questions, challenged the answers, and directed the research. Working with AI to analyze and draft the findings became part of a repeatable intelligence process."
+        "body": "Alexander Emilio Perez founded System Intelligence & Strategic Tactics in response to problems he was confronting directly: fragmented institutional records, conflicting explanations, missing evidence, and decisions with real consequences. He built the architecture and retains human authority as ENFORCER. SIST applies its intelligence process to examine records, develop findings, and produce reports."
       },
       {
         "title": "How the reports were developed",
-        "body": "SIST’s reports grew from that collaboration. Alexander supplied observations, documents, captures, and the practical context. AI-assisted research helped organize the material, compare sources, develop explanations, and draft reports. Alexander continued testing those explanations against the record. The resulting publications belong to SIST’s body of work: investigations and research developed under his direction."
+        "body": "SIST produced these reports through its intelligence workflow: intake, source organization, research, analysis, adversarial review, synthesis, and release. The Council examines competing explanations and tests findings against the record. Alexander’s role is founder, system architect, and human ENFORCER. The investigations, analytical work, and report production are credited to SIST."
       },
       {
         "title": "From Bexar County to a broader method",
@@ -241,7 +241,7 @@ export const reports: Briefing[] = [
     "sections": [
       {
         "title": "What SIST investigated",
-        "body": "Alexander Emilio Perez and SIST reconstructed a consumer dispute from determination letters, secure messages, account statements, portal captures, and submitted evidence. Comparing those sources exposed questions that a single claim summary could not answer: what was investigated, what decision was issued, what the consumer could see, and how the account adjustments reconciled."
+        "body": "SIST reconstructed a consumer dispute from determination letters, secure messages, account statements, portal captures, and submitted evidence. Comparing those sources exposed questions that a single claim summary could not answer: what was investigated, what decision was issued, what the consumer could see, and how the account adjustments reconciled."
       },
       {
         "title": "The discrepancies the analysis uncovered",
@@ -385,13 +385,13 @@ export const reports: Briefing[] = [
     "slug": "browser-telemetry-evidence",
     "title": "Browser Telemetry: Capability, Capture, and Proof",
     "category": "TECHNICAL PRIVACY / EVIDENCE",
-    "description": "Alexander Emilio Perez and SIST investigated browser telemetry on a consumer credit portal, preserved a script artifact, and mapped the evidence needed to establish actual data collection.",
+    "description": "SIST investigated browser telemetry on a consumer credit portal, preserved a script artifact, and mapped the evidence needed to establish actual data collection.",
     "edition": "TECHNICAL INVESTIGATION / PUBLIC BRIEFING",
     "source": "SIST Datadog Discovery Report Corrected, August 22, 2026, pp. 1–7; Datadog Session Replay Privacy Options documentation consulted for this edition.",
     "sections": [
       {
         "title": "The technical discovery",
-        "body": "Alexander Emilio Perez observed telemetry requests during a consumer credit-portal visit and preserved a browser script for analysis. SIST examined the artifact’s library functions, endpoint references, version information, and collection history. That work connected a visible browser observation with specific technical questions about the deployed monitoring configuration."
+        "body": "SIST investigated telemetry requests captured during a consumer credit-portal visit and analyzed a preserved browser script. SIST examined the artifact’s library functions, endpoint references, version information, and collection history. That work connected a visible browser observation with specific technical questions about the deployed monitoring configuration."
       },
       {
         "title": "What the artifact revealed",

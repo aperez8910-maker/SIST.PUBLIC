@@ -154,6 +154,7 @@ export function pageSchema(path: SeoPath) {
       "@type": "Article",
       "@id": `${url}#article`,
       headline: page.title,
+      author: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: siteName },
       description: page.description,
       inLanguage: "en-US",
       mainEntityOfPage: { "@id": `${url}#webpage` },

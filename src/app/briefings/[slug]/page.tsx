@@ -23,7 +23,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ slug:
       <Link href="/briefings" className="briefing-back">← ALL BRIEFINGS & REPORTS</Link>
       <header className="research-document-hero">
         <div><span className="eyebrow">SIST / {report.category}</span><h1>{report.title}</h1><p>{report.description}</p></div>
-        <aside><span>PUBLICATION TYPE</span><strong>{report.edition}</strong><small>SIST investigation & research.<br />Led by <Link href="/alexander-emilio-perez">Alexander Emilio Perez</Link>.</small></aside>
+        <aside><span>PUBLICATION TYPE</span><strong>{report.edition}</strong><small>Produced by System Intelligence & Strategic Tactics (SIST).</small></aside>
       </header>
       <div className="research-document-grid">
         <article className="research-document-body">
@@ -32,7 +32,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ slug:
             <h2>{section.title}</h2><p>{section.body}</p>
             {section.points && <ul>{section.points.map(point => <li key={point}>{point}</li>)}</ul>}
           </section>)}
-          <section id="source-notes"><span className="eyebrow">REPORT SOURCES</span><h2>Research record</h2><p>{report.source}</p><p>Developed through Alexander Emilio Perez’s investigations and human-directed AI collaboration. This briefing presents the report’s findings and research contribution. Source dates identify the period assessed; private exhibits remain outside the public release.</p>
+          <section id="source-notes"><span className="eyebrow">REPORT SOURCES</span><h2>Research record</h2><p>{report.source}</p><p>SIST produced the investigation, analysis, and report. This briefing presents SIST’s findings and research contribution. Source dates identify the period assessed; private exhibits remain outside the public release.</p>
             {report.references && <ul>{report.references.map(ref => <li key={ref.href}><a href={ref.href} target="_blank" rel="noopener noreferrer">{ref.label} ↗</a></li>)}</ul>}
           </section>
         </article>

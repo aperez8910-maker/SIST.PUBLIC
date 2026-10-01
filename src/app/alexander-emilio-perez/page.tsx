@@ -27,7 +27,7 @@ export default function FounderPage() {
           <article className="research-document-body">
             <section>
               <h2>Building SIST</h2>
-              <p>Alexander Emilio Perez created SIST to bring structure to difficult matters involving fragmented records, conflicting claims, missing evidence, and complex institutional processes. He leads the investigations, supplies and examines the source records, challenges working conclusions, and directs the AI-assisted analysis and drafting that turn the discoveries into SIST reports. Final decisions remain under human control.</p>
+              <p>Alexander Emilio Perez created SIST to bring structure to difficult matters involving fragmented records, conflicting claims, missing evidence, and complex institutional processes. As founder, system architect, and ENFORCER, he retains human judgment and release authority. SIST performs the structured research, analysis, adversarial review, and report production documented in its public archive.</p>
             </section>
             <section>
               <h2>AI research and adversarial review</h2>
