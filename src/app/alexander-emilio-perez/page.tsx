@@ -36,7 +36,7 @@ export default function FounderPage() {
             </section>
             <section>
               <h2>Public reports and research</h2>
-              <p>The SIST archive includes immigration record integrity, systemic due-process analysis, independent accountability, consumer disputes, privacy evidence infrastructure, frontier AI safety, and observational validation. Public editions retain their sources, uncertainty, and evidence limits.</p>
+              <p>The SIST archive includes immigration record integrity, systemic due-process analysis, independent accountability, consumer disputes, privacy evidence infrastructure, and frontier AI safety. Public editions retain their sources, uncertainty, and evidence limits.</p>
               <ul>
                 <li><Link href="/briefings">SIST briefings, reports, and white papers</Link></li>
                 <li><Link href="/briefings/alexander-emilio-perez-building-sist">Alexander Emilio Perez: Building SIST</Link></li>

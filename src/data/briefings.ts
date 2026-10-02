@@ -32,7 +32,7 @@ export const reports: Briefing[] = [
       },
       {
         "title": "What this archive represents",
-        "body": "The archive brings together SIST’s discoveries, case analysis, system design, and validation work. It shows what was investigated, what the analysis produced, and what remains open. It also sets the next research agenda: repeat the work across more matters, measure false positives, compare against baselines, and document which verified findings change decisions."
+        "body": "The archive brings together SIST’s discoveries, case analysis and system design. It shows what was investigated, what the analysis produced, and what remains open. It also sets the next research agenda: repeat the work across more matters, measure false positives, compare against baselines, and document which verified findings change decisions."
       }
     ],
     "limits": [
@@ -309,46 +309,6 @@ export const reports: Briefing[] = [
     "limits": [
       "The white paper specifies a proposed system; evaluation targets remain targets.",
       "An observed browser event alone does not establish undisclosed transfer, causation, or a legal violation."
-    ]
-  },
-  {
-    "slug": "cross-domain-benchmark",
-    "title": "Cross-Domain Benchmark: Observed Results and Limits",
-    "category": "VALIDATION / BENCHMARK",
-    "description": "SIST’s five-domain benchmark documented recurring discovery capabilities and caught, corrected, or held all five material weaknesses identified in one criminal-defense run.",
-    "edition": "PUBLIC / ACADEMIC BRIEFING",
-    "source": "SIST Public Benchmark Report v1, benchmark dated August 10, 2026, pp. 1–4.",
-    "sections": [
-      {
-        "title": "What SIST tested",
-        "body": "The August 10, 2026 observational benchmark evaluated work across criminal defense, consumer finance, credit reporting, child welfare, and vendor security. The assessment tracked contradiction detection, source analysis, institutional mapping, novel discovery, and identification of missing evidence."
-      },
-      {
-        "title": "The result that changed the final output",
-        "body": "In the criminal-defense run, five material first-pass vulnerabilities were identified. All five were caught, corrected, or held before finalization; none of those five escaped unchanged into the evaluated output. Adversarial review changed the substance of the work by stopping or repairing weaknesses that the first pass had left in place."
-      },
-      {
-        "title": "The recurring discoveries",
-        "body": "Across the evaluated domains, SIST found value in comparing institutional summaries with their underlying records and identifying evidence-producing processes whose outputs were missing.",
-        "points": [
-          "Chronology gaps and conflicting documentary accounts.",
-          "Connections between actors, systems, and institutional processes.",
-          "Claims whose apparent authority exceeded their source support.",
-          "Missing records that became specific preservation or verification questions."
-        ]
-      },
-      {
-        "title": "What the scores represent",
-        "body": "The domain averages summarize the completed observational capability matrix. They describe this benchmark’s scoring, not population-wide accuracy. The strongest concrete result is the tracked handling of the five observed vulnerabilities. A matched comparison is needed to determine how much improvement is attributable to the review architecture."
-      },
-      {
-        "title": "The next test",
-        "body": "The benchmark established a documented starting point for controlled validation. The next phase requires matched baselines, repeated runs, explicit scoring criteria, false-positive measurement, and independent review. Publishing the original observations alongside that evaluation plan makes the research open to challenge and improvement."
-      }
-    ],
-    "limits": [
-      "Five corrected or held issues in one run are a bounded observation, not a universal zero-error rate.",
-      "Controlled baseline comparison and large-sample statistical validation remain outstanding."
     ]
   },
   {
