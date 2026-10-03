@@ -2955,3 +2955,48 @@ main.min-h-screen.bg-\[\#050810\] section[class*="border"],
   .sist-footer-inner{width:min(100% - 24px,1480px)}
   .sist-footer-bottom{flex-direction:column}
 }
+
+
+/* ===== SOURCE-FAITHFUL REPORT ARCHIVE ===== */
+.briefing-source-chip {
+  margin-top:22px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(5,10,16,.58);
+  color:#7f8a96;
+  font-size:6px;
+  line-height:1.5;
+  letter-spacing:.13em;
+  overflow-wrap:anywhere;
+}
+.report-source-rule {
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:28px;
+  align-items:start;
+  margin-top:14px;
+  padding:20px 24px;
+  border:1px solid rgba(117,201,246,.15);
+  background:linear-gradient(90deg,rgba(117,201,246,.045),rgba(8,15,23,.78));
+}
+.report-source-rule strong {
+  color:#75c9f6;
+  font-size:7px;
+  letter-spacing:.2em;
+}
+.report-source-rule p {
+  margin:0;
+  color:#939eaa;
+  font-size:10px;
+  line-height:1.8;
+}
+.briefing-document .research-document-hero aside small {
+  overflow-wrap:anywhere;
+}
+.briefing-document .research-document-body section#source-notes strong {
+  color:#e7c970;
+  font-weight:600;
+}
+@media(max-width:700px){
+  .report-source-rule{grid-template-columns:1fr;gap:10px}
+}
