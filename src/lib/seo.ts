@@ -78,17 +78,12 @@ export const seoPages = {
     "article": true
   },
   "/briefings": {
-    "title": "Briefings, Reports & White Papers | Alexander Emilio Perez",
-    "description": "Explore SIST reports on immigration, due process, AI safety, privacy, consumer advocacy, and validation, with founder Alexander Emilio Perez’s perspective."
+    "title": "SIST Public Reports & White Papers",
+    "description": "Open the source-faithful SIST report archive: original report titles, issue dates, stated findings, source limits, and public research outputs."
   },
   "/briefings/what-is-adversarial-review": {
     "title": "What Is Adversarial Review?",
     "description": "Understand how adversarial review challenges assumptions, verifies claims, exposes weaknesses, and requires human judgment before strategic output is used.",
-    "article": true
-  },
-  "/briefings/after-bexar-county": {
-    "title": "After Bexar County: The AI Council's Record",
-    "description": "A SIST field briefing on organizing records, questioning contradictions, and using AI-assisted analysis during a sixteen-month legal fight in Bexar County.",
     "article": true
   },
   "/interactive": {
